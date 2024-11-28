@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Zap, Globe, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -15,6 +16,10 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
+      <Image src={'https://res.cloudinary.com/dwlhesiyi/image/upload/v1729260387/erph7fml9unxiowlmrmg.png'}alt="zep logo  "
+          width={400}
+          height={400}
+          />
           <div className="space-y-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
