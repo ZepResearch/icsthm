@@ -1,13 +1,20 @@
-import { Check } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Check } from 'lucide-react';
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Payment from "./Payment";
 
 export default function Ticket() {
+  const host = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(null);
+
   const tickets = [
     {
-      name: "Virtual  TICKET",
+      name: "Virtual TICKET",
       price: 49,
       period: "month",
       features: [
@@ -18,7 +25,7 @@ export default function Ticket() {
       ],
     },
     {
-      name: "Physical  TICKET",
+      name: "Physical TICKET",
       price: 99,
       period: "month",
       features: [
@@ -28,19 +35,79 @@ export default function Ticket() {
         "Backstage Meet & Greet Opportunities",
       ],
     },
-    // {
-    //   name: "VIP TICKET",
-    //   price: 199,
-    //   period: "month",
-    //   features: [
-    //     "VIP Access to All Events",
-    //     "Dedicated Concierge Service",
-    //     "Complimentary Merchandise Pack",
-    //     "Private Artist Meet & Greets",
-    //     "Exclusive VIP Lounge Access",
-    //   ],
-    // },
   ];
+
+  const generateOrderId = () => {
+    return `ORD${Date.now()}${Math.floor(Math.random() * 1000)}`;
+  };
+
+  const paymentCCAvenue = async (ticketName, amount) => {
+    try {
+      setIsLoading(ticketName);
+
+      const paymentData = {
+        merchant_id: process.env.NEXT_PUBLIC_CCAVENUE_MERCHANT_ID,
+        order_id: generateOrderId(),
+        amount: amount.toString(),
+        currency: "USD",
+        redirect_url: `${host}/api/ccavenue/handle`,
+        cancel_url: `${host}/api/ccavenue/handle`,
+        billing_email: "",
+        billing_name: "",
+        billing_address: "",
+        billing_city: "",
+        billing_state: "",
+        billing_zip: "",
+        billing_country: "",
+        billing_tel: "",
+        language: "EN",
+      };
+
+      // First, get the encrypted order from your backend
+      const response = await fetch("/api/ccavenue/encrypt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(paymentData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to encrypt order data");
+      }
+
+      const { encRequest } = await response.json();
+
+      // Create form and submit
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action =
+        "https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction";
+
+      // Add hidden fields
+      const fields = {
+        encRequest,
+        access_code: process.env.NEXT_PUBLIC_CCAVENUE_ACCESS_CODE,
+        merchant_id: process.env.NEXT_PUBLIC_CCAVENUE_MERCHANT_ID,
+      };
+
+      Object.entries(fields).forEach(([key, value]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = value ;
+        form.appendChild(input);
+      });
+
+      document.body.appendChild(form);
+      form.submit();
+    } catch (error) {
+      console.error("Payment initiation failed:", error);
+      alert("Failed to initiate payment. Please try again.");
+    } finally {
+      setIsLoading(null);
+    }
+  };
 
   return (
     <div className="min-h-full bg-background text-foreground py-12 px-4">
@@ -52,7 +119,7 @@ export default function Ticket() {
         <div className="space-y-8">
           {tickets.map((ticket, index) => (
             <div key={index} className="flex items-center justify-center">
-              <Card className="relative w-full max-w-3xl bg-orange-100  overflow-hidden border-none">
+              <Card className="relative w-full max-w-3xl bg-orange-100 overflow-hidden border-none">
                 <div className="flex flex-col md:flex-row">
                   <div className="flex-grow p-6 pr-4">
                     <div className="space-y-4">
@@ -75,10 +142,9 @@ export default function Ticket() {
                           </li>
                         ))}
                       </ul>
-                      {/* <div className="text-xs opacity-80">#{Math.random().toString().slice(2, 11)}</div> */}
                     </div>
                   </div>
-                  <div className="relative flex-shrink-0 w-full md:w-48  md:border-l border-dashed border-orange-500 flex flex-col justify-center items-center">
+                  <div className="relative flex-shrink-0 w-full md:w-48 md:border-l border-dashed border-orange-500 flex flex-col justify-center items-center">
                     <div className="hidden md:block absolute top-0 left-0 w-10 h-10 bg-background rounded-full -translate-x-1/2 -translate-y-1/2" />
                     <div className="hidden md:block absolute bottom-0 left-0 w-10 h-10 bg-background rounded-full -translate-x-1/2 translate-y-1/2" />
                     <div className="text-center space-y-4 p-6">
@@ -86,10 +152,14 @@ export default function Ticket() {
                         <div className="text-4xl font-bold">
                           ${ticket.price}
                         </div>
-                        {/* <div className="text-sm opacity-80">/{ticket.period}</div> */}
                       </div>
-                      <Button className="w-full font-semibold">Book Now</Button>
-                      <Payment />
+                      <Button
+                        className="w-full font-semibold"
+                        onClick={() => paymentCCAvenue(ticket.name, ticket.price)}
+                        disabled={isLoading === ticket.name}
+                      >
+                        {isLoading === ticket.name ? "Processing..." : "Book Now"}
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -101,3 +171,4 @@ export default function Ticket() {
     </div>
   );
 }
+

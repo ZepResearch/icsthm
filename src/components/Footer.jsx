@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -19,35 +19,38 @@ export default function Footer() {
             {/* <h2 className="text-xl font-bold text-orange-600 mb-4">
               International Conference on Tourism Management and Hospitality
             </h2> */}
-            <div className="flex space-x-4  ml-4 mb-4">
-              <a
-                href="#"
-                className="text-orange-600 hover:text-orange-500 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
-                className="text-orange-600 hover:text-orange-500 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
-                className="text-orange-600 hover:text-orange-500 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
-                className="text-orange-600 hover:text-orange-500 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-6 w-6" />
-              </a>
+            <div className="flex space-x-4  ml-3 mb-4">
+            <a href="https://www.facebook.com/people/Zep-Research/61561809783777/" className="text-primary hover:text-primary/80">
+                  <Facebook size={24} />
+                </a>
+                <a href="https://x.com/i/flow/login?redirect_after_login=%2FZepresearch#" className="text-primary hover:text-primary/80">
+                  <Twitter size={24} />
+                </a>
+                <a href="" className="text-primary hover:text-primary/80">
+                  <Instagram size={24} />
+                </a>
+                <a href="https://www.linkedin.com/company/zep-research/" className="text-primary hover:text-primary/80">
+                  < Linkedin size={24} />
+                </a>
+                <a href="https://www.youtube.com/@Zepresearch" className="text-primary hover:text-primary/80">
+                  < Youtube size={24} />
+                </a>
+            </div>
+            <div className="flex space-x-4  ml-3 mb-4">
+            <div className="space-y-2 text-sm font-medium">
+                <div className="flex items-center">
+                  <Mail className="mr-2 text-primary" />
+                  <span>info@icsthm.com</span>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="mr-2 text-primary" />
+                  <span>+91 7358737843</span>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="mr-2 text-primary" />
+                  <span>DCB-330, 3rd Floor, DLF Cyber City, Patia, <br /> Bhubaneswar, ODISHA - 751024 India</span>
+                </div>
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:w-2/3">

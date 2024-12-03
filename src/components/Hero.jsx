@@ -16,10 +16,10 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-      <Image src={'https://res.cloudinary.com/dwlhesiyi/image/upload/v1729260387/erph7fml9unxiowlmrmg.png'}alt="zep logo  "
+      {/* <Image src={'https://res.cloudinary.com/dwlhesiyi/image/upload/v1729260387/erph7fml9unxiowlmrmg.png'}alt="zep logo  "
           width={400}
           height={400}
-          />
+          /> */}
           <div className="space-y-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -35,8 +35,8 @@ export default function Hero() {
               <span className="block text-primary">
                 International Conference on
               </span>
-              <span className="block">Tourism Management </span>
-              <span className="block">& Hospitality</span>
+              <span className="block">Sustainable Tourism </span>
+              <span className="block">& Hospitality Management </span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

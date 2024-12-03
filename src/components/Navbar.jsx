@@ -102,7 +102,7 @@ const MobileNav = () => (
       </SheetHeader>
       <nav className="mt-6">
         <Accordion type="single" collapsible className="w-full">
-          <MobileNavItem href="/">HOME</MobileNavItem>
+          {/* <MobileNavItem href="/">HOME</MobileNavItem> */}
           <MobileNavItem
             href="/about"
             subItems={[
@@ -135,6 +135,11 @@ const MobileNav = () => (
               <Link href="/registration">REGISTRATION</Link>
             </Button>
           </SheetClose>
+          <SheetClose asChild>
+            <Button asChild className="w-full mt-2 py-2 uppercase">
+              <Link href="/sponsorship">Exhibit & Sponsor</Link>
+            </Button>
+          </SheetClose>
         </div>
       </nav>
     </SheetContent>
@@ -154,11 +159,11 @@ export default function Navbar() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                {/* <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     HOME
                   </NavigationMenuLink>
-                </Link>
+                </Link> */}
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
@@ -227,6 +232,9 @@ export default function Navbar() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+          <Button asChild className="w-full  py-3 uppercase ">
+              <Link href="/sponsorship">Exhibit & Sponsor</Link>
+            </Button>
           <Button asChild>
             <Link href="/registration">REGISTRATION</Link>
           </Button>

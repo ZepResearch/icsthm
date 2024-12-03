@@ -10,6 +10,8 @@ import {
   Mail,
   Phone,
   MapPin,
+  Linkedin,
+  Youtube,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -118,15 +120,15 @@ export default function ContactUs() {
               <div className="space-y-2">
                 <div className="flex items-center">
                   <Mail className="mr-2 text-primary" />
-                  <span>info@example.com</span>
+                  <span>info@icsthm.com</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-2 text-primary" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 7358737843</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="mr-2 text-primary" />
-                  <span>123 Conference St, Tourism City, 12345</span>
+                  <span>DCB-330, 3rd Floor, DLF Cyber City, Patia, Bhubaneswar, ODISHA - 751024 India</span>
                 </div>
               </div>
             </div>
@@ -135,14 +137,20 @@ export default function ContactUs() {
                 Follow Us
               </h2>
               <div className="flex space-x-4">
-                <a href="#" className="text-primary hover:text-primary/80">
+                <a href="https://www.facebook.com/people/Zep-Research/61561809783777/" className="text-primary hover:text-primary/80">
                   <Facebook size={24} />
                 </a>
-                <a href="#" className="text-primary hover:text-primary/80">
+                <a href="https://x.com/i/flow/login?redirect_after_login=%2FZepresearch#" className="text-primary hover:text-primary/80">
                   <Twitter size={24} />
                 </a>
-                <a href="#" className="text-primary hover:text-primary/80">
+                <a href="" className="text-primary hover:text-primary/80">
                   <Instagram size={24} />
+                </a>
+                <a href="https://www.linkedin.com/company/zep-research/" className="text-primary hover:text-primary/80">
+                  < Linkedin size={24} />
+                </a>
+                <a href="https://www.youtube.com/@Zepresearch" className="text-primary hover:text-primary/80">
+                  < Youtube size={24} />
                 </a>
               </div>
             </div>
