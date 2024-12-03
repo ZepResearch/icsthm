@@ -81,7 +81,7 @@ export default function SponsorshipContact() {
         <div className="bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg shadow-xl p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Make an Impact?</h2>
           <p className="text-xl text-white mb-6">
-            Don't miss this opportunity to showcase your brand at the International Conference on Tourism Management and Hospitality.
+            Don&apos;t miss this opportunity to showcase your brand at the International Conference on Tourism Management and Hospitality.
           </p>
           <Button className="bg-white text-orange-600 hover:bg-orange-100 text-lg px-8 py-3 rounded-full font-semibold transition-colors duration-300">
         <Link href={'/contact'}>  Request Sponsorship Package</Link>
