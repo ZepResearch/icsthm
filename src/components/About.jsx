@@ -87,7 +87,7 @@ export default function AboutSection() {
               </Button>
             </motion.div>
             <h1 className="text-lg tracking-tighter font-semibold underline underline-offset-4 decoration-orange-500">
-            Why Attend?
+            Insights into the Conference
             </h1>
             <dl className="grid max-w-xl grid-cols-2 gap-8 sm:grid-cols-4">
               {stats.map((stat) => (
