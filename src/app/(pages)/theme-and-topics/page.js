@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from '@/components/ui/badge'
 import { Calendar, FileText, UserPlus, BirdIcon, File } from "lucide-react"
+import Link from 'next/link'
 
 export default function ThemeAndTopics() {
   const controls = useAnimation()
@@ -136,15 +137,19 @@ export default function ThemeAndTopics() {
           </Card>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-6 mt-12">
+        <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-6 mt-12 mx-auto justify-center ">
+          <Link href={'/submission'}>
           <Button className="flex-1 text-xl py-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" variant="default">
             <FileText className="mr-2 h-6 w-6" />
             Submit Your Paper
           </Button>
+          </Link>
+          <Link href={'/registration'}>
           <Button className="flex-1 text-xl py-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" variant="secondary">
             <UserPlus className="mr-2 h-6 w-6" />
             Register for the Conference
           </Button>
+          </Link>
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12">

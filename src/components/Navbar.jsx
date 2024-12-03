@@ -108,7 +108,7 @@ const MobileNav = () => (
             subItems={[
               { href: "/about-conference", title: "About Conference" },
               { href: "/about-zep-research", title: "About Zep Research" },
-              { href: "/about-speakers", title: "About Speakers" },
+              { href: "/committee", title: "About committee" },
             ]}
             icon={Info}
           >
@@ -181,7 +181,7 @@ export default function Navbar() {
                     >
                       Discover Zep Research and its contributions.
                     </ListItem>
-                    <ListItem href="/about-speakers" title="About Speakers">
+                    <ListItem href="/committee" title="About committee">
                       Discover Zep Research and its contributions.
                     </ListItem>
                   </ul>
