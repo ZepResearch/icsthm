@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 export default function Ticket() {
-  const host = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+  const host = process.env.NEXT_PUBLIC_APP_URL ;
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(null);
 
@@ -48,7 +48,7 @@ export default function Ticket() {
       const paymentData = {
         merchant_id: process.env.NEXT_PUBLIC_CCAVENUE_MERCHANT_ID,
         order_id: generateOrderId(),
-        amount: amount.toString(),
+        amount: amount,
         currency: "INR",
         redirect_url: `${host}/api/ccavenue/handle`,
         cancel_url: `${host}/api/ccavenue/handle`,
@@ -82,7 +82,7 @@ export default function Ticket() {
       const form = document.createElement("form");
       form.method = "POST";
       form.action =
-        "https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction";
+        "https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction";
 
       // Add hidden fields
       const fields = {
