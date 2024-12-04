@@ -9,7 +9,7 @@ import { Check } from 'lucide-react'
 const packages = [
   {
     name: "Platinum",
-    price: "15000",
+    price: 1245000,//15000,
     color: "bg-gradient-to-br from-purple-500 to-pink-500",
     benefits: [
       "1 VIP participating in the conference",
@@ -25,7 +25,7 @@ const packages = [
   },
   {
     name: "Diamond",
-    price: "12000",
+    price: 996000,//12000
     color: "bg-gradient-to-br from-blue-500 to-teal-500",
     benefits: [
       "1 Session Chair participating from the sponsor side",
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: "Gold",
-    price: "10000",
+    price: 830000,//10000
     color: "bg-gradient-to-br from-yellow-400 to-orange-500",
     benefits: [
       "Complementary registration for 8 Students and 2 Faculties",
@@ -55,7 +55,7 @@ const packages = [
   },
   {
     name: "Silver",
-    price: "7500",
+    price:622500,//7500
     color: "bg-gradient-to-br from-gray-300 to-gray-400",
     benefits: [
       "Complementary registration for 5 Students and 1 Faculty",
@@ -94,7 +94,7 @@ export function SponsorshipPackages() {
         merchant_id: process.env.NEXT_PUBLIC_CCAVENUE_MERCHANT_ID,
         order_id: generateOrderId(),
         amount: amount,
-        currency: "USD",
+        currency: "INR",
         redirect_url: `${host}/api/ccavenue/handle`,
         cancel_url: `${host}/api/ccavenue/handle`,
         billing_email: "",
@@ -160,7 +160,7 @@ export function SponsorshipPackages() {
         <Card key={index} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl">
           <CardHeader className={`${pkg.color} text-white p-6`}>
             <CardTitle className="text-2xl font-bold">{pkg.name}</CardTitle>
-            <p className="text-3xl font-extrabold mt-2">{pkg.price} USD</p>
+            <p className="text-3xl font-extrabold mt-2">₹{pkg.price.toLocaleString()} </p>
           </CardHeader>
           <CardContent className="flex-grow p-6">
             <ul className="space-y-2">

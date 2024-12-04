@@ -63,7 +63,7 @@ Connecting global leaders, innovators, and experts to redefine the future of tou
  <motion.div variants={itemVariants} className="mt-12 text-center pb-12">
           <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20 inline-block">
             <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary">ICTMH</CardTitle>
+                <CardTitle className="text-2xl font-bold text-primary">About ICTMH</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground px-12 text-justify">
