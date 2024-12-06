@@ -66,7 +66,7 @@ export default function ConferenceSchedule() {
       <div className="space-y-8">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Shaping Tomorrow's Sustainable Landscape
+            Shaping Tomorrow&apos;s Sustainable Landscape
           </h1>
           <p className="text-muted-foreground">
             Join us March 21st-23rd for three days of cutting-edge insights and networking. Reserve your spot today!
