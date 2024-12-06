@@ -102,9 +102,5 @@ const faqs = [
     answer:
       "You can register for the conference through our online registration portal. Early bird discounts are available until July 31, 2024.",
   },
-  {
-    question: "Is there accommodation available at the conference venue?",
-    answer:
-      "Yes, the Grand Hotel offers special rates for conference attendees. You can book your room through our conference website.",
-  },
+
 ];

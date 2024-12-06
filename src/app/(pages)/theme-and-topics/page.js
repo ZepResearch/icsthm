@@ -5,7 +5,8 @@ import { motion, useAnimation, useInView } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from '@/components/ui/badge'
-import { Calendar, FileText, UserPlus, BirdIcon, File } from "lucide-react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Calendar, FileText, UserPlus, BirdIcon, File } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ThemeAndTopics() {
@@ -38,29 +39,63 @@ export default function ThemeAndTopics() {
   }
 
   const topics = [
-    "Air Transportation Management", "Applied Financial Accounting", "Applied Macroeconomics",
-    "Applied Microeconomics", "Archaeological Sites Management", "Aviation Management",
-    "Big Data and Business Intelligence", "Business English", "Business Ethics",
-    "Business Law", "Business Operations", "City Tourism",
-    "Congress Management", "Contemporary Nutrition", "Corporate Social Responsibility",
-    "Cost Accounting", "Crisis Management and Tourism", "Customer Experience Management",
-    "Destination Management", "Digitalization and Tourism", "Economic Sustainability",
-    "Ecotourism", "Entrepreneurship and SMEs", "E-Tourism",
-    "Event Management", "Tourism and Financial Management", "Food and Beverage Management",
-    "Food Production and Service", "Foreign Language", "Global Business Environment",
-    "Health and Wellbeing Tourism", "Heritage Tourism", "Hospitality and Tourism Fundamentals",
-    "Hospitality Project Planning", "Hotel Business Operations", "Human Resource Management",
-    "ICT And Tourism", "Information Systems and Technology", "Intangible Cultural Heritage Management",
-    "International Management", "Lodging Operations", "Management Accounting",
-    "Marine and Coastal Areas Tourism", "Market Research", "Mathematics and Tourism Management",
-    "Medical Tourism", "MICE", "Operations Management",
-    "Restaurant and Event Management", "Rural Tourism", "Social Media Marketing",
-    "Sport Tourism", "Statistics", "Strategic Management",
-    "Sustainable Tourism Development", "Tour Operations", "Tourism Development",
-    "Tourism Geography", "Tourism Law", "Tourism Marketing",
-    "Tourism Mobilities", "Urban and Regional Tourism Planning", "Wildlife and Adventure Tourism",
-    "World Heritage Management"
-  ]
+  {
+    title: "Sustainable Tourism Development",
+    content: [
+      "Sustainable destination management strategies",
+      "Community-based tourism and local empowerment",
+      "Eco-tourism: Practices, challenges, and opportunities",
+      "Preservation of cultural heritage through tourism",
+      "Sustainable tourism policies and governance"
+    ]
+  },
+  {
+    title: "Sustainable Hospitality Management",
+    content: [
+      "Green building practices in the hospitality industry",
+      "Energy efficiency and water conservation in hotels",
+      "Waste management and circular economy in hospitality",
+      "Sustainable procurement and supply chain management",
+      "Creating eco-conscious guest experiences"
+    ]
+  },
+  {
+    title: "Technology and Innovation in Sustainable Tourism",
+    content: [
+      "Smart tourism: Leveraging technology for sustainability",
+      "AI, IoT, and blockchain for sustainable hospitality operations",
+      "Digital marketing for eco-friendly tourism destinations",
+      "Tech-driven approaches for reducing environmental impacts"
+    ]
+  },
+  {
+    title: "Tourism and Climate Change",
+    content: [
+      "Carbon footprint of tourism and mitigation strategies",
+      "Climate-resilient tourism planning",
+      "Renewable energy in tourism and hospitality sectors",
+      "Adapting to climate change: Lessons from vulnerable regions"
+    ]
+  },
+  {
+    title: "Economic and Social Dimensions of Sustainable Tourism",
+    content: [
+      "Inclusive tourism: Addressing social equity and access",
+      "Economic impacts of sustainable tourism practices",
+      "Developing sustainable business models in hospitality",
+      "Balancing over-tourism and responsible tourism"
+    ]
+  },
+  {
+    title: "Research and Education in Sustainable Tourism",
+    content: [
+      "Innovations in tourism and hospitality education",
+      "Role of academia in promoting sustainable tourism",
+      "Case studies on successful sustainable tourism models",
+      "Research collaborations for global impact"
+    ]
+  }
+]
 
   return (
     <motion.section
@@ -73,9 +108,9 @@ export default function ThemeAndTopics() {
       <div className="max-w-6xl mx-auto">
         <motion.div variants={itemVariants} className="text-center mb-12">
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">Conference Themes</Badge>
-          <h2 className="text-4xl font-bold text-primary mb-4">Theme and Topics</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">International Conference on Sustainable Tourism & Hospitality Management</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore the diverse range of topics covered in our conference on Tourism Management and Hospitality.
+            Exploring innovative strategies and research in sustainable tourism and hospitality management.
           </p>
         </motion.div>
 
@@ -86,7 +121,10 @@ export default function ThemeAndTopics() {
             </CardHeader>
             <CardContent className="p-6">
               <p className="leading-relaxed text-lg text-muted-foreground">
-                The 5th International Conference on Tourism Management and Hospitality on 22 – 24 November 2024 in London, UK encourages all to present their recent research work. This conference is considered a prestigious event organized with the motivation to provide an excellent international platform for academics, researchers, managers, industrial participants, and students to share their research findings with global experts. All abstract submissions will be peer-reviewed and evaluated based on originality, technical and/or research depth, accuracy, and relevance with the theme of the conference.
+                The International Conference on Sustainable Tourism & Hospitality Management invites researchers, industry professionals, policymakers, and innovators to present their recent work in sustainable tourism and hospitality practices. This conference is a prestigious event designed to provide an excellent international platform for sharing groundbreaking research, innovative solutions, and actionable strategies to promote sustainability in the tourism and hospitality sectors.
+              </p>
+              <p className="leading-relaxed text-lg text-muted-foreground mt-4">
+                All abstract submissions will undergo rigorous peer review to ensure originality, technical merit, and relevance to the conference themes of sustainable tourism and hospitality management.
               </p>
             </CardContent>
           </Card>
@@ -95,60 +133,55 @@ export default function ThemeAndTopics() {
         <motion.div variants={itemVariants} className="mt-12">
           <Card className="overflow-hidden shadow-2xl bg-slate-100 backdrop-blur-sm border-2 border-primary/20">
             <CardHeader className="bg-white text-secondary-foreground p-6">
-              <CardTitle className="text-3xl underline underline-offset-2 decoration-orange-500">Conference Themes and Topics</CardTitle>
+              <CardTitle className="text-3xl underline underline-offset-2 decoration-primary">Session and Tracks</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <p className="mb-6 text-lg text-black">
-                The conference is seeking submissions related to the following conference topics: Tourism Management and Hospitality. Other related tracks and topics will also be considered.
+                The conference encourages submissions on the following topics related to sustainable tourism and hospitality management. Other relevant areas will also be considered.
               </p>
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-                variants={{
-                  visible: { transition: { staggerChildren: 0.05 } }
-                }}
-              >
+              <Accordion type="single" collapsible className="w-full">
                 {topics.map((topic, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white text-accent-foreground p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-                    variants={{
-                      hidden: { opacity: 0, scale: 0.9 },
-                      visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } }
-                    }}
-                  >
-                    {topic}
-                  </motion.div>
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-lg font-semibold">{topic.title}</AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="list-disc pl-6">
+                        {topic.content.map((item, itemIndex) => (
+                          <li key={itemIndex} className="text-gray-800 text-base">{item}</li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </motion.div>
+              </Accordion>
             </CardContent>
           </Card>
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12">
           <Card className="overflow-hidden shadow-2xl bg-white/50 backdrop-blur-sm border-2 border-primary/20">
-            <CardHeader className="bg-muted text-primary p-6">
+            <CardHeader className="bg-muted text-orange-500 p-6 border-b-2 border-orange-400 rounded-md">
               <CardTitle className="text-3xl">Submission Guidelines</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <p className="leading-relaxed text-lg text-muted-foreground">
-                Submitted abstracts will be evaluated by the Scientific Committee. All submissions should report original and previously unpublished research results no matter the type of research paper you are presenting. Manuscripts should meet the format set by the Conference committee and are subject to review. Detailed instructions and full paper submission guidelines will be emailed within a few weeks following the conference.
+                Submitted abstracts will be reviewed by the Scientific Committee to ensure they align with the conference objectives and themes. Submissions should report original and previously unpublished research findings. Manuscripts must adhere to the conference&apos;s format and guidelines, which will be shared with accepted participants.
               </p>
             </CardContent>
           </Card>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-6 mt-12 mx-auto justify-center ">
+        <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-6 mt-12 justify-center items-center mx-auto">
           <Link href={'/submission'}>
-          <Button className="flex-1 text-xl py-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" variant="default">
-            <FileText className="mr-2 h-6 w-6" />
-            Submit Your Paper
-          </Button>
+            <Button className="flex-1 text-xl py-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" variant="default">
+              <FileText className="mr-2 h-6 w-6" />
+              Submit Your Paper
+            </Button>
           </Link>
           <Link href={'/registration'}>
-          <Button className="flex-1 text-xl py-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" variant="secondary">
-            <UserPlus className="mr-2 h-6 w-6" />
-            Register for the Conference
-          </Button>
+            <Button className="flex-1 text-xl py-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" variant="secondary">
+              <UserPlus className="mr-2 h-6 w-6" />
+              Register for the Conference
+            </Button>
           </Link>
         </motion.div>
 
@@ -186,3 +219,4 @@ export default function ThemeAndTopics() {
     </motion.section>
   )
 }
+
