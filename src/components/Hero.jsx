@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Zap, Globe, Sparkles } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -69,19 +70,23 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="flex flex-wrap gap-4"
           >
+            <Link href={'/submission'}>
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
+              >
               Submit Your Paper
             </Button>
+              </Link>
+              <Link href={'registration'}>
             <Button
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/50 hover:text-primary-foreground font-semibold"
-            >
+              >
               Register Now
             </Button>
+              </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

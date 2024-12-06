@@ -28,11 +28,7 @@ const faqs = [
     answer:
       "Registration will open soon. You'll be able to secure your spot through our user-friendly online registration portal. Early bird discounts will be available!",
   },
-  {
-    question: "Will there be opportunities for networking?",
-    answer:
-      "Enjoy multiple networking sessions, including interactive coffee breaks, themed lunch discussions, and our grand gala dinner. Connect, collaborate, and create lasting professional relationships.",
-  },
+ 
 ];
 
 export default function FAQSection() {

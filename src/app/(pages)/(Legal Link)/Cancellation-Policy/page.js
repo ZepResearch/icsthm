@@ -84,8 +84,8 @@ export default function CancellationPolicy() {
               If you have any questions about our cancellation policy or need assistance, please dont hesitate to contact our support team:
             </p>
             <p className="mt-2">
-              <strong>Email:</strong> support@tourismconference.com<br />
-             <strong> Phone:</strong> +1 (555) 123-4567
+              <strong>Email:</strong> info@icsthm.com<br />
+             <strong> Phone:</strong> +91 7358737843
             </p>
           </CardContent>
         </Card>

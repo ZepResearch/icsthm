@@ -222,7 +222,7 @@ export default function CTASection() {
                     asChild
                     className="w-full bg-primary text-lg text-primary-foreground hover:bg-primary/90 py-6"
                   >
-                    <Link href="/register">Register for the Conference</Link>
+                    <Link href="/registration">Register for the Conference</Link>
                   </Button>
                 </motion.div>
               </CardFooter>

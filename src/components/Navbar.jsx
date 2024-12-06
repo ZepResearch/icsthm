@@ -108,7 +108,7 @@ const MobileNav = () => (
             subItems={[
               { href: "/about-conference", title: "About Conference" },
               { href: "/about-zep-research", title: "About Zep Research" },
-              { href: "/committee", title: "About committee" },
+              // { href: "/committee", title: "About committee" },
             ]}
             icon={Info}
           >
@@ -125,11 +125,14 @@ const MobileNav = () => (
           >
             CALL FOR PAPERS
           </MobileNavItem>
+          <MobileNavItem href="/committee">COMMITTEE</MobileNavItem>
           <MobileNavItem href="/submission">SUBMISSION</MobileNavItem>
           <MobileNavItem href="/venue">VENUE</MobileNavItem>
           <MobileNavItem href="/contact">CONTACT</MobileNavItem>
+
         </Accordion>
         <div className="mt-6">
+        
           <SheetClose asChild>
             <Button asChild className="w-full">
               <Link href="/registration">REGISTRATION</Link>
@@ -181,9 +184,9 @@ export default function Navbar() {
                     >
                       Discover Zep Research and its contributions.
                     </ListItem>
-                    <ListItem href="/committee" title="About committee">
+                    {/* <ListItem href="/committee" title="About committee">
                       Discover Zep Research and its contributions.
-                    </ListItem>
+                    </ListItem> */}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -208,6 +211,13 @@ export default function Navbar() {
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/committee" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  COMMITTEE
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/submission" legacyBehavior passHref>

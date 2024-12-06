@@ -44,7 +44,7 @@ export default function TicketCTA() {
                 />
                 <div className="mt-4 flex items-baseline text-gray-900">
                   <span className="text-4xl font-bold tracking-tight">
-                    ${ticket.price}
+                    {ticket.price}
                   </span>
                   <span className="ml-1 text-xl font-semibold">
                     {ticket.period}
@@ -79,7 +79,7 @@ export default function TicketCTA() {
 const tickets = [
   {
     name: "Virtual Pass",
-    price: "699",
+    price: "₹18,543",
     period: "/person",
     img: "https://illustrations.popsy.co/amber/graphic-design.svg",
     features: [
@@ -92,7 +92,7 @@ const tickets = [
   },
   {
     name: "Phyiscal Pass",
-    price: "999",
+    price: "₹27,010",
     period: "/person",
     img: "https://illustrations.popsy.co/amber/keynote-presentation.svg",
 
