@@ -36,12 +36,12 @@ export default function AboutCompany() {
   }
 
   const conferenceFeatures = [
-    { icon: CalendarDays, text: "3-day event: October 15-17, 2024" },
-    { icon: MapPin, text: "Grand Hotel, New York City" },
+    { icon: CalendarDays, text: "2-day event: April 24-25, 2025" },
+    { icon: MapPin, text: "Grand Hotel, Bangkok, Thailand" },
     { icon: Users, text: "500+ Expected Attendees" },
     { icon: Globe, text: "International Speakers" },
-    { icon: Mail, text: "info@tourismconference.com" },
-    { icon: Phone, text: "+1 (555) 123-4567" },
+    { icon: Mail, text: "info@icsthm.com" },
+    { icon: Phone, text: "+91 7358737843" },
   ]
 
   return (

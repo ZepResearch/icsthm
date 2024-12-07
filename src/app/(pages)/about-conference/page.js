@@ -36,8 +36,8 @@ export default function ConferenceAboutSection() {
   }
 
   const conferenceFeatures = [
-    { icon: CalendarDays, text: "3-day thought-provoking event" },
-    { icon: MapPin, text: "At the centre of (Add location)" },
+    { icon: CalendarDays, text: "2-day thought-provoking event" },
+    { icon: MapPin, text: "At the centre of Bangkok, Thailand" },
     { icon: Users, text: "Connect with 500+ leaders in the industry" },
     { icon: Lightbulb, text: "Over 20+ workshops on emerging trends" },
     { icon: Globe, text: "Speakers from more than 30 countries" },
@@ -117,7 +117,7 @@ Fostering innovation and collaboration, with a focus on sustainable practi
                 Be a part of redefining the future of tourism and hospitality.
               </CardDescription>
               <p className="text-muted-foreground">
-                September 15-17, 2024 • New York City, USA
+                April 24-25, 2024 • Bangkok, Thailand
               </p>
             </CardContent>
           </Card>

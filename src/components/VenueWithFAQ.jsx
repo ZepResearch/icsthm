@@ -37,7 +37,8 @@ export default function VenueWithFAQ() {
                 <div className="space-y-2 text-base text-gray-500 pb-4">
                   <p className="flex items-center">
                     <MapPin className="mr-2 h-4 w-4 text-orange-500" />
-                    123 Conference Ave, Tourism City, TC 12345
+                    Bangkok, Thailand
+
                   </p>
                   <p className="flex items-center">
                     <Phone className="mr-2 h-4 w-4 text-orange-500" />
@@ -85,7 +86,7 @@ const faqs = [
   {
     question: "What are the dates for the conference?",
     answer:
-      "The International Conference on Tourism Management & Hospitality will take place from September 15-17, 2024.",
+      "The International Conference on Tourism Management & Hospitality will take place from April 24-25, 2025.",
   },
   {
     question: "Is there a dress code for the conference?",
@@ -100,7 +101,7 @@ const faqs = [
   {
     question: "How can I register for the conference?",
     answer:
-      "You can register for the conference through our online registration portal. Early bird discounts are available until July 31, 2024.",
+      "You can register for the conference through our online registration portal. Early bird discounts are available until Dec 31, 2024.",
   },
 
 ];
