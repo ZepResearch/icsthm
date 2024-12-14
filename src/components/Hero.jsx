@@ -114,17 +114,19 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="relative hidden lg:block"
         >
-          <div className="relative h-full w-full  p-8">
+          <div className="relative flex justify-center items-center h-full w-full  p-8">
             <img
               alt="Conference illustration"
-              className="h-auto w-full object-contain"
-              src="https://illustrations.popsy.co/amber/backpacking.svg"
+              className="object-contain rounded-xl drop-shadow-2xl"
+              height={450}
+              width={450}
+              src="https://images.unsplash.com/photo-1508292162097-00dd24b15f47?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute -bottom-6 -left-6 rounded-2xl bg-primary p-6 text-primary-foreground shadow-lg"
+              className="absolute -bottom-6 -left-2 rounded-2xl bg-primary p-6 text-primary-foreground shadow-lg"
             >
               <Sparkles className="h-8 w-8 mb-2" />
               <h3 className="text-xl font-bold">Networking Events</h3>

@@ -116,7 +116,7 @@ export default function Dates() {
               ))}
             </div>
           </div>
-          <div className="w-full flex justify-center items-center sm:w-1/2 sm:pl-12">
+          {/* <div className="w-full flex justify-center items-center sm:w-1/2 sm:pl-12">
             <Image
               src="https://illustrations.popsy.co/amber/man-riding-a-rocket.svg"
               alt="Illustration of a person riding a rocket, symbolizing the journey towards a sustainable future"
@@ -124,7 +124,7 @@ export default function Dates() {
               height={500}
               className="rounded-lg"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-16 text-center">

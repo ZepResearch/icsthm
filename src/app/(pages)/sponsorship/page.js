@@ -12,11 +12,11 @@ export default function SponsorshipContact() {
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
           <div className="relative h-[400px] md:h-[600px]">
             <Image
-              src="https://illustrations.popsy.co/amber/work-party.svg"
+              src="https://res.cloudinary.com/dtsuvx8dz/image/upload/v1734198715/samples/szapxx5bakzspvbxz3gj.webp"
               alt="Conference sponsorship"
               layout="fill"
               objectFit="cover"
-              className=""
+              className=" rounded-2xl drop-shadow-lg"
             />
           </div>
           <div className="space-y-8">

@@ -66,7 +66,7 @@ export default function ConferenceObjectives() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center"
+          className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-end"
         >
           <motion.div
             variants={containerVariants}
@@ -78,7 +78,7 @@ export default function ConferenceObjectives() {
             >
               Objectives of the Conference
             </motion.h2>
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2 end">
               {objectives.map((objective, index) => (
                 <motion.div key={index} variants={itemVariants}>
                   <Card className="h-full">
@@ -97,11 +97,11 @@ export default function ConferenceObjectives() {
           </motion.div>
           <motion.div
             variants={itemVariants}
-            className="flex justify-center lg:justify-start"
+            className="flex justify-end items-end lg:justify-start"
           >
-            <div className="relative w-full max-w-[500px] aspect-[4/3] overflow-hidden rounded-lg">
+            <div className="relative w-full max-w-[470px] aspect-[4/3] overflow-hidden rounded-lg">
               <Image
-                src="https://illustrations.popsy.co/amber/communication.svg"
+                src="https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Conference Objectives"
                 layout="fill"
                 className="object-center"

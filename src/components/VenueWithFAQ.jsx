@@ -23,8 +23,8 @@ export default function VenueWithFAQ() {
             <CardContent className="p-0">
               <div className="aspect-[16/9] overflow-hidden bg-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.2922926156740665!3d48.858370079287466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1636567096378!5m2!1sen!2sus"
-                  alt="Map of conference venue"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248057.2039935503!2d100.46795618719626!3d13.724878241259372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sin!4v1734197483351!5m2!1sen!2sin"
+            alt="Map of conference venue"
                   className="object-cover"
                   width={800}
                   height={400}

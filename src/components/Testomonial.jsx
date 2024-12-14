@@ -99,7 +99,7 @@ const testimonials = [
     name: "Sarah Chen",
     title: "Director of Tourism Development, Global Destinations",
     avatar:
-      "https://illustrations.popsy.co/amber/man-with-short-hair-avatar.svg",
+      "https://images.unsplash.com/photo-1478427094460-4c8d412903e2?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     quote:
@@ -107,7 +107,7 @@ const testimonials = [
     name: "Michael Rodriguez",
     title: "CEO, Luxury Hotels Group",
     avatar:
-      "https://illustrations.popsy.co/amber/man-with-short-hair-avatar.svg",
+      "https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     quote:
@@ -115,6 +115,6 @@ const testimonials = [
     name: "Emma Thompson",
     title: "Head of Operations, Tourism Board",
     avatar:
-      "https://illustrations.popsy.co/amber/man-with-short-hair-avatar.svg",
+      "https://plus.unsplash.com/premium_photo-1693000697180-4e285198d71c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];

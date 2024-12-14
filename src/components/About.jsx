@@ -53,14 +53,15 @@ export default function AboutSection() {
           animate={inView ? "visible" : "hidden"}
           className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center"
         >
-          <motion.div variants={itemVariants} className="flex justify-center">
-            <div className="relative w-full max-w-[500px] aspect-square overflow-hidden rounded-lg">
+          <motion.div variants={itemVariants} className="flex justify-center ">
+            <div className="relative w flex justify-center items-center  aspect-square overflow-hidden rounded-lg">
               <Image
-                src="https://illustrations.popsy.co/amber/shaking-hands.svg"
+                src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Conference Image"
-                layout="fill"
-                objectFit="cover"
-                className="object-center"
+                width={500}
+                height={400}
+                objectFit=""
+                className="object-center w-96 h-60 rounded-xl "
               />
             </div>
           </motion.div>
