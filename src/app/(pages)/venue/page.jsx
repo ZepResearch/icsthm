@@ -44,13 +44,13 @@ export default function VenuePage() {
               Welcome to the International Conference on Tourism Management and
               Hospitality. Our venue in the vibrant city of Bangkok offers state-of-the-art facilities to
               ensure a productive and enjoyable experience for all attendees. With modern conference rooms,
-              cutting-edge audiovisual equipment, and spacious networking areas, we've created the perfect
+              cutting-edge audiovisual equipment, and spacious networking areas, weve created the perfect
               environment for knowledge sharing and collaboration.
             </p>
             <p className="text-lg mb-4">
               Situated in the heart of Bangkok, our venue provides easy access to public transportation,
-              world-class hotels, and a variety of dining options. Whether you're here to present, learn,
-              or network, you'll find our venue both comfortable and inspiring.
+              world-class hotels, and a variety of dining options. Whether youre here to present, learn,
+              or network, youll find our venue both comfortable and inspiring.
             </p>
             <div className="flex items-center text-muted-foreground">
               <MapPin className="mr-2" />
