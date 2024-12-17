@@ -73,7 +73,7 @@ export default function AboutSection() {
               About The Conference
             </h2>
             <p className="text-muted-foreground">
-              The International Conference on Tourism Management and Hospitality
+              The International Conference on Sustainable Tourism Management and Hospitality
               (ICTMH) unites global leaders, researchers, and innovators to
               reimagine the future of tourism and hospitality, fostering
               sustainable growth, resilience, and transformative ideas for a
