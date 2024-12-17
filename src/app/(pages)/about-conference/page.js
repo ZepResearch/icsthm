@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { CalendarDays, MapPin, Users, Lightbulb, Globe, Award } from 'lucide-react'
+import { CalendarDays, MapPin, Users, Lightbulb, Globe, Award, Check, UserCircle } from 'lucide-react'
 
 export default function ConferenceAboutSection() {
   const controls = useAnimation()
@@ -36,12 +36,48 @@ export default function ConferenceAboutSection() {
   }
 
   const conferenceFeatures = [
-    { icon: CalendarDays, text: "2-day thought-provoking event" },
-    { icon: MapPin, text: "At the centre of Bangkok, Thailand" },
-    { icon: Users, text: "Connect with 500+ leaders in the industry" },
-    { icon: Lightbulb, text: "Over 20+ workshops on emerging trends" },
-    { icon: Globe, text: "Speakers from more than 30 countries" },
+    { icon: CalendarDays, text: "2-day thought-provoking event" },
+    { icon: MapPin, text: "At the centre of Bangkok, Thailand" },
+    { icon: Users, text: "Connect with 500+ leaders in the industry" },
+    { icon: Lightbulb, text: "Over 20+ workshops on emerging trends" },
+    { icon: Globe, text: "Speakers from more than 30 countries" },
     { icon: Award, text: "Annual Tourism Innovation Awards" },
+  ]
+
+  const whyAttendReasons = [
+    "Future-Focused Insights: Explore groundbreaking innovations and strategies that address sustainability, resilience, and growth in tourism and hospitality.",
+    "Global Thought Leaders: Gain knowledge and inspiration from 50+ renowned speakers who are shaping the future of sustainable tourism and hospitality management.",
+    "Networking with Industry Leaders: Connect with 500+ attendees, including industry pioneers, researchers, and innovators.",
+    "Cutting-Edge Research: Learn from the latest research, case studies, and innovative solutions that address sustainability and resilience.",
+    "Interactive Workshops & Panels: Participate in engaging workshops, panel discussions, and Q&A sessions.",
+    "Post-Pandemic Strategies: Discover how the sectors are adapting with new technologies and sustainable practices."
+  ]
+
+  const attendeeTypes = [
+    {
+      title: "Tourism & Hospitality Professionals",
+      description: "Stay ahead of industry trends, explore new strategies, and connect with global leaders."
+    },
+    {
+      title: "Researchers & Academics",
+      description: "Present your research, gain feedback, and collaborate with experts to advance sustainability."
+    },
+    {
+      title: "Policymakers & Government Officials",
+      description: "Discover innovative policies and strategies to support sustainable tourism infrastructure."
+    },
+    {
+      title: "Students & Emerging Scholars",
+      description: "Enhance your knowledge, showcase your work, and network with established professionals."
+    },
+    {
+      title: "Entrepreneurs & Innovators",
+      description: "Find inspiration, explore new technologies, and connect with potential collaborators."
+    },
+    {
+      title: "Nonprofit Organizations & NGOs",
+      description: "Learn about sustainable practices that align with environmental and social responsibility."
+    }
   ]
 
   return (
@@ -57,35 +93,35 @@ export default function ConferenceAboutSection() {
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">About the Conference</Badge>
           <h2 className="text-4xl font-bold text-primary mb-4">International Conference on Sustainable Tourism & Hospitality Management</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-Connecting global leaders, innovators, and experts to redefine the future of tourism and hospitality.
+            Connecting global leaders, innovators, and experts to redefine the future of tourism and hospitality.
           </p>
         </motion.div>
- <motion.div variants={itemVariants} className="mt-12 text-center pb-12">
+
+        <motion.div variants={itemVariants} className="mt-12 text-center pb-12">
           <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20 inline-block">
             <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary">About ICSTMH</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground px-12 text-justify">
-                 The International Conference on Sustainable Tourism Management and Hospitality is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
-
-                </p>
-                <p className="text-muted-foreground px-12 text-justify mt-2">
-                 Attendees will have the chance to engage in insightful discussions, attend workshops, and network with key influencers shaping the future of tourism and hospitality. Whether you are a seasoned professional, an academic, or a newcomer to the industry, this conference will provide valuable knowledge and connections that can help you navigate and lead in the evolving landscape of tourism and hospitality.
-                </p>
-              </CardContent>
+              <CardTitle className="text-2xl font-bold text-primary">About ICSTMH</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground px-12 text-justify">
+                The International Conference on Sustainable Tourism Management and Hospitality is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
+              </p>
+              <p className="text-muted-foreground px-12 text-justify mt-2">
+                Attendees will have the chance to engage in insightful discussions, attend workshops, and network with key influencers shaping the future of tourism and hospitality. Whether you are a seasoned professional, an academic, or a newcomer to the industry, this conference will provide valuable knowledge and connections that can help you navigate and lead in the evolving landscape of tourism and hospitality.
+              </p>
+            </CardContent>
           </Card>
-          
         </motion.div>
+
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div variants={itemVariants}>
             <Card className="h-full bg-white/50 backdrop-blur-sm border-2 border-primary/20">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary"> Mission</CardTitle>
+                <CardTitle className="text-2xl font-bold text-primary">Mission</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-Fostering innovation and collaboration, with a focus on sustainable practices in the tourism and hospitality industry through knowledge sharing, networking, and showcasing the most up-to-date research and technologies.
+                  Fostering innovation and collaboration, with a focus on sustainable practices in the tourism and hospitality industry through knowledge sharing, networking, and showcasing the most up-to-date research and technologies.
                 </p>
               </CardContent>
             </Card>
@@ -109,6 +145,47 @@ Fostering innovation and collaboration, with a focus on sustainable practi
             </Card>
           </motion.div>
         </div>
+
+        {/* Why Attend Section */}
+        <motion.div variants={itemVariants} className="mt-12">
+          <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-primary">Why Attend ICSTHM 2025</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-4">
+                {whyAttendReasons.map((reason, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                    <p className="text-muted-foreground">{reason}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Who Can Attend Section */}
+        <motion.div variants={itemVariants} className="mt-12">
+          <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-primary">Who Can Attend</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                {attendeeTypes.map((type, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <UserCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-primary">{type.title}</h3>
+                      <p className="text-sm text-muted-foreground">{type.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12 text-center">
           <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20 inline-block">
