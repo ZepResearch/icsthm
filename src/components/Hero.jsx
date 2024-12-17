@@ -57,7 +57,7 @@ export default function Hero() {
           >
             <div className="flex items-center space-x-2">
               <Calendar className="h-6 w-6 text-primary" />
-              <span>24 - 25 April  2025</span>
+              <span>24th - 25th April  2025</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-6 w-6 text-primary" />

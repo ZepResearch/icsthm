@@ -10,7 +10,7 @@ import { addDays } from "date-fns"
 
 const scheduleData = [
   {
-    date: "March - 21 | Registration",
+    date: "April - 23 | Registration",
     items: [
       { time: "8:00AM - 9:15AM", title: "Registration" },
       { time: "9:15AM - 9:30AM", title: "Inaugural Function" },
@@ -23,22 +23,22 @@ const scheduleData = [
       { time: "2:30PM - 5:00PM", title: "2nd Session" },
     ]
   },
+  // {
+  //   date: "March - 22 | Day 2",
+  //   items: [
+  //     { time: "9:00AM - 9:15AM", title: "Registration" },
+  //     { time: "9:15AM - 9:30AM", title: "Day 2 Opening Remarks" },
+  //     { time: "9:30AM - 10:00AM", title: "Keynote Speech (Session 3)" },
+  //     { time: "10:00AM - 10:15AM", title: "Coffee Break" },
+  //     { time: "10:15AM - 10:30AM", title: "Introduction to the Session Chairs" },
+  //     { time: "10:30AM - 01:00PM", title: "3rd Session" },
+  //     { time: "01:00PM - 02:00PM", title: "Lunch Break" },
+  //     { time: "02:00PM - 02:30PM", title: "Keynote Speech (Session 4)" },
+  //     { time: "2:30PM - 5:00PM", title: "4th Session" },
+  //   ]
+  // },
   {
-    date: "March - 22 | Day 2",
-    items: [
-      { time: "9:00AM - 9:15AM", title: "Registration" },
-      { time: "9:15AM - 9:30AM", title: "Day 2 Opening Remarks" },
-      { time: "9:30AM - 10:00AM", title: "Keynote Speech (Session 3)" },
-      { time: "10:00AM - 10:15AM", title: "Coffee Break" },
-      { time: "10:15AM - 10:30AM", title: "Introduction to the Session Chairs" },
-      { time: "10:30AM - 01:00PM", title: "3rd Session" },
-      { time: "01:00PM - 02:00PM", title: "Lunch Break" },
-      { time: "02:00PM - 02:30PM", title: "Keynote Speech (Session 4)" },
-      { time: "2:30PM - 5:00PM", title: "4th Session" },
-    ]
-  },
-  {
-    date: "March - 23 | Closing Day",
+    date: "April - 24 | Closing Day",
     items: [
       { time: "9:00AM - 9:30AM", title: "Registration" },
       { time: "9:30AM - 10:00AM", title: "Closing Ceremony Opening Remarks" },
@@ -54,11 +54,11 @@ const scheduleData = [
 ]
 
 export default function ConferenceSchedule() {
-  const startDate = new Date(2024, 2, 21) // March 21, 2024
+  const startDate = new Date(2025, 3, 24) // March 21, 2024
   const [selectedDates, setSelectedDates] = useState([
     startDate,
     addDays(startDate, 1),
-    addDays(startDate, 2)
+
   ])
 
   return (
@@ -69,14 +69,14 @@ export default function ConferenceSchedule() {
             Shaping Tomorrow&apos;s Sustainable Landscape
           </h1>
           <p className="text-muted-foreground">
-            Join us March 21st-23rd for three days of cutting-edge insights and networking. Reserve your spot today!
+            Join us April 24th-25th for three days of cutting-edge insights and networking. Reserve your spot today!
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-[300px_1fr]">
           <Card className="border-orange-200">
             <CardHeader>
-              <CardTitle>March 2024</CardTitle>
+              <CardTitle>April 2024</CardTitle>
             </CardHeader>
             <CardContent>
               <Calendar

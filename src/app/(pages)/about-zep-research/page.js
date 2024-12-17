@@ -36,8 +36,8 @@ export default function AboutCompany() {
   }
 
   const conferenceFeatures = [
-    { icon: CalendarDays, text: "2-day event: April 24-25, 2025" },
-    { icon: MapPin, text: "Grand Hotel, Bangkok, Thailand" },
+    { icon: CalendarDays, text: "2-day event: April 24th - 25th, 2025" },
+    { icon: MapPin, text: "Bangkok, Thailand" },
     { icon: Users, text: "500+ Expected Attendees" },
     { icon: Globe, text: "International Speakers" },
     { icon: Mail, text: "info@icsthm.com" },
@@ -55,7 +55,7 @@ export default function AboutCompany() {
       <div className="max-w-6xl mx-auto">
         <motion.div variants={itemVariants} className="text-center mb-12">
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">About Zep Research</Badge>
-          <h2 className="text-4xl font-bold text-primary mb-4">International Conference on Tourism Management and Hospitality</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">International Conference on Sustainable Tourism & Hospitality Management</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A premier event bringing together industry professionals, researchers, and academics from around the world.
           </p>
@@ -123,7 +123,7 @@ export default function AboutCompany() {
                 Join us in shaping the future of tourism and hospitality
               </CardDescription>
               <p className="text-muted-foreground">
-                October 15-17, 2024 • Grand Hotel, New York City, USA
+                April 24th - 25th, 2025 • Bangkok, Thailand
               </p>
             </CardContent>
           </Card>

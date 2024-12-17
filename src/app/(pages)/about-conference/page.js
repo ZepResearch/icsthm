@@ -55,7 +55,7 @@ export default function ConferenceAboutSection() {
       <div className="max-w-6xl mx-auto">
         <motion.div variants={itemVariants} className="text-center mb-12">
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">About the Conference</Badge>
-          <h2 className="text-4xl font-bold text-primary mb-4">International Conference on Tourism Management and Hospitality</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">International Conference on Sustainable Tourism & Hospitality Management</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
 Connecting global leaders, innovators, and experts to redefine the future of tourism and hospitality.
           </p>
@@ -63,7 +63,7 @@ Connecting global leaders, innovators, and experts to redefine the future of tou
  <motion.div variants={itemVariants} className="mt-12 text-center pb-12">
           <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20 inline-block">
             <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary">About ICTMH</CardTitle>
+                <CardTitle className="text-2xl font-bold text-primary">About ICSTMH</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground px-12 text-justify">
@@ -117,7 +117,7 @@ Fostering innovation and collaboration, with a focus on sustainable practi
                 Be a part of redefining the future of tourism and hospitality.
               </CardDescription>
               <p className="text-muted-foreground">
-                April 24-25, 2024 • Bangkok, Thailand
+                April 24th - 25th, 2024 • Bangkok, Thailand
               </p>
             </CardContent>
           </Card>

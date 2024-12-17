@@ -196,11 +196,11 @@ export default function ThemeAndTopics() {
             <CardContent className="p-6">
               <ul className="space-y-4">
                 {[
-                  { date: "July 31, 2024", event: "Abstract Submission Deadline", icon: <FileText className="h-6 w-6" /> },
-                  { date: "August 15, 2024", event: "Notification of Acceptance", icon: <UserPlus className="h-6 w-6" /> },
-                  { date: "September 1, 2024", event: "Early Bird Registration", icon: <BirdIcon className="h-6 w-6" /> },
-                  { date: "October 15, 2024", event: "Full Paper Submission", icon: <File className="h-6 w-6" /> },
-                  { date: "November 22-24, 2024", event: "Conference Dates", icon: <Calendar className="h-6 w-6" /> }
+                  { date: "December 23rd, 2024", event: "Abstract Submission Deadline", icon: <FileText className="h-6 w-6" /> },
+                  { date: "January 9th, 2025", event: "Notification of Acceptance", icon: <UserPlus className="h-6 w-6" /> },
+                  { date: "January 25th, 2025", event: "Early Bird Registration", icon: <BirdIcon className="h-6 w-6" /> },
+                  { date: "February 10th, 2025", event: "Full Paper Submission", icon: <File className="h-6 w-6" /> },
+                  { date: "April 23-24, 2025", event: "Conference Dates", icon: <Calendar className="h-6 w-6" /> }
                 ].map((item, index) => (
                   <li key={index} className="flex items-center">
                     <div className="mr-2 text-primary">
