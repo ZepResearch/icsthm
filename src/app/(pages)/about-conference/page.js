@@ -67,7 +67,7 @@ Connecting global leaders, innovators, and experts to redefine the future of tou
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground px-12 text-justify">
-                 The International Conference on Tourism Management and Hospitality is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
+                 The International Conference on Sustainable Tourism Management and Hospitality is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
 
                 </p>
                 <p className="text-muted-foreground px-12 text-justify mt-2">
