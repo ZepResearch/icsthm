@@ -42,7 +42,7 @@ export default function VenueWithFAQ() {
                   </p>
                   <p className="flex items-center">
                     <Phone className="mr-2 h-4 w-4 text-orange-500" />
-                    +91 7358737843
+                    +91 8260080050
                   </p>
                   <p className="flex items-center ">
                     <Mail className="mr-2 h-4 w-4 text-orange-500" />

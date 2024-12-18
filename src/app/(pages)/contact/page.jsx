@@ -124,7 +124,7 @@ export default function ContactUs() {
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-2 text-primary" />
-                  <span>+91 7358737843</span>
+                  <span>+91 8260080050</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="mr-2 text-primary" />
@@ -140,11 +140,11 @@ export default function ContactUs() {
                 <a href="https://www.facebook.com/people/Zep-Research/61561809783777/" className="text-primary hover:text-primary/80">
                   <Facebook size={24} />
                 </a>
-                <a href="https://x.com/i/flow/login?redirect_after_login=%2FZepresearch#" className="text-primary hover:text-primary/80">
-                  <Twitter size={24} />
-                </a>
                 <a href="" className="text-primary hover:text-primary/80">
                   <Instagram size={24} />
+                </a>
+                <a href="https://x.com/i/flow/login?redirect_after_login=%2FZepresearch#" className="text-primary hover:text-primary/80">
+                  <Twitter size={24} />
                 </a>
                 <a href="https://www.linkedin.com/company/zep-research/" className="text-primary hover:text-primary/80">
                   < Linkedin size={24} />

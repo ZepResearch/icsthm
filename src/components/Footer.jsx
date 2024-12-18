@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="mb-8 md:mb-0 md:w-1/3">
               <Link href="/" className="inline-block mb-4">
                 <Image
-                  src="/ictmh.svg"
+                  src="/ictmh.png"
                   alt="ICTMH Logo"
                   width={200}
                   height={80}
@@ -24,11 +24,11 @@ export default function Footer() {
                 <a href="https://www.facebook.com/people/Zep-Research/61561809783777/" className="text-primary hover:text-primary/80">
                   <Facebook size={24} />
                 </a>
-                <a href="https://x.com/i/flow/login?redirect_after_login=%2FZepresearch#" className="text-primary hover:text-primary/80">
-                  <Twitter size={24} />
-                </a>
                 <a href="" className="text-primary hover:text-primary/80">
                   <Instagram size={24} />
+                </a>
+                <a href="https://x.com/i/flow/login?redirect_after_login=%2FZepresearch#" className="text-primary hover:text-primary/80">
+                  <Twitter size={24} />
                 </a>
                 <a href="https://www.linkedin.com/company/zep-research/" className="text-primary hover:text-primary/80">
                   <Linkedin size={24} />
@@ -45,11 +45,11 @@ export default function Footer() {
                   </div>
                   <div className="flex items-center">
                     <Phone className="mr-2 text-primary" />
-                    <span>+91 7358737843</span>
+                    <span>+91 8260080050</span>
                   </div>
                   <div className="flex items-center">
                     <MapPin className="mr-2 text-primary" />
-                    <span>DCB-330, 3rd Floor, DLF Cyber City, Patia, <br /> Bhubaneswar, ODISHA - 751024 India</span>
+                    <span>Bangkok, Thailand</span>
                   </div>
                 </div>
               </div>

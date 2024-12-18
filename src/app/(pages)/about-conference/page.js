@@ -100,11 +100,11 @@ export default function ConferenceAboutSection() {
         <motion.div variants={itemVariants} className="mt-12 text-center pb-12">
           <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20 inline-block">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary">About ICSTMH</CardTitle>
+              <CardTitle className="text-2xl font-bold text-primary">About ICSTHM</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground px-12 text-justify">
-                The International Conference on Sustainable Tourism Management and Hospitality is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
+                The International Conference on Sustainable Tourism  and Hospitality Management is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
               </p>
               <p className="text-muted-foreground px-12 text-justify mt-2">
                 Attendees will have the chance to engage in insightful discussions, attend workshops, and network with key influencers shaping the future of tourism and hospitality. Whether you are a seasoned professional, an academic, or a newcomer to the industry, this conference will provide valuable knowledge and connections that can help you navigate and lead in the evolving landscape of tourism and hospitality.
@@ -194,7 +194,7 @@ export default function ConferenceAboutSection() {
                 Be a part of redefining the future of tourism and hospitality.
               </CardDescription>
               <p className="text-muted-foreground">
-                April 24th - 25th, 2024 • Bangkok, Thailand
+                April 24th - 25th, 2025 • Bangkok, Thailand
               </p>
             </CardContent>
           </Card>

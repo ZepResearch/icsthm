@@ -151,11 +151,11 @@ const MobileNav = () => (
 
 export default function Navbar() {
   return (
-    <div className="border-b">
+    <div className="border-b py-1">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-bold">
-            <Image src="./ictmh.svg" alt="logo" width={200} height={200} />
+            <Image src="/ictmh.png" alt="logo" width={180} height={200} />
           </Link>
         </div>
         <div className="hidden md:flex items-center space-x-4">

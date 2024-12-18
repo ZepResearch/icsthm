@@ -41,7 +41,7 @@ export default function AboutCompany() {
     { icon: Users, text: "500+ Expected Attendees" },
     { icon: Globe, text: "International Speakers" },
     { icon: Mail, text: "info@icsthm.com" },
-    { icon: Phone, text: "+91 7358737843" },
+    { icon: Phone, text: "+91 8260080050" },
   ]
 
   return (
