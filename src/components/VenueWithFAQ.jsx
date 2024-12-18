@@ -23,8 +23,8 @@ export default function VenueWithFAQ() {
             <CardContent className="p-0">
               <div className="aspect-[16/9] overflow-hidden bg-gray-100">
                 <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248057.2039935503!2d100.46795618719626!3d13.724878241259372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sin!4v1734197483351!5m2!1sen!2sin"
-            alt="Map of conference venue"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248057.2039935503!2d100.46795618719626!3d13.724878241259372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sin!4v1734197483351!5m2!1sen!2sin"
+                  alt="Map of conference venue"
                   className="object-cover"
                   width={800}
                   height={400}
@@ -38,7 +38,6 @@ export default function VenueWithFAQ() {
                   <p className="flex items-center">
                     <MapPin className="mr-2 h-4 w-4 text-orange-500" />
                     Bangkok, Thailand
-
                   </p>
                   <p className="flex items-center">
                     <Phone className="mr-2 h-4 w-4 text-orange-500" />
@@ -84,24 +83,31 @@ export default function VenueWithFAQ() {
 
 const faqs = [
   {
-    question: "What are the dates for the conference?",
-    answer:
-      "The International Conference on Tourism Management & Hospitality will take place from April 24-25, 2025.",
+    question: "Who should attend the ICTMH conference?",
+    answer: "This conference is designed for tourism professionals, hospitality leaders, researchers, academics, policymakers, and innovators who are passionate about shaping sustainable practices in the tourism and hospitality sectors.",
   },
   {
-    question: "Is there a dress code for the conference?",
-    answer:
-      "The dress code is business casual. We recommend comfortable attire suitable for a professional conference environment.",
+    question: "What makes ICTMH different from other tourism conferences?",
+    answer: "ICTMH focuses on post-pandemic innovations, sustainable strategies, and resilience in the tourism and hospitality industries, bringing together a global audience from over 30 countries and featuring insights from 50+ industry experts.",
   },
   {
-    question: "Are meals included in the conference fee?",
-    answer:
-      "Yes, the conference fee includes lunch and refreshments during the scheduled breaks. Dinner is included for Business Pass holders.",
+    question: "Can I submit a paper if Im not an academic?",
+    answer: "Yes! ICTMH welcomes contributions from industry professionals, researchers, and innovators from both academic and non-academic backgrounds who have valuable insights and experiences to share.",
   },
   {
-    question: "How can I register for the conference?",
-    answer:
-      "You can register for the conference through our online registration portal. Early bird discounts are available until Dec 31, 2024.",
+    question: "What are the benefits of presenting at ICTMH?",
+    answer: "Presenters gain global visibility, receive feedback from industry experts, have their work featured in conference proceedings, and access opportunities for publication in esteemed journals.",
   },
-
+  {
+    question: "What types of sessions will be available?",
+    answer: "ICTMH offers a variety of sessions including keynote speeches, panel discussions, workshops, paper presentations, and interactive Q&A sessions to provide a comprehensive experience for all attendees.",
+  },
+  {
+    question: "What kind of innovations will be showcased at ICTMH?",
+    answer: "Expect to see innovations in eco-friendly travel, digital transformation in hospitality, sustainable event management, and AI-driven guest services, among other forward-thinking solutions.",
+  },
+  {
+    question: "Can attendees access conference materials after the event?",
+    answer: "Yes! Registered participants will have access to recordings of sessions, presentation slides, and conference proceedings for a limited time after the event.",
+  },
 ];
