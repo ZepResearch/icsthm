@@ -13,7 +13,7 @@ const timeline = [
     name: "Early bird registration deadline",
     description:
       "Submit your research on sustainable development and green technologies to benefit from exclusive early rates.",
-    date: "December 23rd",
+    date: "December 29rd,2024",
     dateTime: "2024-12",
     icon: <Book className="h-6 w-6" />,
   },
@@ -21,7 +21,7 @@ const timeline = [
     name: "Abstract submission deadline",
     description:
       "Register through our seamless paperless system and receive a virtual conference kit to enhance your experience.",
-    date: "January 9th",
+    date: "January 9th,2025",
     dateTime: "2025-01",
     icon: <Globe className="h-6 w-6" />,
   },
@@ -29,7 +29,7 @@ const timeline = [
     name: "Full paper submission Deadline",
     description:
       "Top submissions will be featured in our Green Innovation Showcase, highlighting groundbreaking sustainability efforts.",
-    date: "January 25th",
+    date: "January 25th,2025",
     dateTime: "2025-01",
     icon: <Lightbulb className="h-6 w-6" />,
   },
@@ -37,7 +37,7 @@ const timeline = [
     name: "Final Registration Deadline",
     description:
       "Don’t miss three days of networking, insightful discussions, and in-depth exploration of sustainable development practices.",
-    date: "February 10th",
+    date: "February 10th,2025",
     dateTime: "2025-02",
     icon: <Users className="h-6 w-6" />,
   },
