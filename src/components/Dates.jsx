@@ -13,7 +13,7 @@ const timeline = [
     name: "Early bird registration deadline",
     description:
       "Submit your research on sustainable development and green technologies to benefit from exclusive early rates.",
-    date: "December 29rd,2024",
+    date: "December 29th,2024",
     dateTime: "2024-12",
     icon: <Book className="h-6 w-6" />,
   },

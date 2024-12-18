@@ -29,9 +29,9 @@ export default function VenuePage() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div className="w-full md:w-1/2">
             <Image
-              src="https://plus.unsplash.com/premium_photo-1693149386423-2e4e264712e5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
+              src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Conference Venue"
-              width={500}
+              width={600}
               height={400}
               className="rounded-2xl drop-shadow-lg"
             />

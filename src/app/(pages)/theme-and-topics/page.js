@@ -196,7 +196,7 @@ export default function ThemeAndTopics() {
             <CardContent className="p-6">
               <ul className="space-y-4">
                 {[
-                  { date: "December 29rd,2024", event: "Early bird registration deadline", icon: <BirdIcon className="h-6 w-6" /> },
+                  { date: "December 29th,2024", event: "Early bird registration deadline", icon: <BirdIcon className="h-6 w-6" /> },
                   { date: "January 9th,2025", event: "Abstract submission deadline", icon: <UserPlus className="h-6 w-6" /> },
                   { date: "January 25th, 2025", event: "Full paper submission Deadline", icon: <File className="h-6 w-6" /> },
                   { date: "February 10th,2025", event: "Final Registration Deadline", icon: <Calendar className="h-6 w-6" /> }
