@@ -213,7 +213,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-orange-200 text-center">
-            <p className="text-sm text-white">
+            <p className="text-sm text-orange-50  ">
               &copy; {new Date().getFullYear()} International Conference on
               Tourism Management and Hospitality. All rights reserved.
             </p>
