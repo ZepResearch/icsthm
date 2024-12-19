@@ -15,7 +15,7 @@ export default function Ticket() {
   const tickets = [
     {
       name: "Virtual TICKET",
-      price: 18543,
+      price: 217,
       period: "month",
       features: [
         "General Admission to Events",
@@ -26,7 +26,7 @@ export default function Ticket() {
     },
     {
       name: "Physical TICKET",
-      price: 27010,
+      price: 317,
       period: "month",
       features: [
         "Priority Access to All Events",
@@ -49,7 +49,7 @@ export default function Ticket() {
         merchant_id: process.env.NEXT_PUBLIC_CCAVENUE_MERCHANT_ID,
         order_id: generateOrderId(),
         amount: amount,
-        currency: "INR",
+        currency: "USD",
         redirect_url: `${host}/api/ccavenue/handle`,
         cancel_url: `${host}/api/ccavenue/handle`,
         billing_email: "",

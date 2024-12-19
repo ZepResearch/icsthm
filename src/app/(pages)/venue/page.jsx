@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { MapPin } from 'lucide-react';
+import { Hotel, MapPin } from 'lucide-react';
 
 export default function VenuePage() {
   const fadeIn = {
@@ -52,9 +52,13 @@ export default function VenuePage() {
               world-class hotels, and a variety of dining options. Whether youre here to present, learn,
               or network, youll find our venue both comfortable and inspiring.
             </p>
+            <div className="flex items-center text-gray-950 font-semibold pb-4">
+            <Hotel className="mr-2"/>
+            <h1>Radisson Suites Bangkok Sukhumvit            </h1>
+            </div>
             <div className="flex items-center text-gray-950 font-semibold">
               <MapPin className="mr-2" />
-              <span>Address- 23/2 Soi Sukhumvit 13, Khwaeng Khlong Toei Nuea, Khlong Toei, Bangkok 10110, Thailand,</span>
+              <span>23/2 Soi Sukhumvit 13, Khwaeng Khlong Toei Nuea, Khlong Toei, Bangkok 10110, Thailand,</span>
             </div>
           </div>
         </div>
