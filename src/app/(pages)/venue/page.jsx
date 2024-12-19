@@ -52,9 +52,9 @@ export default function VenuePage() {
               world-class hotels, and a variety of dining options. Whether youre here to present, learn,
               or network, youll find our venue both comfortable and inspiring.
             </p>
-            <div className="flex items-center text-muted-foreground">
+            <div className="flex items-center text-gray-950 font-semibold">
               <MapPin className="mr-2" />
-              <span>Bangkok, Thailand</span>
+              <span>Address- 23/2 Soi Sukhumvit 13, Khwaeng Khlong Toei Nuea, Khlong Toei, Bangkok 10110, Thailand,</span>
             </div>
           </div>
         </div>
@@ -70,10 +70,9 @@ export default function VenuePage() {
         <h1 className="text-4xl font-bold mb-4  underline underline-offset-4 decoration-orange-500 text-center">
           Location
         </h1>
-
         <div className="aspect-w-16 aspect-h-9">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248057.2039935503!2d100.46795618719626!3d13.724878241259372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sin!4v1734197483351!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5766923075325!2d100.55548519306322!3d13.74405924155247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee677aa7f5b%3A0x297e4d6053920063!2sRadisson%20Suites%20Bangkok%20Sukhumvit!5e0!3m2!1sen!2sin!4v1734588683427!5m2!1sen!2sin"
             width="100%"
             height="450"
             style={{ border: 0 }}
