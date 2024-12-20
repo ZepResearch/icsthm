@@ -150,7 +150,7 @@ export default function Ticket() {
                     <div className="text-center space-y-4 p-6">
                       <div className="space-y-1">
                         <div className="text-4xl font-bold">
-                        ₹{ticket.price.toLocaleString()}
+                        ${ticket.price.toLocaleString()}
                         </div>
                       </div>
                       <Button
