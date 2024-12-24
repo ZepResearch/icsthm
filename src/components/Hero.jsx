@@ -6,10 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Zap, Globe, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Banner from "./Banner";
 
 export default function Hero() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
+      <Banner/>
       <div className="container mx-auto grid min-h-[calc(100vh-4rem)] grid-cols-1 items-center gap-12 px-4 py-16 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
