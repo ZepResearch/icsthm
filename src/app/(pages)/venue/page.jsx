@@ -41,8 +41,8 @@ export default function VenuePage() {
               Conference Venue
             </h1>
             <p className="text-lg mb-4">
-              Welcome to the International Conference on Tourism Management and
-              Hospitality. Our venue in the vibrant city of Bangkok offers state-of-the-art facilities to
+              Welcome to the International Conference on Sustainable Tourism  and
+              Hospitality Management. Our venue in the vibrant city of Bangkok offers state-of-the-art facilities to
               ensure a productive and enjoyable experience for all attendees. With modern conference rooms,
               cutting-edge audiovisual equipment, and spacious networking areas, weve created the perfect
               environment for knowledge sharing and collaboration.
