@@ -14,7 +14,7 @@ const speakerCategories = [
   { id: "Session Chair", title: "Session Chair" },
 ];
 
-const SpeakerCard = ({ name, role, image, bio,collectionId, id, onMoreInfo }) => (
+const SpeakerCard = ({ name, role, image, bio,collectionId, id, country, college, onMoreInfo }) => (
   <motion.div
     className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
     whileHover={{ y: -5 }}
@@ -27,8 +27,10 @@ const SpeakerCard = ({ name, role, image, bio,collectionId, id, onMoreInfo }) =>
     <div className="p-4">
       <h3 className="text-xl font-semibold text-orange-800">{name}</h3>
       <p className="text-orange-600">{role}</p>
+      <p className="text-sm">{college}</p>
+      <p className="text-sm">{country}</p>
       <button
-        onClick={() => onMoreInfo({ name, role, image, bio ,collectionId, id}) }
+        onClick={() => onMoreInfo({ name, role, image, bio ,collectionId, id ,country,college}) }
         className="mt-2 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors duration-300"
       >
         More info
@@ -85,8 +87,10 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
             <h2 className="text-2xl font-bold text-orange-800 mb-2">
               {speaker.name}
             </h2>
-            <h3 className="text-xl text-orange-600 mb-4">{speaker.role}</h3>
-            <p className="text-gray-700 flex-grow">{speaker.bio}</p>
+            <h3 className="text-xl text-orange-600 ">{speaker.role}</h3>
+            <p className="text-sm mt-1 mb-4">{speaker.country}</p>
+            <p className="text-sm">{speaker.college}</p>
+            <p className="text-gray-700 flex-grow mt-4">{speaker.bio}</p>
             <button
               onClick={onClose}
               className="mt-6 w-full px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors duration-300"
@@ -131,7 +135,9 @@ export default function SpeakerSection() {
             image: speaker.image,
             bio: speaker.bio,
             id: speaker.id,
-            collectionId: speaker.collectionId
+            collectionId: speaker.collectionId,
+            college: speaker.college,
+            country: speaker.country,
           });
           return acc;
         }, {});
