@@ -1,47 +1,13 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
-import { Book, Globe, Lightbulb, Users } from "lucide-react";
+import PocketBase from 'pocketbase';
 
-const timeline = [
-  {
-    name: "Early bird registration deadline",
-    description:
-      "Submit your research on sustainable development and green technologies to benefit from exclusive early rates.",
-    date: "December 29th,2024",
-    dateTime: "2024-12",
-    icon: <Book className="h-6 w-6" />,
-  },
-  {
-    name: "Abstract submission deadline",
-    description:
-      "Register through our seamless paperless system and receive a virtual conference kit to enhance your experience.",
-    date: "January 9th,2025",
-    dateTime: "2025-01",
-    icon: <Globe className="h-6 w-6" />,
-  },
-  {
-    name: "Full paper submission Deadline",
-    description:
-      "Top submissions will be featured in our Green Innovation Showcase, highlighting groundbreaking sustainability efforts.",
-    date: "January 25th,2025",
-    dateTime: "2025-01",
-    icon: <Lightbulb className="h-6 w-6" />,
-  },
-  {
-    name: "Final Registration Deadline",
-    description:
-      "Don’t miss three days of networking, insightful discussions, and in-depth exploration of sustainable development practices.",
-    date: "February 10th,2025",
-    dateTime: "2025-02",
-    icon: <Users className="h-6 w-6" />,
-  },
-];
+const pb = new PocketBase('https://icsthm.pockethost.io');
 
 function TimelineItem({ item, index }) {
   const ref = useRef(null);
@@ -57,19 +23,8 @@ function TimelineItem({ item, index }) {
     >
       <Card className="relative flex items-center">
         <CardContent className="flex p-4">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={isInView ? { scale: 1 } : { scale: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md"
-          >
-            {item.icon}
-          </motion.div>
           <div className="ml-4 flex flex-col">
-            <time
-              dateTime={item.dateTime}
-              className="text-sm font-semibold text-primary"
-            >
+            <time className="text-sm font-semibold text-primary">
               {item.date}
             </time>
             <h3 className="text-lg font-semibold">{item.name}</h3>
@@ -84,8 +39,52 @@ function TimelineItem({ item, index }) {
 }
 
 export default function Dates() {
+  const [timeline, setTimeline] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
   const timelineRef = useRef(null);
   const isInView = useInView(timelineRef, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    async function fetchDates() {
+      try {
+        setLoading(true);
+        // Fetch all records and sort them by date
+        const records = await pb.collection('dates').getFullList({
+          sort: 'date',
+          requestKey: null,
+        });
+        
+        // Transform the records to match our timeline format
+    
+        setTimeline(records);
+      } catch (err) {
+        console.error('Error fetching dates:', err);
+        setError('Failed to load timeline dates');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchDates();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center text-red-500 p-4">
+        {error}
+      </div>
+    );
+  }
 
   return (
     <section className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900 py-12">
@@ -95,7 +94,7 @@ export default function Dates() {
             Key Dates to Remember
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Stay ahead of the curve.Mark these important dates and be part of a
+            Stay ahead of the curve. Mark these important dates and be part of a
             transformative conference.
           </p>
         </div>
@@ -116,15 +115,6 @@ export default function Dates() {
               ))}
             </div>
           </div>
-          {/* <div className="w-full flex justify-center items-center sm:w-1/2 sm:pl-12">
-            <Image
-              src="https://illustrations.popsy.co/amber/man-riding-a-rocket.svg"
-              alt="Illustration of a person riding a rocket, symbolizing the journey towards a sustainable future"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-          </div> */}
         </div>
 
         <div className="mt-16 text-center">

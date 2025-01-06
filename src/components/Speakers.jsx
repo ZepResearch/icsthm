@@ -1,102 +1,34 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import PocketBase from 'pocketbase';
 
+const pb = new PocketBase('https://icsthm.pockethost.io');
+
+// Updated to match exact PocketBase select field choices
 const speakerCategories = [
-  { id: "guest", title: "Guest Speaker" },
-  { id: "keynote", title: "Keynote Speaker" },
-  { id: "chair", title: "Conference Chair" },
-  { id: "co-chair", title: "Conference Co-Chair" },
-  { id: "session", title: "Session Chair" },
+  { id: "Guest Speaker", title: "Guest Speaker" },
+  { id: "Keynote Speaker", title: "Keynote Speaker" },
+  { id: "Conference Chair", title: "Conference Chair" },
+  { id: "Conference Co-Chair", title: "Conference Co-Chair" },
+  { id: "Session Chair", title: "Session Chair" },
 ];
 
-const speakers = {
-  guest: [
-    {
-      name: "Dr. Jane Smith",
-      role: "AI Ethics Researcher",
-      image:
-        "https://plus.unsplash.com/premium_photo-1673866484792-c5a36a6c025e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Dr. Jane Smith is a renowned AI Ethics Researcher with over 15 years of experience in the field. She has published numerous papers on the ethical implications of artificial intelligence and machine learning.",
-    },
-    {
-      name: "Prof. John Doe",
-      role: "Quantum Computing Expert",
-      image:
-        "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Prof. John Doe is a leading expert in Quantum Computing, known for his groundbreaking work in quantum algorithms and their applications in cryptography.",
-    },
-    {
-      name: "Prof. John Doe2",
-      role: "Quantum Computing Expert",
-      image:
-        "https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Prof. John Doe2 is another prominent figure in Quantum Computing, focusing on the development of quantum error correction techniques and fault-tolerant quantum computation.",
-    },
-  ],
-  keynote: [
-    {
-      name: "Dr. Emily Johnson",
-      role: "Climate Scientist",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Dr. Emily Johnson is a leading climate scientist who has made significant contributions to our understanding of global climate patterns and their impact on ecosystems.",
-    },
-    {
-      name: "Dr. Michael Chen",
-      role: "Renewable Energy Innovator",
-      image:
-        "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Dr. Michael Chen is a pioneering researcher in renewable energy technologies, with a focus on improving the efficiency of solar cells and developing new energy storage solutions.",
-    },
-  ],
-  chair: [
-    {
-      name: "Prof. Sarah Williams",
-      role: "Sustainability Policy Expert",
-      image:
-        "https://plus.unsplash.com/premium_photo-1673866484792-c5a36a6c025e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Prof. Sarah Williams is a respected authority on sustainability policy, advising governments and organizations on implementing effective environmental protection measures.",
-    },
-  ],
-  "co-chair": [
-    {
-      name: "Dr. Robert Lee",
-      role: "orange Technology Researcher",
-      image:
-        "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Dr. Robert Lee is at the forefront of orange technology research, developing innovative solutions for reducing carbon emissions in industrial processes.",
-    },
-  ],
-  session: [
-    {
-      name: "Dr. Lisa Garcia",
-      role: "Circular Economy Specialist",
-      image:
-        "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Dr. Lisa Garcia is a leading expert in circular economy principles, working to transform industrial processes and consumer behavior to minimize waste and maximize resource efficiency.",
-    },
-    {
-      name: "Prof. David Kim",
-      role: "Sustainable Agriculture Expert",
-      image:
-        "https://plus.unsplash.com/premium_photo-1673866484792-c5a36a6c025e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Prof. David Kim is renowned for his work in sustainable agriculture, developing methods to increase crop yields while reducing environmental impact and preserving biodiversity.",
-    },
-  ],
-};
-
-const SpeakerCard = ({ name, role, image, bio, onMoreInfo }) => (
+const SpeakerCard = ({ name, role, image, bio,collectionId, id, onMoreInfo }) => (
   <motion.div
     className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
     whileHover={{ y: -5 }}
   >
-    <img src={image} alt={name} className="w-full h-72 object-cover" />
+    <img 
+      src={ `https://icsthm.pockethost.io/api/files/${collectionId}/${id}/${image}` } 
+      alt={name} 
+      className="w-full h-72 object-cover" 
+    />
     <div className="p-4">
       <h3 className="text-xl font-semibold text-orange-800">{name}</h3>
       <p className="text-orange-600">{role}</p>
       <button
-        onClick={() => onMoreInfo({ name, role, image, bio })}
+        onClick={() => onMoreInfo({ name, role, image, bio ,collectionId, id}) }
         className="mt-2 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors duration-300"
       >
         More info
@@ -107,7 +39,7 @@ const SpeakerCard = ({ name, role, image, bio, onMoreInfo }) => (
 
 const Drawer = ({ isOpen, onClose, speaker }) => (
   <AnimatePresence>
-    {isOpen && (
+    {isOpen && speaker && (
       <>
         <motion.div
           initial={{ opacity: 0 }}
@@ -146,9 +78,9 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
               </svg>
             </button>
             <img
-              src={speaker.image}
+              src={`https://icsthm.pockethost.io/api/files/${speaker.collectionId}/${speaker.id}/${speaker.image}` }
               alt={speaker.name}
-              className="w-full h-64 object-cover rounded-lg mb-4"
+              className="w-full h-64 object-cover rounded-lg mb-4 mt-4"
             />
             <h2 className="text-2xl font-bold text-orange-800 mb-2">
               {speaker.name}
@@ -169,22 +101,89 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
 );
 
 export default function SpeakerSection() {
-  const [activeCategory, setActiveCategory] = useState("guest");
+  const [activeCategory, setActiveCategory] = useState("Guest Speaker");
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [speakers, setSpeakers] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
+  useEffect(() => {
+    const fetchSpeakers = async () => {
+      try {
+        setLoading(true);
+        // Fetch all speakers
+        const records = await pb.collection('speakers').getFullList({
+          sort: 'name',
+          expand: 'image', // Expand the image relation if needed
+          requestKey: null,
+        });
+
+        // Group speakers by category
+        const groupedSpeakers = records.reduce((acc, speaker) => {
+          const category = speaker.category;
+          if (!acc[category]) {
+            acc[category] = [];
+          }
+          acc[category].push({
+            name: speaker.name,
+            role: speaker.role,
+            image: speaker.image,
+            bio: speaker.bio,
+            id: speaker.id,
+            collectionId: speaker.collectionId
+          });
+          return acc;
+        }, {});
+        //console.log(groupedSpeakers);
+      
+        // Ensure all categories exist in the grouped speakers object
+        speakerCategories.forEach(({ id }) => {
+          if (!groupedSpeakers[id]) {
+            groupedSpeakers[id] = [];
+          }
+        });
+
+        setSpeakers(groupedSpeakers);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching speakers:', err);
+        setError('Failed to load speakers');
+        setLoading(false);
+      }
+    };
+
+    fetchSpeakers();
+  }, []);
 
   const handleMoreInfo = (speaker) => {
     setSelectedSpeaker(speaker);
     setIsDrawerOpen(true);
   };
-
+  console.log(selectedSpeaker);
   const closeDrawer = () => {
     setIsDrawerOpen(false);
   };
 
+  if (loading) {
+    return (
+      <div className="bg-orange-50 min-h-screen flex items-center justify-center">
+        <div className="text-orange-600 text-xl">Loading speakers...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="bg-orange-50 min-h-screen flex items-center justify-center">
+        <div className="text-red-600 text-xl">{error}</div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-orange-50">
-      <div className="max-w-6xl mx-auto px-4 py-12 ">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-4xl font-bold text-center underline underline-offset-4 decoration-orange-500 mb-8">
           Our Speakers
         </h2>
@@ -212,9 +211,9 @@ export default function SpeakerSection() {
             transition={{ duration: 0.3 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {speakers[activeCategory].map((speaker, index) => (
+            {speakers[activeCategory]?.map((speaker, index) => (
               <motion.div
-                key={speaker.name}
+                key={speaker.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}

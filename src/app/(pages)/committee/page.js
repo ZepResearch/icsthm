@@ -6,7 +6,8 @@ import OrganizingCommittee from './components/OrganizingCommittee'
 function page() {
   return (
     <div>
-        {/* <OrganizingCommittee/>
+      <OrganizingCommittee/>
+        {/*
         <ScientificCommittee/>   */}
         <IACommitte/>
     </div>

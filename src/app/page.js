@@ -18,7 +18,7 @@ export default function Home() {
    <CoOrganizationLogos/>
    <AboutSection/>
    <ConferenceObjectives/>
-   {/* <SpeakerSection/> */}
+   <SpeakerSection/>
    <SDGSection/>
    {/* <ConferenceHighlightSection/> */}
    <CTASection/>
