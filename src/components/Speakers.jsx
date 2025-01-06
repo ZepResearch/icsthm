@@ -22,7 +22,7 @@ const SpeakerCard = ({ name, role, image, bio,collectionId, id, onMoreInfo }) =>
     <img 
       src={ `https://icsthm.pockethost.io/api/files/${collectionId}/${id}/${image}` } 
       alt={name} 
-      className="w-full h-72 object-cover" 
+      className="w-full h-72 object-fill" 
     />
     <div className="p-4">
       <h3 className="text-xl font-semibold text-orange-800">{name}</h3>
@@ -80,7 +80,7 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
             <img
               src={`https://icsthm.pockethost.io/api/files/${speaker.collectionId}/${speaker.id}/${speaker.image}` }
               alt={speaker.name}
-              className="w-full h-64 object-cover rounded-lg mb-4 mt-4"
+              className="w-full h-auto object-fill rounded-lg mb-4 mt-4"
             />
             <h2 className="text-2xl font-bold text-orange-800 mb-2">
               {speaker.name}
