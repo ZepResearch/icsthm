@@ -6,16 +6,19 @@ import { Check } from 'lucide-react';
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CCavenuePaymentForm } from "@/components/ui/CCavenuePaymentForm";
 
 export default function Ticket() {
-  const host = process.env.NEXT_PUBLIC_APP_URL ;
+  const host = process.env.NEXT_PUBLIC_APP_URL;
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedTicket, setSelectedTicket] = useState(null);
 
   const tickets = [
     {
       name: "Virtual TICKET",
-      price: 217,
+      price: 219,
       period: "month",
       features: [
         "General Admission to Events",
@@ -26,7 +29,7 @@ export default function Ticket() {
     },
     {
       name: "Physical TICKET",
-      price: 317,
+      price: 319,
       period: "month",
       features: [
         "Priority Access to All Events",
@@ -41,29 +44,47 @@ export default function Ticket() {
     return `ORD${Date.now()}${Math.floor(Math.random() * 1000)}`;
   };
 
-  const paymentCCAvenue = async (ticketName, amount) => {
+  const openPaymentPopup = (ticket) => {
+    setSelectedTicket(ticket);
+    setIsPopupOpen(true);
+  };
+
+  const closePaymentPopup = () => {
+    setIsPopupOpen(false);
+    setSelectedTicket(null);
+  };
+
+  const handlePaymentSubmit = async (formData) => {
     try {
-      setIsLoading(ticketName);
+      setIsLoading(selectedTicket.name);
+
+      const TAX_RATE = 0.06; // 6% tax rate
+      const subtotal = selectedTicket.price;
+      const taxAmount = subtotal * TAX_RATE;
+      const totalAmount = subtotal + taxAmount;
 
       const paymentData = {
         merchant_id: process.env.NEXT_PUBLIC_CCAVENUE_MERCHANT_ID,
         order_id: generateOrderId(),
-        amount: amount,
+        name: selectedTicket.name,
+        amount: totalAmount.toFixed(2),
         currency: "USD",
         redirect_url: `${host}/api/ccavenue/handle`,
         cancel_url: `${host}/api/ccavenue/handle`,
-        billing_email: "",
-        billing_name: "",
-        billing_address: "",
-        billing_city: "",
-        billing_state: "",
-        billing_zip: "",
-        billing_country: "",
-        billing_tel: "",
+        ...formData,
         language: "EN",
       };
 
-      // First, get the encrypted order from your backend
+      // Send payment data to the server for email notification
+      await fetch("/api/payment-notification", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(paymentData),
+      });
+
+      // Get the encrypted order from your backend
       const response = await fetch("/api/ccavenue/encrypt", {
         method: "POST",
         headers: {
@@ -81,8 +102,7 @@ export default function Ticket() {
       // Create form and submit
       const form = document.createElement("form");
       form.method = "POST";
-      form.action =
-        "https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction";
+      form.action = "https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction";
 
       // Add hidden fields
       const fields = {
@@ -95,7 +115,7 @@ export default function Ticket() {
         const input = document.createElement("input");
         input.type = "hidden";
         input.name = key;
-        input.value = value ;
+        input.value = value;
         form.appendChild(input);
       });
 
@@ -106,13 +126,14 @@ export default function Ticket() {
       alert("Failed to initiate payment. Please try again.");
     } finally {
       setIsLoading(null);
+      closePaymentPopup();
     }
   };
 
   return (
     <div className="min-h-full bg-background text-foreground py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">
+        <h1 className="text-4xl font-bold text-center mb-12 underline decoration-wavy decoration-orange-500">
           Choose Your Experience
         </h1>
 
@@ -150,12 +171,12 @@ export default function Ticket() {
                     <div className="text-center space-y-4 p-6">
                       <div className="space-y-1">
                         <div className="text-4xl font-bold">
-                        ${ticket.price.toLocaleString()}
+                          ${`${ticket.price.toLocaleString()} `}
                         </div>
                       </div>
                       <Button
                         className="w-full font-semibold"
-                        onClick={() => paymentCCAvenue(ticket.name, ticket.price)}
+                        onClick={() => openPaymentPopup(ticket)}
                         disabled={isLoading === ticket.name}
                       >
                         {isLoading === ticket.name ? "Processing..." : "Book Now"}
@@ -168,6 +189,15 @@ export default function Ticket() {
           ))}
         </div>
       </div>
+      {selectedTicket && (
+        <CCavenuePaymentForm
+          isOpen={isPopupOpen}
+          onClose={closePaymentPopup}
+          ticketName={selectedTicket.name}
+          amount={selectedTicket.price}
+          onSubmit={handlePaymentSubmit}
+        />
+      )}
     </div>
   );
 }
