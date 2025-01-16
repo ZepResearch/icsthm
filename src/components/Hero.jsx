@@ -47,8 +47,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="mt-3 text-xl text-gray-600 sm:mt-5 sm:text-2xl max-w-prose"
             >
-              Join us to envision the future innovations in Tourism Management &
-              Hospitality in a post-pandemic world
+             Redefining Tourism and Hospitality: Pathways to Sustainability and Innovation
             </motion.p>
           </div>
           <motion.div
