@@ -3,7 +3,7 @@ import AboutCompany from './Content'
 
 
 export const metadata = {
-  title: 'About ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  title: 'About organizer ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
   description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
   keywords: [
     'ICSTHM 2025',
@@ -20,7 +20,7 @@ export const metadata = {
     'tourism networking'
   ],
   openGraph: {
-    title: 'About organizer ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
+    title: 'About  ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
     description: 'Join 500+ global leaders at ICSTHM 2025 in Bangkok. Explore sustainable tourism innovations, network with industry experts, and attend 20+ workshops on emerging trends.',
     url: 'https://www.icsthm.com/about-zep-research',
     siteName: 'ICSTHM 2025',

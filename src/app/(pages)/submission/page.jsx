@@ -3,7 +3,7 @@ import SubmitForm from "./components/Form";
 
 
 export const metadata = {
-  title: 'About ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  title: 'Paper Submission ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
   description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
   keywords: [
     'ICSTHM 2025',
