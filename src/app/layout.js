@@ -19,8 +19,57 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "ICSTHM |International Conference on Sustainable Tourism & Hospitality Management",
-  description: "a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. ",
+  title: 'ICSTHM 2025 - International Conference on Sustainable Tourism & Hospitality Management',
+  description: 'Join us at the International Conference on Sustainable Tourism & Hospitality Management in Bangkok, Thailand on April 24-25, 2025. Explore sustainable practices in tourism and hospitality.',
+  keywords: [
+    'tourism conference',
+    'hospitality management',
+    'sustainable tourism',
+    'Bangkok conference',
+    'ICSTHM 2025',
+    'tourism sustainability',
+    'hospitality conference',
+    'Thailand conference'
+  ],
+  openGraph: {
+    title: 'ICSTHM 2025 - International Conference on Sustainable Tourism & Hospitality Management',
+    description: 'Join us at the International Conference on Sustainable Tourism & Hospitality Management in Bangkok, Thailand on April 24-25, 2025.',
+    url: 'https://www.icsthm.com',
+    siteName: 'ICSTHM 2025',
+    images: [
+      {
+        url: '/og-image.jpg', // Make sure to add an appropriate OG image
+        width: 1200,
+        height: 630,
+        alt: 'ICSTHM 2025 Conference Banner'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ICSTHM 2025 - International Conference on Sustainable Tourism & Hospitality Management',
+    description: 'International Conference on Sustainable Tourism & Hospitality Management - Bangkok, Thailand (April 24-25, 2025)',
+    images: ['/og-image.jpg'], // Same as OG image
+  },
+  alternates: {
+    canonical: 'https://www.icsthm.com'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your Google Search Console verification code
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -1,88 +1,104 @@
-'use client'
+import React from 'react'
+import PrivacyPolicy from './Content';
 
-import { motion } from 'framer-motion'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-export default function PrivacyPolicy() {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+export const metadata = {
+  title: 'Privacy Policy ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
+  keywords: [
+    'ICSTHM 2025',
+    'sustainable tourism conference',
+    'hospitality management conference',
+    'tourism innovation',
+    'Bangkok conference',
+    'tourism sustainability',
+    'hospitality research',
+    'tourism professionals',
+    'tourism workshops',
+    'sustainable travel',
+    'hospitality innovation',
+    'tourism networking'
+  ],
+  openGraph: {
+    title: 'Privacy Policy ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
+    description: 'Join 500+ global leaders at ICSTHM 2025 in Bangkok. Explore sustainable tourism innovations, network with industry experts, and attend 20+ workshops on emerging trends.',
+    url: 'https://www.icsthm.com/about',
+    siteName: 'ICSTHM 2025',
+    images: [
+      {
+        url: '/og-images/about-conference.jpg', // Add appropriate image
+        width: 1200,
+        height: 630,
+        alt: 'ICSTHM 2025 Conference Overview'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About ICSTHM 2025 | Sustainable Tourism Conference',
+    description: 'Explore the future of sustainable tourism & hospitality at ICSTHM 2025 in Bangkok. Join 500+ leaders, 50+ speakers, and 20+ workshops.',
+    images: ['/og-images/about-conference.jpg'],
+  },
+  alternates: {
+    canonical: 'https://www.icsthm.com/Privacy-Policy'
+  },
+  // Structured data for the conference
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'International Conference on Sustainable Tourism & Hospitality Management 2025',
+      description: 'A premier global conference bringing together thought leaders, industry professionals, researchers, and innovators to explore sustainable tourism and hospitality management.',
+      startDate: '2025-04-24',
+      endDate: '2025-04-25',
+      location: {
+        '@type': 'Place',
+        name: 'Bangkok',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Bangkok',
+          addressCountry: 'Thailand'
+        }
+      },
+      organizer: {
+        '@type': 'Organization',
+        name: 'ICSTHM',
+        url: 'https://www.icsthm.com'
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://www.icsthm.com/register',
+        availability: 'https://schema.org/InStock'
+      },
+      keywords: [
+        'Tourism Conference',
+        'Hospitality Management',
+        'Sustainable Tourism',
+        'Tourism Innovation',
+        'Hospitality Research'
+      ],
+      audience: {
+        '@type': 'Audience',
+        audienceType: [
+          'Tourism Professionals',
+          'Hospitality Professionals',
+          'Researchers',
+          'Academics',
+          'Policymakers',
+          'Students'
+        ]
+      }
+    })
   }
-
-  const policies = [
-    {
-      title: "Information Collection",
-      content: "We collect information you provide directly to us, such as when you register for the conference, contact us with inquiries, or participate in polls, surveys, or promotional events. This may include your name, email address, postal address, phone number, and other contact or identifying information you choose to provide."
-    },
-    {
-      title: "Use of Information",
-      content: "We use the information we collect to provide, maintain, and improve our services, to process your registration, to send you technical notices, updates, security alerts, and support and administrative messages, and to respond to your comments, questions, and customer service requests."
-    },
-    {
-      title: "Information Sharing",
-      content: "We may share your personal information with third-party vendors, consultants, and other service providers who need access to such information to carry out work on our behalf. We may also release information when its release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety."
-    },
-    {
-      title: "Data Security",
-      content: "We take reasonable measures to help protect information about you from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction. However, no Internet or email transmission is ever fully secure or error-free."
-    },
-    {
-      title: "Cookies",
-      content: "We use cookies and similar technologies to collect information about your browsing activities over time and across different websites following your use of our services. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent."
-    },
-    {
-      title: "Your Rights",
-      content: "You may update, correct, or delete your account information at any time by logging into your online account or by contacting us. You may also request access to the personal data we hold about you and request that we correct, amend, or delete it if it is inaccurate or processed in violation of applicable law."
-    }
-  ]
-
+};
+function page() {
   return (
-    <div className="min-h-screen bg-background text-foreground py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <motion.h1 
-          className="text-4xl font-bold text-center text-primary mb-12"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-        >
-          Privacy Policy
-        </motion.h1>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          transition={{ delay: 0.2 }}
-        >
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-primary">
-                International Conference on Tourism Management and Hospitality
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-6 text-muted-foreground">
-                Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you participate in our conference or use our website.
-              </p>
-              <Accordion type="single" collapsible className="w-full">
-                {policies.map((policy, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="text-lg font-medium text-primary">
-                      {policy.title}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      {policy.content}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-              <p className="mt-6 text-sm text-muted-foreground">
-                Last updated: {new Date().toLocaleDateString()}
-              </p>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </div>
+    <div>
+      <PrivacyPolicy/>
     </div>
   )
 }
+
+export default page

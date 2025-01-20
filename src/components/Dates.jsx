@@ -19,7 +19,7 @@ function TimelineItem({ item, index }) {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="relative pb-0"
+      className="relative pb-8"
     >
       <Card className="relative flex items-center">
         <CardContent className="flex p-4">
@@ -52,7 +52,7 @@ export default function Dates() {
         setLoading(true);
         // Fetch all records and sort them by date
         const records = await pb.collection('dates').getFullList({
-          sort: 'date',
+          sort: '-created',
           requestKey: null,
         });
         
@@ -109,7 +109,7 @@ export default function Dates() {
               className="absolute left-6 top-5 -bottom-5 w-0.5 bg-primary"
               style={{ originY: 0 }}
             />
-            <div className="space-y-8">
+            <div className="flex flex-col-reverse ">
               {timeline.map((item, index) => (
                 <TimelineItem key={item.name} item={item} index={index} />
               ))}

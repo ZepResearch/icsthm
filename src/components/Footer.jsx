@@ -90,14 +90,14 @@ export default function Footer() {
                       Sponsorship
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/about-speakers"
                       className="hover:text-orange-500 transition-colors"
                     >
                       Speakers
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="space-y-4 text-white" >

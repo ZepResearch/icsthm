@@ -1,66 +1,104 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Trophy, Star, Users, ArrowRight } from "lucide-react"
+import React from 'react'
+import AwardsPage from './Content'
 
-export default function AwardsPage() {
-  const awards = [
-    {
-      title: "BEST PAPER PRESENTATION AWARD",
-      description: "Recognizing outstanding research presentation and communication skills",
-      icon: <Trophy className="h-8 w-8 text-yellow-500" />,
-    },
-    {
-      title: "BEST PAPER AWARD",
-      description: "Honoring the most impactful presentation in each conference session",
-      icon: <Star className="h-8 w-8 text-yellow-500" />,
-    },
-    {
-      title: "BEST INTERPRETATION STUDENT PRESENTATION AWARD",
-      description: "Celebrating exceptional presentations by student researchers",
-      icon: <Users className="h-8 w-8 text-yellow-500" />,
-    },
-  ]
 
+export const metadata = {
+  title: 'About ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
+  keywords: [
+    'ICSTHM 2025',
+    'sustainable tourism conference',
+    'hospitality management conference',
+    'tourism innovation',
+    'Bangkok conference',
+    'tourism sustainability',
+    'hospitality research',
+    'tourism professionals',
+    'tourism workshops',
+    'sustainable travel',
+    'hospitality innovation',
+    'tourism networking'
+  ],
+  openGraph: {
+    title: 'Awards ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
+    description: 'Join 500+ global leaders at ICSTHM 2025 in Bangkok. Explore sustainable tourism innovations, network with industry experts, and attend 20+ workshops on emerging trends.',
+    url: 'https://www.icsthm.com/awards',
+    siteName: 'ICSTHM 2025',
+    images: [
+      {
+        url: '/og-images/about-conference.jpg', // Add appropriate image
+        width: 1200,
+        height: 630,
+        alt: 'ICSTHM 2025 Conference Overview'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Awards ICSTHM 2025 | Sustainable Tourism Conference',
+    description: 'Explore the future of sustainable tourism & hospitality at ICSTHM 2025 in Bangkok. Join 500+ leaders, 50+ speakers, and 20+ workshops.',
+    images: ['/og-images/about-conference.jpg'],
+  },
+  alternates: {
+    canonical: 'https://www.icsthm.com/awards'
+  },
+  // Structured data for the conference
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'International Conference on Sustainable Tourism & Hospitality Management 2025',
+      description: 'A premier global conference bringing together thought leaders, industry professionals, researchers, and innovators to explore sustainable tourism and hospitality management.',
+      startDate: '2025-04-24',
+      endDate: '2025-04-25',
+      location: {
+        '@type': 'Place',
+        name: 'Bangkok',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Bangkok',
+          addressCountry: 'Thailand'
+        }
+      },
+      organizer: {
+        '@type': 'Organization',
+        name: 'ICSTHM',
+        url: 'https://www.icsthm.com'
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://www.icsthm.com/register',
+        availability: 'https://schema.org/InStock'
+      },
+      keywords: [
+        'Tourism Conference',
+        'Hospitality Management',
+        'Sustainable Tourism',
+        'Tourism Innovation',
+        'Hospitality Research'
+      ],
+      audience: {
+        '@type': 'Audience',
+        audienceType: [
+          'Tourism Professionals',
+          'Hospitality Professionals',
+          'Researchers',
+          'Academics',
+          'Policymakers',
+          'Students'
+        ]
+      }
+    })
+  }
+};
+function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-yellow-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold underline underline-offset-4 decoration-orange-500 mb-4">Conference Awards</h1>
-          <p className="text-xl  max-w-2xl mx-auto">
-            Recognizing excellence in Tourism Management and Hospitality research and presentation
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
-          {awards.map((award, index) => (
-            <Card key={index} className="bg-white border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <CardHeader className="flex flex-col items-center pb-2">
-                <div className="rounded-full bg-orange-100 p-3 mb-4">
-                  {award.icon}
-                </div>
-                <CardTitle className="text-xl font-bold text-orange-500 text-center drop-shadow-sm">{award.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className=" text-center">{award.description}</CardDescription>
-              </CardContent>
-              <div className="px-6 pb-4 flex justify-center">
-                <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-200">Prestigious Award</Badge>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        <div className="bg-orange-500 rounded-lg shadow-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Dont Miss Your Chance to Win!</h2>
-          <p className="text-xl text-orange-100 mb-6">
-            Register now for the International Conference on Tourism Management and Hospitality and showcase your research.
-          </p>
-          <Button className="bg-white text-orange-600 hover:bg-orange-100 text-lg px-8 py-3 rounded-full font-semibold transition-colors duration-300">
-            Register Now <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
-      </div>
+    <div>
+      <AwardsPage/>
     </div>
   )
 }
+
+export default page

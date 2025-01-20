@@ -1,123 +1,102 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Download, FileText, Image, FileCode } from "lucide-react";
-
-export default function PaperFormat() {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-        staggerChildren: 0.1,
+import React from 'react'
+import PaperFormat from './Content'
+export const metadata = {
+  title: 'Paper Format ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
+  keywords: [
+    'ICSTHM 2025',
+    'sustainable tourism conference',
+    'hospitality management conference',
+    'tourism innovation',
+    'Bangkok conference',
+    'tourism sustainability',
+    'hospitality research',
+    'tourism professionals',
+    'tourism workshops',
+    'sustainable travel',
+    'hospitality innovation',
+    'tourism networking'
+  ],
+  openGraph: {
+    title: 'Paper Format  ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
+    description: 'Join 500+ global leaders at ICSTHM 2025 in Bangkok. Explore sustainable tourism innovations, network with industry experts, and attend 20+ workshops on emerging trends.',
+    url: 'https://www.icsthm.com/about',
+    siteName: 'ICSTHM 2025',
+    images: [
+      {
+        url: '/og-images/about-conference.jpg', // Add appropriate image
+        width: 1200,
+        height: 630,
+        alt: 'ICSTHM 2025 Conference Overview'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About ICSTHM 2025 | Sustainable Tourism Conference',
+    description: 'Explore the future of sustainable tourism & hospitality at ICSTHM 2025 in Bangkok. Join 500+ leaders, 50+ speakers, and 20+ workshops.',
+    images: ['/og-images/about-conference.jpg'],
+  },
+  alternates: {
+    canonical: 'https://www.icsthm.com/paper-format '
+  },
+  // Structured data for the conference
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'International Conference on Sustainable Tourism & Hospitality Management 2025',
+      description: 'A premier global conference bringing together thought leaders, industry professionals, researchers, and innovators to explore sustainable tourism and hospitality management.',
+      startDate: '2025-04-24',
+      endDate: '2025-04-25',
+      location: {
+        '@type': 'Place',
+        name: 'Bangkok',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Bangkok',
+          addressCountry: 'Thailand'
+        }
       },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
-  const formatSections = [
-    {
-      title: "Abstract Format",
-      icon: <FileText className="w-8 h-8" />,
-      content:
-        "The abstract should be a concise summary of your research, not exceeding 300 words. It should include the research objectives, methodology, results, and conclusions. Use clear, concise language and avoid jargon or acronyms.",
-      downloadLink: "/path-to-abstract-template.docx",
-    },
-    {
-      title: "Full Paper Format",
-      icon: <FileCode className="w-8 h-8" />,
-      content:
-        "Full papers should be between 3000-5000 words, excluding references and appendices. Use Times New Roman, 12-point font, double-spaced. Include an abstract, keywords, introduction, methodology, results, discussion, conclusion, and references. Follow APA 7th edition for citations and references.",
-      downloadLink: "/path-to-full-paper-template.docx",
-    },
-    {
-      title: "Poster Format",
-      icon: <Image className="w-8 h-8" />,
-      content:
-        "Posters should be designed in A0 size (841 x 1189 mm) in portrait orientation. Use a clear, readable font (at least 24-point for body text, larger for headings). Include a title, authors, affiliation, introduction, methods, results, conclusions, and key references. Use graphics, charts, and images to convey your research visually.",
-      downloadLink: "/path-to-poster-template.pptx",
-    },
-  ];
-
+      organizer: {
+        '@type': 'Organization',
+        name: 'ICSTHM',
+        url: 'https://www.icsthm.com'
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://www.icsthm.com/register',
+        availability: 'https://schema.org/InStock'
+      },
+      keywords: [
+        'Tourism Conference',
+        'Hospitality Management',
+        'Sustainable Tourism',
+        'Tourism Innovation',
+        'Hospitality Research'
+      ],
+      audience: {
+        '@type': 'Audience',
+        audienceType: [
+          'Tourism Professionals',
+          'Hospitality Professionals',
+          'Researchers',
+          'Academics',
+          'Policymakers',
+          'Students'
+        ]
+      }
+    })
+  }
+};
+function page() {
   return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={containerVariants}
-      className="py-16 px-4 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900"
-    >
-      <div className="max-w-4xl mx-auto">
-        <motion.div variants={itemVariants} className="text-center mb-12">
-          <Badge variant="outline" className="mb-4 text-lg px-4 py-1">
-            Submission Guidelines
-          </Badge>
-          <h2 className="text-4xl font-bold text-primary mb-4">
-            Paper Format Guidelines
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Follow these guidelines to ensure your submission meets our
-            conference standards.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="space-y-8"
-          variants={{
-            visible: { transition: { staggerChildren: 0.1 } },
-          }}
-        >
-          {formatSections.map((section, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/50 backdrop-blur-sm border-2 border-primary/20">
-                <CardHeader className="bg-primary text-primary-foreground p-6">
-                  <CardTitle className="text-2xl flex items-center gap-2">
-                    {section.icon}
-                    {section.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <p className="text-lg mb-6 text-muted-foreground">
-                    {section.content}
-                  </p>
-                  <Button
-                    className="w-full sm:w-auto border-2 border-primary py-5 font-bold"
-                    variant="secondary"
-                  >
-                    <Download className="mr-2 h-4 w-4 text-primary" />
-                    Download {section.title} Template
-                  </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </motion.section>
-  );
+    <div>
+      <PaperFormat/>
+    </div>
+  )
 }
+
+export default page

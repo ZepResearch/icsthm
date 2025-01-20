@@ -1,131 +1,103 @@
-"use client"
-import { useState } from "react"
-import { Calendar } from "@/components/ui/calendar"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { cn } from "@/lib/utils"
-import { addDays } from "date-fns"
+import React from 'react'
+import ConferenceSchedule from './Content'
 
-
-
-const scheduleData = [
-  {
-    date: "April - 23 | Registration",
-    items: [
-      { time: "8:00AM - 9:15AM", title: "Registration" },
-      { time: "9:15AM - 9:30AM", title: "Inaugural Function" },
-      { time: "9:30AM - 10:00AM", title: "Keynote Speech (Session 1)" },
-      { time: "10:00AM - 10:15AM", title: "Coffee Break" },
-      { time: "10:15AM - 10:30AM", title: "Introduction to the Session Chairs" },
-      { time: "10:30AM - 01:00PM", title: "1st Session" },
-      { time: "01:00PM - 02:00PM", title: "Lunch Break" },
-      { time: "02:00PM - 02:30PM", title: "Keynote Speech" },
-      { time: "2:30PM - 5:00PM", title: "2nd Session" },
-    ]
+export const metadata = {
+  title: 'Conference Schedule ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
+  keywords: [
+    'ICSTHM 2025',
+    'sustainable tourism conference',
+    'hospitality management conference',
+    'tourism innovation',
+    'Bangkok conference',
+    'tourism sustainability',
+    'hospitality research',
+    'tourism professionals',
+    'tourism workshops',
+    'sustainable travel',
+    'hospitality innovation',
+    'tourism networking'
+  ],
+  openGraph: {
+    title: 'Conference Schedule ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
+    description: 'Join 500+ global leaders at ICSTHM 2025 in Bangkok. Explore sustainable tourism innovations, network with industry experts, and attend 20+ workshops on emerging trends.',
+    url: 'https://www.icsthm.com/schedule',
+    siteName: 'ICSTHM 2025',
+    images: [
+      {
+        url: '/og-images/about-conference.jpg', // Add appropriate image
+        width: 1200,
+        height: 630,
+        alt: 'ICSTHM 2025 Conference Overview'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
-  // {
-  //   date: "March - 22 | Day 2",
-  //   items: [
-  //     { time: "9:00AM - 9:15AM", title: "Registration" },
-  //     { time: "9:15AM - 9:30AM", title: "Day 2 Opening Remarks" },
-  //     { time: "9:30AM - 10:00AM", title: "Keynote Speech (Session 3)" },
-  //     { time: "10:00AM - 10:15AM", title: "Coffee Break" },
-  //     { time: "10:15AM - 10:30AM", title: "Introduction to the Session Chairs" },
-  //     { time: "10:30AM - 01:00PM", title: "3rd Session" },
-  //     { time: "01:00PM - 02:00PM", title: "Lunch Break" },
-  //     { time: "02:00PM - 02:30PM", title: "Keynote Speech (Session 4)" },
-  //     { time: "2:30PM - 5:00PM", title: "4th Session" },
-  //   ]
-  // },
-  {
-    date: "April - 24 | Closing Day",
-    items: [
-      { time: "9:00AM - 9:30AM", title: "Registration" },
-      { time: "9:30AM - 10:00AM", title: "Closing Ceremony Opening Remarks" },
-      { time: "10:00AM - 11:00AM", title: "Final Keynote Speech" },
-      { time: "11:00AM - 11:15AM", title: "Coffee Break" },
-      { time: "11:15AM - 12:45PM", title: "Panel Discussion: Future of Sustainability" },
-      { time: "12:45PM - 2:00PM", title: "Networking Lunch" },
-      { time: "2:00PM - 3:30PM", title: "Workshops and Breakout Sessions" },
-      { time: "3:30PM - 4:00PM", title: "Closing Remarks and Next Steps" },
-      { time: "4:00PM - 5:00PM", title: "Farewell Reception" },
-    ]
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About ICSTHM 2025 | Sustainable Tourism Conference',
+    description: 'Explore the future of sustainable tourism & hospitality at ICSTHM 2025 in Bangkok. Join 500+ leaders, 50+ speakers, and 20+ workshops.',
+    images: ['/og-images/about-conference.jpg'],
+  },
+  alternates: {
+    canonical: 'https://www.icsthm.com/about'
+  },
+  // Structured data for the conference
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'International Conference on Sustainable Tourism & Hospitality Management 2025',
+      description: 'A premier global conference bringing together thought leaders, industry professionals, researchers, and innovators to explore sustainable tourism and hospitality management.',
+      startDate: '2025-04-24',
+      endDate: '2025-04-25',
+      location: {
+        '@type': 'Place',
+        name: 'Bangkok',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Bangkok',
+          addressCountry: 'Thailand'
+        }
+      },
+      organizer: {
+        '@type': 'Organization',
+        name: 'ICSTHM',
+        url: 'https://www.icsthm.com'
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://www.icsthm.com/register',
+        availability: 'https://schema.org/InStock'
+      },
+      keywords: [
+        'Tourism Conference',
+        'Hospitality Management',
+        'Sustainable Tourism',
+        'Tourism Innovation',
+        'Hospitality Research'
+      ],
+      audience: {
+        '@type': 'Audience',
+        audienceType: [
+          'Tourism Professionals',
+          'Hospitality Professionals',
+          'Researchers',
+          'Academics',
+          'Policymakers',
+          'Students'
+        ]
+      }
+    })
   }
-]
-
-export default function ConferenceSchedule() {
-  const startDate = new Date(2025, 3, 24) // March 21, 2024
-  const [selectedDates, setSelectedDates] = useState([
-    startDate,
-    addDays(startDate, 1),
-
-  ])
-
+};
+function page() {
   return (
-    <div className="container mx-auto py-10">
-      <div className="space-y-8">
-        <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Shaping Tomorrow&apos;s Sustainable Landscape
-          </h1>
-          <p className="text-muted-foreground">
-            Join us April 24th-25th for three days of cutting-edge insights and networking. Reserve your spot today!
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-[300px_1fr]">
-          <Card className="border-orange-200">
-            <CardHeader>
-              <CardTitle>April 2024</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Calendar
-                mode="multiple"
-                selected={selectedDates}
-                onSelect={setSelectedDates}
-                month={startDate}
-                className="w-full"
-                classNames={{
-                  day_selected: "bg-orange-500 text-primary-foreground hover:bg-orange-500 mr-0.5",
-                  day_today: "bg-orange-100 text-orange-900",
-                }}
-                
-              />
-            </CardContent>
-          </Card>
-
-          <ScrollArea className="h-[600px]">
-            <div className="space-y-8">
-              {scheduleData.map((day, index) => (
-                <Card key={index} className="border-orange-200">
-                  <CardHeader>
-                    <CardTitle>{day.date}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2">
-                      {day.items.map((item, itemIndex) => (
-                        <div
-                          key={itemIndex}
-                          className={cn(
-                            "grid grid-cols-[140px_1fr] gap-4 p-3 rounded-lg",
-                            "bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-                          )}
-                        >
-                          <div className="text-sm font-medium text-orange-900">
-                            {item.time}
-                          </div>
-                          <div className="text-sm">{item.title}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </ScrollArea>
-        </div>
-      </div>
+    <div>
+      <ConferenceSchedule/>
     </div>
   )
 }
 
+export default page
