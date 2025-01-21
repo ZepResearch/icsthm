@@ -29,10 +29,10 @@ const logos = [
     name: "Company 7",
     src: "https://res.cloudinary.com/dwlhesiyi/image/upload/v1727851535/pather%20logo/afcvjzohrxc4gnuii3yc.png",
   },
-  {
-    name: "Company 8",
-    src: "https://res.cloudinary.com/dwlhesiyi/image/upload/v1727851536/pather%20logo/itr0sezg2mkyt0noyfvl.png",
-  },
+  // {
+  //   name: "Company 8",
+  //   src: "https://res.cloudinary.com/dwlhesiyi/image/upload/v1727851536/pather%20logo/itr0sezg2mkyt0noyfvl.png",
+  // },
 ];
 
 export default function CoOrganizationLogos() {
