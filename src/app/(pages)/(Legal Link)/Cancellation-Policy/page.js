@@ -6,7 +6,7 @@ import { InfoIcon } from "lucide-react"
 
 
 export const metadata = {
-  title: 'Cancellation Policy ICSTHM 2025 ',
+  title: 'Cancellation Policy ICSTHM 2025',
   description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
   keywords: [
     'ICSTHM 2025',
