@@ -2,7 +2,7 @@ import React from 'react'
 import VenuePage from './Content'
 
 export const metadata = {
-  title: 'Venue ICSTHM 2025   ',
+  title: 'Venue ICSTHM 2025',
   description: 'Join 500+ tourism leaders at ICSTHM 2025. Experience 20+ workshops & 50+ speakers from 30+ countries exploring sustainable tourism solutions.',
   keywords: [
     'ICSTHM 2025',

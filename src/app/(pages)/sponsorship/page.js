@@ -144,7 +144,7 @@ export default function SponsorshipContact() {
             </Card>
 
             <div className="space-y-4">
-              <h1 className="text-2xl font-semibold text-orange-500">Contact Our Sponsorship Team</h1>
+              <h2 className="text-2xl font-semibold text-orange-500">Contact Our Sponsorship Team</h2>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-orange-700" />
                 <span>+91 7358737843</span>

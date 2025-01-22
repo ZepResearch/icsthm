@@ -29,7 +29,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             ></motion.div>
-            <motion.h1
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
@@ -40,7 +40,7 @@ export default function Hero() {
               </span>
               <span className="block">Sustainable Tourism </span>
               <span className="block">& Hospitality Management </span>
-            </motion.h1>
+            </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

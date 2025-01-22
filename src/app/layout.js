@@ -19,7 +19,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: 'ICSTHM 2025 - International Conference on Sustainable Tourism & Hospitality Management',
+  title: 'ICSTHM 2025 - Sustainable Tourism & Hospitality Management',
   description: 'Join us at the International Conference on Sustainable Tourism & Hospitality Management in Bangkok, Thailand on April 24-25, 2025. Explore sustainable practices in tourism and hospitality.',
   keywords: [
     'tourism conference',

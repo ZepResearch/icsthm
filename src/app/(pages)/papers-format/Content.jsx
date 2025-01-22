@@ -77,9 +77,9 @@ export default function PaperFormat() {
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">
             Submission Guidelines
           </Badge>
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h1 className="text-4xl font-bold text-primary mb-4">
             Paper Format Guidelines
-          </h2>
+          </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Follow these guidelines to ensure your submission meets our
             conference standards.

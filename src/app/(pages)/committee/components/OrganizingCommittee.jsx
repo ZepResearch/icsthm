@@ -63,9 +63,9 @@ export default function OrganizingCommittee() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Organizing Committees
-          </h2>
+          </h1>
         </motion.div>
         <ul
           role="list"

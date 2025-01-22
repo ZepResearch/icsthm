@@ -54,7 +54,7 @@ export default function VenuePage() {
             </p>
             <div className="flex items-center text-gray-950 font-semibold pb-4">
             <Hotel className="mr-2"/>
-            <h1>Radisson Suites Bangkok Sukhumvit            </h1>
+            <h2>Radisson Suites Bangkok Sukhumvit            </h2>
             </div>
             <div className="flex items-center text-gray-950 font-semibold">
               <MapPin className="mr-2" />
@@ -71,9 +71,9 @@ export default function VenuePage() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="container mx-auto px-4 py-16"
       >
-        <h1 className="text-4xl font-bold mb-4  underline underline-offset-4 decoration-orange-500 text-center">
+        <h3 className="text-4xl font-bold mb-4  underline underline-offset-4 decoration-orange-500 text-center">
           Location
-        </h1>
+        </h3>
         <div className="aspect-w-16 aspect-h-9">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5766923075325!2d100.55548519306322!3d13.74405924155247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee677aa7f5b%3A0x297e4d6053920063!2sRadisson%20Suites%20Bangkok%20Sukhumvit!5e0!3m2!1sen!2sin!4v1734588683427!5m2!1sen!2sin"
@@ -93,9 +93,9 @@ export default function VenuePage() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="container mx-auto px-4 py-16"
       >
-        <h1 className="text-4xl font-bold mb-4 underline underline-offset-4 decoration-orange-500 text-center">
+        <h4 className="text-4xl font-bold mb-4 underline underline-offset-4 decoration-orange-500 text-center">
           Nearby Attractions
-        </h1>
+        </h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
