@@ -199,7 +199,9 @@ export default function SubmitForm() {
   };
   const presentationTypeOptions = [
     { value: "Poster", label: "Poster" },
-    { value: "Oral", label: "Oral" }
+    { value: "Oral", label: "Oral" },
+    { value: "Virtual", label: "Virtual" },
+    
   ];
 
   const conferenceSourceOptions = [
