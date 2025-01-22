@@ -110,9 +110,9 @@ export default function ContactUs() {
               className=""
             />
             <div>
-              <h2 className="text-3xl font-semibold  mb-4 underline underline-offset-4 decoration-orange-500">
+              <h3 className="text-3xl font-semibold  mb-4 underline underline-offset-4 decoration-orange-500">
                 Get in Touch
-              </h2>
+              </h3>
               <p className="text-muted-foreground mb-4">
                 We love to hear from you. Whether you have a question about our
                 services, pricing, or anything else, our team is ready to answer

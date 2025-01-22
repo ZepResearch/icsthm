@@ -7,8 +7,8 @@ import Link from "next/link"
 
 
 export const metadata = {
-  title: 'Sponsorship ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
-  description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
+  title: 'Sponsorship ICSTHM 2025 ',
+  description: 'Join 500+ tourism leaders at ICSTHM 2025. Experience 20+ workshops & 50+ speakers from 30+ countries exploring sustainable tourism solutions.',
   keywords: [
     'ICSTHM 2025',
     'sustainable tourism conference',
@@ -144,7 +144,7 @@ export default function SponsorshipContact() {
             </Card>
 
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-orange-500">Contact Our Sponsorship Team</h2>
+              <h1 className="text-2xl font-semibold text-orange-500">Contact Our Sponsorship Team</h1>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-orange-700" />
                 <span>+91 7358737843</span>
@@ -171,7 +171,7 @@ export default function SponsorshipContact() {
         </div>
 
         <div className="bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg shadow-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Make an Impact?</h2>
+          <h3 className="text-3xl font-bold text-white mb-4">Ready to Make an Impact?</h3>
           <p className="text-xl text-white mb-6">
             Don&apos;t miss this opportunity to showcase your brand at the International Conference on Tourism Management and Hospitality.
           </p>

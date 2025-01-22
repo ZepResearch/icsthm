@@ -36,9 +36,9 @@ export default function OrganizingCommittee() {
     return (
       <div className="bg-secondary py-12 pt-32">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <p className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Loading...
-          </h2>
+          </p>
         </div>
       </div>
     );
@@ -47,9 +47,9 @@ export default function OrganizingCommittee() {
     return (
       <div className="bg-secondary py-12 pt-32">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <p className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             {error}
-          </h2>
+          </p>
         </div>
       </div>
     );

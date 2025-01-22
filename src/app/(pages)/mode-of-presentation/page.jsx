@@ -1,8 +1,8 @@
 import React from 'react'
 import ModePresentation from './Content'
 export const metadata = {
-  title: 'Mode of Presentation ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
-  description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
+  title: 'Mode of Presentation ICSTHM 2025 ',
+  description: 'Join 500+ tourism leaders at ICSTHM 2025. Experience 20+ workshops & 50+ speakers from 30+ countries exploring sustainable tourism solutions.',
   keywords: [
     'ICSTHM 2025',
     'sustainable tourism conference',

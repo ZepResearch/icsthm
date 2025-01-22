@@ -33,12 +33,12 @@ export const metadata = {
   ],
   openGraph: {
     title: 'ICSTHM 2025 - International Conference on Sustainable Tourism & Hospitality Management',
-    description: 'Join us at the International Conference on Sustainable Tourism & Hospitality Management in Bangkok, Thailand on April 24-25, 2025.',
+    description: 'Join ICSTHM 2025 in Bangkok on April 24-25, 2025. Explore sustainable tourism and hospitality management practices with global experts.',
     url: 'https://www.icsthm.com',
     siteName: 'ICSTHM 2025',
     images: [
       {
-        url: '/og-image.jpg', // Make sure to add an appropriate OG image
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'ICSTHM 2025 Conference Banner'
@@ -51,7 +51,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'ICSTHM 2025 - International Conference on Sustainable Tourism & Hospitality Management',
     description: 'International Conference on Sustainable Tourism & Hospitality Management - Bangkok, Thailand (April 24-25, 2025)',
-    images: ['/og-image.jpg'], // Same as OG image
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://www.icsthm.com'
@@ -68,8 +68,13 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: 'your-google-verification-code',
   },
+  other: {
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+  }
 };
 
 export default function RootLayout({ children }) {

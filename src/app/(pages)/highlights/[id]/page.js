@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 // This data would typically come from a database or API
 
 export const metadata = {
-  title: 'Conference Highlight ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  title: 'Conference Highlight ICSTHM 2025 ',
   description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
   keywords: [
     'ICSTHM 2025',

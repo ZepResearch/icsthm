@@ -2,7 +2,7 @@ import React from 'react'
 import ConferenceSchedule from './Content'
 
 export const metadata = {
-  title: 'Conference Schedule ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  title: 'Conference Schedule ICSTHM 2025 ',
   description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
   keywords: [
     'ICSTHM 2025',
@@ -41,7 +41,7 @@ export const metadata = {
     images: ['/og-images/about-conference.jpg'],
   },
   alternates: {
-    canonical: 'https://www.icsthm.com/about'
+    canonical: 'https://www.icsthm.com'
   },
   // Structured data for the conference
   other: {

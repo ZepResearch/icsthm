@@ -12,73 +12,131 @@ export default function PrivacyPolicy() {
 
   const policies = [
     {
-      title: "Information Collection",
-      content: "We collect information you provide directly to us, such as when you register for the conference, contact us with inquiries, or participate in polls, surveys, or promotional events. This may include your name, email address, postal address, phone number, and other contact or identifying information you choose to provide."
+      title: "How We Collect Your Information",
+      content: [
+        "We collect information when you:",
+        "• Register for the conference",
+        "• Contact our support team",
+        "• Take part in surveys",
+        "• Join our events",
+        "",
+        "This typically includes basic details like your name and email. We'll always tell you when we need any information and why."
+      ].join('\n')
     },
     {
-      title: "Use of Information",
-      content: "We use the information we collect to provide, maintain, and improve our services, to process your registration, to send you technical notices, updates, security alerts, and support and administrative messages, and to respond to your comments, questions, and customer service requests."
+      title: "What We Do With Your Information",
+      content: [
+        "Your information helps us:",
+        "• Process your conference registration",
+        "• Keep you updated about the event",
+        "• Answer your questions",
+        "• Make our services better",
+        "",
+        "We use your data only for these specific purposes and nothing else."
+      ].join('\n')
     },
     {
-      title: "Information Sharing",
-      content: "We may share your personal information with third-party vendors, consultants, and other service providers who need access to such information to carry out work on our behalf. We may also release information when its release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety."
+      title: "Sharing Your Information",
+      content: [
+        "We only share your information with:",
+        "• Our trusted service providers who help run the conference",
+        "• Legal authorities if required by law",
+        "",
+        "We never sell your personal information to third parties."
+      ].join('\n')
     },
     {
-      title: "Data Security",
-      content: "We take reasonable measures to help protect information about you from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction. However, no Internet or email transmission is ever fully secure or error-free."
+      title: "Keeping Your Information Safe",
+      content: [
+        "We protect your information by:",
+        "• Using secure servers",
+        "• Limiting access to authorized staff",
+        "• Regular security updates",
+        "",
+        "While we work hard to protect your data, no online system is 100% secure. We recommend using strong passwords and keeping your login details private."
+      ].join('\n')
     },
     {
-      title: "Cookies",
-      content: "We use cookies and similar technologies to collect information about your browsing activities over time and across different websites following your use of our services. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent."
+      title: "About Cookies",
+      content: [
+        "We use cookies to:",
+        "• Remember your preferences",
+        "• Improve your browsing experience",
+        "• Analyze how our website is used",
+        "",
+        "You can control cookies through your browser settings. Want to know more? Visit our Cookie Policy page."
+      ].join('\n')
     },
     {
-      title: "Your Rights",
-      content: "You may update, correct, or delete your account information at any time by logging into your online account or by contacting us. You may also request access to the personal data we hold about you and request that we correct, amend, or delete it if it is inaccurate or processed in violation of applicable law."
+      title: "Your Privacy Rights",
+      content: [
+        "You have the right to:",
+        "• See what information we have about you",
+        "• Update your information",
+        "• Delete your information",
+        "• Opt out of communications",
+        "",
+        "To exercise these rights, contact our privacy team at privacy@conference.com"
+      ].join('\n')
     }
   ]
 
   return (
     <div className="min-h-screen bg-background text-foreground py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <motion.h1 
-          className="text-4xl font-bold text-center text-primary mb-12"
+        <motion.div
+          className="text-center mb-12"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
         >
-          Privacy Policy
-        </motion.h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">Your Privacy Matters</h1>
+          <p className="text-lg text-muted-foreground">Simple, clear information about how we protect your data</p>
+        </motion.div>
+        
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeIn}
           transition={{ delay: 0.2 }}
         >
-          <Card>
-            <CardHeader>
+          <Card className="shadow-lg">
+            <CardHeader className="bg-primary/5">
               <CardTitle className="text-2xl font-semibold text-primary">
                 International Conference on Tourism Management and Hospitality
               </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-6 text-muted-foreground">
-                Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you participate in our conference or use our website.
+              <p className="text-lg text-muted-foreground mt-2">
+                We believe in being clear and open about how we collect and use your data.
               </p>
-              <Accordion type="single" collapsible className="w-full">
+            </CardHeader>
+            <CardContent className="pt-6">
+              <Accordion type="single" collapsible className="w-full space-y-4">
                 {policies.map((policy, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="text-lg font-medium text-primary">
+                  <AccordionItem 
+                    key={index} 
+                    value={`item-${index}`}
+                    className="border rounded-lg px-4 hover:bg-primary/5 transition-colors"
+                  >
+                    <AccordionTrigger className="text-lg font-medium text-primary py-4">
                       {policy.title}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
+                    <AccordionContent className="text-muted-foreground whitespace-pre-line leading-relaxed pb-4">
                       {policy.content}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
-              <p className="mt-6 text-sm text-muted-foreground">
-                Last updated: {new Date().toLocaleDateString()}
-              </p>
+              
+              <div className="mt-8 p-4 bg-primary/5 rounded-lg">
+                <h2 className="text-lg font-medium text-primary mb-2">Need Help?</h2>
+                <p className="text-muted-foreground">
+                  If you have any questions about your privacy, please email our privacy team 
+                  or call us at +91 7848854815 .
+                </p>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Last updated: {new Date().toLocaleDateString()}
+                </p>
+              </div>
             </CardContent>
           </Card>
         </motion.div>

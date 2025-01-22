@@ -3,8 +3,8 @@ import SubmitForm from "./components/Form";
 
 
 export const metadata = {
-  title: 'Paper Submission ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
-  description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
+  title: 'Paper Submission ICSTHM 2025 ',
+  description: 'Join 500+ tourism leaders at ICSTHM 2025. Experience 20+ workshops & 50+ speakers from 30+ countries exploring sustainable tourism solutions.',
   keywords: [
     'ICSTHM 2025',
     'sustainable tourism conference',
@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: 'Paper Submission ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
     description: 'Join 500+ global leaders at ICSTHM 2025 in Bangkok. Explore sustainable tourism innovations, network with industry experts, and attend 20+ workshops on emerging trends.',
-    url: 'https://www.icsthm.com/about',
+    url: 'https://www.icsthm.com/',
     siteName: 'ICSTHM 2025',
     images: [
       {

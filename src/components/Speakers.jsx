@@ -84,9 +84,9 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
               alt={speaker.name}
               className="w-full h-96 object-contain rounded-lg mb-4 mt-4"
             />
-            <h2 className="text-2xl font-bold text-orange-800 mb-2">
+            <h1 className="text-2xl font-bold text-orange-800 mb-2">
               {speaker.name}
-            </h2>
+            </h1>
             <h3 className="text-xl text-orange-600 ">{speaker.role}</h3>
             <p className="text-sm mt-1 mb-4">{speaker.country}</p>
             <p className="text-sm">{speaker.college}</p>

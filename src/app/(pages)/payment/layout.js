@@ -6,7 +6,7 @@ export default function PaymentLayout({ children }) {
   );
 }
 export const metadata = {
-  title: 'Payment Status ICSTHM 2025 | International Conference on Sustainable Tourism & Hospitality Management',
+  title: 'Payment Status ICSTHM 2025 ',
   description: 'Discover ICSTHM 2025, a premier global conference bringing together 500+ tourism leaders, featuring 20+ workshops, 50+ speakers from 30+ countries, and innovative solutions for sustainable tourism and hospitality management.',
   keywords: [
     'ICSTHM 2025',
@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: 'About ICSTHM 2025 | Sustainable Tourism & Hospitality Conference',
     description: 'Join 500+ global leaders at ICSTHM 2025 in Bangkok. Explore sustainable tourism innovations, network with industry experts, and attend 20+ workshops on emerging trends.',
-    url: 'https://www.icsthm.com/about',
+    url: 'https://www.icsthm.com/',
     siteName: 'ICSTHM 2025',
     images: [
       {
