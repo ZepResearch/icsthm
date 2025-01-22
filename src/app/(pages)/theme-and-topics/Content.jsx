@@ -24,6 +24,7 @@ export default function ThemeAndTopics() {
         const pb = new PocketBase('https://icsthm.pockethost.io')
         const records = await pb.collection('dates').getFullList({
           sort: '-created',
+        
         })
         setDates(records)
       } catch (error) {
@@ -234,9 +235,9 @@ export default function ThemeAndTopics() {
             {loading ? (
               <p className="text-lg text-muted-foreground">Loading dates...</p>
             ) : (
-              <ul className="space-y-4">
+              <ul className=" flex flex-col-reverse">
                 {dates.map((item, index) => (
-                  <li key={index} className="flex items-center">
+                  <li key={index} className="flex items-center py-2">
                     {/* <div className="mr-2 text-primary">
                       {getIconForEventType(item.eventType)}
                     </div> */}
