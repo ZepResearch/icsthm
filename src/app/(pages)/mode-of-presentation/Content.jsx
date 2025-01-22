@@ -17,7 +17,7 @@ export default function ModePresentation() {
       icon: Mic,
       image: "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content:
-        "You'll have 15 minutes for your talk. Please send us your slides by email to info[@]ictmh.org at least 10 days before the event. If you can't send them early, you can bring them to the registration desk at least 2 hours before your talk time.",
+        "You well have 15 minutes for your talk. Please send us your slides by email to info[@]ictmh.org at least 10 days before the event. If you cant send them early, you can bring them to the registration desk at least 2 hours before your talk time.",
     },
     {
       title: "Show a Poster",
@@ -26,16 +26,16 @@ export default function ModePresentation() {
       icon: ImageIcon,
       image: "https://images.unsplash.com/photo-1493972741200-51d407e0ee33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content:
-        "Each poster gets 3 minutes of display time. Send us one page as a PDF or image file. We'll put all posters on our website before the event so everyone can see them.",
+        "Each poster gets 3 minutes of display time. Send us one page as a PDF or image file. We well put all posters on our website before the event so everyone can see them.",
     },
     {
       title: "Present Online",
       description:
-        "Join us from anywhere in the world. Share your work online and connect with tourism experts globally. Ask questions and network just like you're there in person.",
+        "Join us from anywhere in the world. Share your work online and connect with tourism experts globally. Ask questions and network just like you are there in person.",
       icon: Video,
       image: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content:
-        "We'll email you the online meeting link one week before the event. Joining is easy - just click the link we send you. Remember to sign up first if you want to present online.",
+        "We well email you the online meeting link one week before the event. Joining is easy - just click the link we send you. Remember to sign up first if you want to present online.",
     },
   ];
 
@@ -59,7 +59,7 @@ export default function ModePresentation() {
             Share Your Work at Our Tourism Conference
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Pick how you'd like to present your research
+            Pick how you like to present your research
           </p>
         </motion.div>
 

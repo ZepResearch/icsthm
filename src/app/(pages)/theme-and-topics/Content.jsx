@@ -71,7 +71,7 @@ export default function ThemeAndTopics() {
     {
       title: "Tourism and Climate",
       content: [
-        "Reducing tourism's carbon footprint",
+        "Reducing tourism carbon footprint",
         "Planning for climate change",
         "Using renewable energy",
         "Learning from at-risk destinations"
@@ -133,7 +133,7 @@ export default function ThemeAndTopics() {
         <motion.div variants={itemVariants} className="mt-12">
           <Card className="overflow-hidden shadow-2xl bg-slate-100 backdrop-blur-sm border-2 border-primary/20">
             <CardHeader className="bg-white text-secondary-foreground p-6">
-              <CardTitle className="text-3xl underline underline-offset-2 decoration-primary">What We'll Cover</CardTitle>
+              <CardTitle className="text-3xl underline underline-offset-2 decoration-primary">What We&apos;ll Cover</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <p className="mb-6 text-lg text-black">
@@ -164,7 +164,7 @@ export default function ThemeAndTopics() {
             </CardHeader>
             <CardContent className="p-6">
               <p className="leading-relaxed text-lg text-muted-foreground">
-                Our team will review your work to make sure it fits the conference goals. Your research should be new and not published elsewhere. We'll send you guidelines for formatting after we accept your work.
+                Our team will review your work to make sure it fits the conference goals. Your research should be new and not published elsewhere. We&apos;ll send you guidelines for formatting after we accept your work.
               </p>
             </CardContent>
           </Card>
