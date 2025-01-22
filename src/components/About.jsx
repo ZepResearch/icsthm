@@ -69,9 +69,9 @@ export default function AboutSection() {
             variants={itemVariants}
             className="flex flex-col justify-center space-y-4"
           >
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl underline underline-offset-4 decoration-orange-500">
+            <p className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl underline underline-offset-4 decoration-orange-500">
               About The Conference
-            </h2>
+            </p>
             <p className="text-muted-foreground">
               The International Conference on Sustainable Tourism  and Hospitality Management
               (ICSTHM) unites global leaders, researchers, and innovators to
@@ -87,9 +87,9 @@ export default function AboutSection() {
                 <a href="/about-conference">Read More</a>
               </Button>
             </motion.div>
-            <h1 className="text-lg tracking-tighter font-semibold underline underline-offset-4 decoration-orange-500">
+            <h2 className="text-lg tracking-tighter font-semibold underline underline-offset-4 decoration-orange-500">
             Insights into the Conference
-            </h1>
+            </h2>
             <dl className="grid max-w-xl grid-cols-2 gap-8 sm:grid-cols-4">
               {stats.map((stat) => (
                 <div

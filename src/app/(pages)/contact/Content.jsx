@@ -110,9 +110,9 @@ export default function ContactUs() {
               className=""
             />
             <div>
-              <h3 className="text-3xl font-semibold  mb-4 underline underline-offset-4 decoration-orange-500">
+              <h2 className="text-3xl font-semibold  mb-4 underline underline-offset-4 decoration-orange-500">
                 Get in Touch
-              </h3>
+              </h2>
               <p className="text-muted-foreground mb-4">
                 We love to hear from you. Whether you have a question about our
                 services, pricing, or anything else, our team is ready to answer
@@ -134,9 +134,9 @@ export default function ContactUs() {
               </div>
             </div>
             <div>
-              <h2 className="text-2xl font-semibold text-primary mb-4">
+              <h3 className="text-2xl font-semibold text-primary mb-4">
                 Follow Us
-              </h2>
+              </h3>
               <div className="flex space-x-4">
                 <a href="https://www.facebook.com/people/Zep-Research/61561809783777/" className="text-primary hover:text-primary/80">
                   <Facebook size={24} />

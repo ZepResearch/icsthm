@@ -186,7 +186,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <Link
-                      href="/Terms-and-Conditions"
+                      href="/terms-and-conditions"
                       className="hover:text-orange-500 transition-colors"
                     >
                       Terms & Conditions
@@ -194,7 +194,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/Cancellation-Policy"
+                      href="/cancellation-policy"
                       className="hover:text-orange-500 transition-colors"
                     >
                       Cancellation Policy
@@ -202,7 +202,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/Privacy-Policy"
+                      href="/privacy-policy"
                       className="hover:text-orange-500 transition-colors"
                     >
                       Privacy Policy

@@ -145,9 +145,9 @@ export default function Ticket() {
                   <div className="flex-grow p-6 pr-4">
                     <div className="space-y-4">
                       <div className="space-y-2">
-                        <h3 className="text-2xl font-bold tracking-wide underline underline-offset-4 decoration-orange-500">
+                        <p className="text-2xl font-bold tracking-wide underline underline-offset-4 decoration-orange-500">
                           {ticket.name}
-                        </h3>
+                        </p>
                         <div className="text-xs uppercase tracking-wider opacity-80">
                           Admit one
                         </div>

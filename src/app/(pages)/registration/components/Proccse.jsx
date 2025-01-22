@@ -41,9 +41,9 @@ export default function Process() {
   return (
     <div className="py-12 px-4 bg-white ">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 underline underline-offset-4 decoration-orange-400">
+        <h1 className="text-3xl font-bold text-center mb-8 underline underline-offset-4 decoration-orange-400">
           Registration Process
-        </h2>
+        </h1>
         <div className="grid gap-6 md:grid-cols-4">
           {steps.map((step, index) => (
             <Card
@@ -53,7 +53,7 @@ export default function Process() {
               <div className="bg-primary text-primary-foreground rounded-full p-3 mb-4">
                 {step.icon}
               </div>
-              <h3 className="font-semibold mb-2">{step.title}</h3>
+              <h2 className="font-semibold mb-2">{step.title}</h2>
               <p className="text-sm text-muted-foreground">
                 {step.description}
               </p>

@@ -70,11 +70,7 @@ export const metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
-  other: {
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-  }
+ 
 };
 
 export default function RootLayout({ children }) {
