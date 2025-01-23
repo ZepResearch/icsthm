@@ -238,7 +238,7 @@ export default function SubmitForm() {
           </div>
           <Card className="lg:col-span-2">
             <CardHeader>
-              <CardTitle className="text-2xl underline underline-offset-2 decoration-orange-500">
+              <CardTitle className="text-2xl ">
                 Submit Your Paper
               </CardTitle>
             </CardHeader>

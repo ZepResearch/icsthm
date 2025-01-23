@@ -7,9 +7,9 @@ export default function Footer() {
     <footer className="bg-black border-t-2 border-orange-400 bg-[url('https://res.cloudinary.com/dtsuvx8dz/image/upload/v1734199287/samples/fxpubw3p6ryt2aidmluy.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="bg-black/80">
         <div className="container mx-auto px-4 py-12">
-          <div className="flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col md:flex-row justify-between i">
             <div className="mb-8 md:mb-0 md:w-1/3">
-              <Link href="/" className="inline-block mb-4">
+              <Link href="/" className="inline-block ">
                 <Image
                   src="/ictmh.png"
                   alt="ICTMH Logo"
@@ -17,6 +17,10 @@ export default function Footer() {
                   height={80}
                 />
               </Link>
+              <div className="inline-flex justify-center items-center text-white text-xl sm:text-xl font-semibold ">
+          <Image src="https://res.cloudinary.com/dwlhesiyi/image/upload/v1726731577/il2wr5yxd2w1sarnj3it.svg" width={100} height={40} alt="ICASEM" className=" " />
+          <span className="-ml-3">Zep Research</span> 
+          </div>
               {/* <h2 className="text-xl font-bold text-orange-600 mb-4">
                 International Conference on Tourism Management and Hospitality
               </h2> */}

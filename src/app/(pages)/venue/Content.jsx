@@ -37,7 +37,7 @@ export default function VenuePage() {
             />
           </div>
           <div className="w-full md:w-1/2">
-            <h1 className="text-4xl font-bold mb-4  underline underline-offset-4 decoration-orange-500">
+            <h1 className="text-4xl font-bold mb-4 text-orange-500  ">
               Conference Venue
             </h1>
             <p className="text-lg mb-4">
@@ -71,7 +71,7 @@ export default function VenuePage() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="container mx-auto px-4 py-16"
       >
-        <h3 className="text-4xl font-bold mb-4  underline underline-offset-4 decoration-orange-500 text-center">
+        <h3 className="text-4xl font-bold mb-4 text-orange-500 text-center">
           Location
         </h3>
         <div className="aspect-w-16 aspect-h-9">
@@ -93,7 +93,7 @@ export default function VenuePage() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="container mx-auto px-4 py-16"
       >
-        <h4 className="text-4xl font-bold mb-4 underline underline-offset-4 decoration-orange-500 text-center">
+        <h4 className="text-4xl font-bold mb-4  text-orange-500 text-center">
           Nearby Attractions
         </h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

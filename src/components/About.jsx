@@ -69,7 +69,7 @@ export default function AboutSection() {
             variants={itemVariants}
             className="flex flex-col justify-center space-y-4"
           >
-            <p className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl underline underline-offset-4 decoration-orange-500">
+            <p className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl ">
               About The Conference
             </p>
             <p className="text-muted-foreground">
@@ -87,7 +87,7 @@ export default function AboutSection() {
                 <a href="/about-conference">Read More</a>
               </Button>
             </motion.div>
-            <h2 className="text-lg tracking-tighter font-semibold underline underline-offset-4 decoration-orange-500">
+            <h2 className="text-lg tracking-tighter font-semibold ">
             Insights into the Conference
             </h2>
             <dl className="grid max-w-xl grid-cols-2 gap-8 sm:grid-cols-4">

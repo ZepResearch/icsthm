@@ -190,7 +190,7 @@ export default function SpeakerSection() {
   return (
     <div className="bg-orange-50">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold text-center underline underline-offset-4 decoration-orange-500 mb-8">
+        <h2 className="text-4xl font-bold text-center  mb-8">
           Our Speakers
         </h2>
         <div className="mb-8 flex flex-wrap justify-center gap-2">
