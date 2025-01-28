@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
           variants={fadeIn}
         >
           <h1 className="text-4xl font-bold text-primary mb-4">Your Privacy Matters</h1>
-          <p className="text-lg text-muted-foreground">Simple, clear information about how we protect your data</p>
+          <h2 className="text-lg text-muted-foreground">Simple, clear information about how we protect your data</h2>
         </motion.div>
         
         <motion.div
@@ -128,7 +128,7 @@ export default function PrivacyPolicy() {
               </Accordion>
               
               <div className="mt-8 p-4 bg-primary/5 rounded-lg">
-                <h2 className="text-lg font-medium text-primary mb-2">Need Help?</h2>
+                <p className="text-lg font-medium text-primary mb-2">Need Help?</p>
                 <p className="text-muted-foreground">
                   If you have any questions about your privacy, please email our privacy team 
                   or call us at +91 7848854815 .

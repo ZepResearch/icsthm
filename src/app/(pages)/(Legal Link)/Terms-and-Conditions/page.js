@@ -143,10 +143,10 @@ export default function TermsAndConditions() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold underline underline-offset-4 decoration-orange-500 mb-8 text-center">Terms and Conditions</h1>
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <p className="text-orange-900 mb-4">
+          <h2 className="text-orange-900 mb-4">
             Welcome to the Terms and Conditions for the International Conference on Tourism Management and Hospitality. 
             Please read these terms carefully before registering for the conference.
-          </p>
+          </h2>
           <ScrollArea className="h-[60vh] rounded-md border border-orange-200 p-4">
             <Accordion type="single" collapsible className="w-full">
               {sections.map((section, index) => (
@@ -163,7 +163,7 @@ export default function TermsAndConditions() {
           </ScrollArea>
         </div>
         <div className="text-center ">
-          <h2>Last updated: <span className="font-semibold text-orange-600">{new Date().toLocaleDateString()}</span> </h2>
+          <p>Last updated: <span className="font-semibold text-orange-600">{new Date().toLocaleDateString()}</span> </p>
           <p>For any questions regarding these Terms and Conditions, please contact us at <a className="font-semibold text-orange-600" href="mailto:icthm@icthm.com">icthm@contact.com</a></p>
         </div>
       </div>
