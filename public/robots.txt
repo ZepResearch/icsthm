@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Allow: /about-conference
+Allow: /about-zep-research
+Allow: /awards
+Allow: /committee
+Allow: /contact
+Allow: /highlights
+Allow: /mode-of-presentation
+Allow: /papers-format
+Allow: /payment
+Allow: /registration
+Allow: /schedule
+Allow: /sponsorship
+Allow: /submission
+Allow: /theme-and-topics
+Allow: /venue
+Allow: /Legal-Link/cancellation-policy
+Allow: /Legal-Link/privacy-policy
+Allow: /Legal-Link/terms-and-conditions
+
+# Sitemaps
+Sitemap: https://www.icsthm.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
