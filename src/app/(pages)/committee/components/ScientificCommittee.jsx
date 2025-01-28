@@ -42,9 +42,9 @@ export default function ScientificCommittee() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Scientific Committee
-          </h2>
+          </h1>
         </motion.div>
         <ul
           role="list"
@@ -68,9 +68,9 @@ export default function ScientificCommittee() {
                         .join("")}
                     </AvatarFallback>
                   </Avatar>
-                  <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-primary">
+                  <h2 className="mt-6 text-base font-semibold leading-7 tracking-tight text-primary">
                     {speaker.name}
-                  </h3>
+                  </h2>
                   <p className="text-sm leading-6 text-muted-foreground">
                     {speaker.role}
                   </p>

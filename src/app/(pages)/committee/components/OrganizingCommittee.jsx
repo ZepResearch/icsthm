@@ -89,9 +89,9 @@ export default function OrganizingCommittee() {
                         .join("")}
                     </AvatarFallback>
                   </Avatar>
-                  <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-primary">
+                  <h2 className="mt-6 text-base font-semibold leading-7 tracking-tight text-primary">
                     {speaker.name}
-                  </h3>
+                  </h2>
                   <p className="text-sm leading-6 text-muted-foreground">
                     {speaker.designation}
                   </p>

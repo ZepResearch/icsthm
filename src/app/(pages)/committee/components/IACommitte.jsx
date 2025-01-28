@@ -67,12 +67,12 @@ export default function IACommittee() {
           <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-center">
             Co-organizers
           </h1>
-          <p className="mt-6 text-lg sm:px-12 text-center leading-8 text-muted-foreground">
+          <h2 className="mt-6 text-lg sm:px-12 text-center leading-8 text-muted-foreground">
             Meet our distinguished organizers and experts who are at the
             forefront of sustainable development. They bring a wealth of
             knowledge and innovative ideas to address global environmental
             challenges.
-          </p>
+          </h2>
         </motion.div>
         <ul
           role="list"
