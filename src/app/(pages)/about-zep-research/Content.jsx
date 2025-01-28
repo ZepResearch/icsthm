@@ -122,9 +122,9 @@ export default function AboutCompany() {
               <CardDescription className="text-lg font-medium text-primary mb-2">
                 Join us in shaping the future of tourism and hospitality
               </CardDescription>
-              <p className="text-muted-foreground">
+              <h2 className="text-muted-foreground">
                 April 24th - 25th, 2025 • Bangkok, Thailand
-              </p>
+              </h2>
             </CardContent>
           </Card>
         </motion.div>

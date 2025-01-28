@@ -150,7 +150,7 @@ export default function CancellationPolicy() {
             <CardTitle className="text-2xl underline underline-offset-4 decoration-orange-500 font-extrabold">How to Cancel</CardTitle>
           </CardHeader>
           <CardContent className="">
-            <p>To cancel your registration, please follow these steps:</p>
+            <h2>To cancel your registration, please follow these steps:</h2>
             <ol className="list-decimal list-inside mt-2 space-y-2 ">
               <li>Log in to your conference account</li>
               <li>Navigate to My Registrations</li>

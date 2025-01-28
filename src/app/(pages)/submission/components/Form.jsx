@@ -224,10 +224,10 @@ export default function SubmitForm() {
             <h1 className="text-3xl font-bold text-orange-500 mb-4">
               Paper Submission
             </h1>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-gray-600 mb-6">
               Get in touch with our team for personalized assistance and expert
               guidance.
-            </p>
+            </h2>
             <img
               src="https://illustrations.popsy.co/amber/paper-plane.svg"
               alt="Product screenshot"

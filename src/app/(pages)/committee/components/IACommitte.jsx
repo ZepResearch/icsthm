@@ -64,9 +64,9 @@ export default function IACommittee() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-center">
             Co-organizers
-          </h2>
+          </h1>
           <p className="mt-6 text-lg sm:px-12 text-center leading-8 text-muted-foreground">
             Meet our distinguished organizers and experts who are at the
             forefront of sustainable development. They bring a wealth of

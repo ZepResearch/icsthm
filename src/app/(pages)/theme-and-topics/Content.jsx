@@ -174,9 +174,9 @@ export default function ThemeAndTopics() {
               <CardTitle className="text-3xl underline underline-offset-2 decoration-primary">What We&apos;ll Cover</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
-              <p className="mb-6 text-lg text-black">
+              <h2 className="mb-6 text-lg text-black">
                 Share your work in these areas or suggest other relevant topics:
-              </p>
+              </h2>
               <Accordion type="single" collapsible className="w-full">
                 {topics.map((topic, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>

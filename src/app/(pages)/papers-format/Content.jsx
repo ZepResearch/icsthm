@@ -80,10 +80,10 @@ export default function PaperFormat() {
           <h1 className="text-4xl font-bold text-primary mb-4">
             Paper Format Guidelines
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Follow these guidelines to ensure your submission meets our
             conference standards.
-          </p>
+          </h2>
         </motion.div>
 
         <motion.div

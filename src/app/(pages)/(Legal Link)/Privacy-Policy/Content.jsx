@@ -128,7 +128,7 @@ export default function PrivacyPolicy() {
               </Accordion>
               
               <div className="mt-8 p-4 bg-primary/5 rounded-lg">
-                <p className="text-lg font-medium text-primary mb-2">Need Help?</p>
+                <h2 className="text-lg font-medium text-primary mb-2">Need Help?</h2>
                 <p className="text-muted-foreground">
                   If you have any questions about your privacy, please email our privacy team 
                   or call us at +91 7848854815 .

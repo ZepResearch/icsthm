@@ -183,9 +183,9 @@ export default function ConferenceAboutSection() {
         <motion.div variants={itemVariants} className="text-center mb-12">
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">About the Conference</Badge>
           <h1 className="text-4xl font-bold text-primary mb-4">International Conference on Sustainable Tourism & Hospitality Management</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Connecting global leaders, innovators, and experts to redefine the future of tourism and hospitality.
-          </p>
+          </h2>
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12 text-center pb-12">
