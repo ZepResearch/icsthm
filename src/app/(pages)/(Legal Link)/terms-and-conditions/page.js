@@ -43,7 +43,7 @@ export const metadata = {
     images: ['/og-images/about-conference.jpg'],
   },
   alternates: {
-    canonical: 'https://www.icsthm.com/Terms-and-Conditions '
+    canonical: 'https://www.icsthm.com/terms-and-conditions '
   },
   // Structured data for the conference
   other: {

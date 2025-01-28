@@ -113,11 +113,11 @@ export default function SponsorshipContact() {
           </div>
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl font-bold mb-4">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-500">
+              <div className="text-4xl font-bold mb-4">
+                <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-500">
                   Become a Sponsor
-                </span>
-              </h1>
+                </h1>
+              </div>
               <p className="text-lg text-gray-700">
                 Join us in shaping the future of Tourism Management and Hospitality. Explore our sponsorship opportunities and connect with industry leaders.
               </p>
@@ -162,16 +162,16 @@ export default function SponsorshipContact() {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
+          <div className="text-3xl font-bold text-center mb-8">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-500">
               Sponsorship Packages
             </span>
-          </h2>
+          </div>
           <SponsorshipPackages />
         </div>
 
         <div className="bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg shadow-xl p-8 text-center">
-          <h3 className="text-3xl font-bold text-white mb-4">Ready to Make an Impact?</h3>
+          <p className="text-3xl font-bold text-white mb-4">Ready to Make an Impact?</p>
           <p className="text-xl text-white mb-6">
             Don&apos;t miss this opportunity to showcase your brand at the International Conference on Sustainable Tourism and Hospitality Management.
           </p>

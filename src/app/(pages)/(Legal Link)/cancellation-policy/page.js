@@ -45,7 +45,7 @@ export const metadata = {
     images: ['/og-images/about-conference.jpg'],
   },
   alternates: {
-    canonical: 'https://www.icsthm.com/Cancellation-Policy'
+    canonical: 'https://www.icsthm.com/cancellation-policy'
   },
   // Structured data for the conference
   other: {

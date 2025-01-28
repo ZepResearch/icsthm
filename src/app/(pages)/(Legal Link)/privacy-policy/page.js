@@ -42,7 +42,7 @@ export const metadata = {
     images: ['/og-images/about-conference.jpg'],
   },
   alternates: {
-    canonical: 'https://www.icsthm.com/Privacy-Policy'
+    canonical: 'https://www.icsthm.com/privacy-policy'
   },
   // Structured data for the conference
   other: {

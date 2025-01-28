@@ -53,7 +53,7 @@ export default function Process() {
               <div className="bg-primary text-primary-foreground rounded-full p-3 mb-4">
                 {step.icon}
               </div>
-              <h2 className="font-semibold mb-2">{step.title}</h2>
+              <p className="font-semibold mb-2">{step.title}</p>
               <p className="text-sm text-muted-foreground">
                 {step.description}
               </p>
