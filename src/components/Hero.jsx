@@ -3,14 +3,37 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Users, Zap, Globe, Sparkles } from "lucide-react";
+import { Calendar, MapPin, Users, Zap, Globe, Sparkles, Headphones } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Banner from "./Banner";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
+    <div className=" relative min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
+        <motion.div
+        className="md:absolute top-24 sm:right-24 right-5 z-20 bg-white/90 backdrop-blur-sm text-black p-4 rounded-lg shadow-lg w-64 md:my-0 my-24 md:ml-0 ml-16"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        <h3 className="font-bold text-lg mb-2">Hybrid Conference</h3>
+        <p className="text-sm mb-2">Experience the conference your way:</p>
+        <ul className="list-disc list-inside text-sm">
+          <li>Attend in person in Thailand</li>
+          <li>Join virtually from anywhere</li>
+        </ul>
+        <div className="mt-3 flex items-center justify-between text-xs">
+          <span className="flex items-center">
+            <MapPin className="w-4 h-4 mr-1" />
+            Physical
+          </span>
+          <span className="flex items-center">
+            <Headphones className="w-4 h-4 mr-1" />
+            Virtual
+          </span>
+        </div>
+      </motion.div>
       <Banner/>
       <div className="container mx-auto grid min-h-[calc(100vh-4rem)] grid-cols-1 items-center gap-12 px-4 py-16 lg:grid-cols-2">
         <motion.div
