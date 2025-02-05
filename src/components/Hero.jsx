@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <div className=" relative min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
         <motion.div
-        className="md:absolute top-24 sm:right-24 right-5 z-20 bg-white/90 backdrop-blur-sm text-black p-4 rounded-lg shadow-lg w-64 md:my-0 my-24 md:ml-0 ml-16"
+        className="md:absolute top-24 sm:right-24 right-5 z-20 bg-gradient-to-l from-orange-300/90 to-yellow-300/90 backdrop-blur-sm text-black p-4 rounded-lg shadow-lg w-64 md:my-0 my-24 md:ml-0 ml-16"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
