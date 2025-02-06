@@ -64,6 +64,7 @@ export default function Process() {
           ))}
         </div>
       </div>
+      <h1 className=" text-center text-red-600 font-semibold  py-4 text-lg ">N.B: For journal publication separate fee would be charged.</h1>
     </div>
   );
 }
