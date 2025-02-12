@@ -14,7 +14,25 @@ export default function Ticket() {
   const [isLoading, setIsLoading] = useState(null)
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [selectedTicket, setSelectedTicket] = useState(null)
+  const [customAmount, setCustomAmount] = useState("")
 
+  // Then, add this function after other function declarations:
+  const handleCustomPayment = () => {
+    if (!customAmount || isNaN(customAmount) || customAmount <= 0) {
+      alert("Please enter a valid amount")
+      return
+    }
+    
+    const ticket = {
+      name: "Custom Payment",
+      price: parseFloat(customAmount),
+      type: "Custom",
+      features: ["Custom amount payment", "6% tax will be added"]
+    }
+    
+    openPaymentPopup(ticket)
+  }
+  
   const tickets = [
     {
       name: "Virtual TICKET",
@@ -215,6 +233,68 @@ export default function Ticket() {
 
         {renderTicketSection("Presenter")}
         {renderTicketSection("Listener")}
+
+        <div className="space-y-8 mt-12">
+  <h2 className="text-3xl font-bold text-center my-8 text-primary">Custom Payment</h2>
+  <div className="flex items-center justify-center">
+    <Card className="relative w-full max-w-3xl bg-orange-100 overflow-hidden border-none">
+      <div className="flex flex-col md:flex-row">
+        <div className="flex-grow p-6 pr-4">
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h3 className="text-2xl font-bold tracking-wide">Custom Amount Payment</h3>
+              <div className="text-xs uppercase tracking-wider opacity-80">Flexible Payment Option</div>
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-center gap-2">
+                <Check className="w-4 h-4 flex-shrink-0" />
+                <span>Enter any custom amount</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="w-4 h-4 flex-shrink-0" />
+                <span>6% tax will be added to the final amount</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Info className="w-4 h-4 flex-shrink-0" />
+                <span>Secure payment processing</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="relative flex-shrink-0 w-full md:w-48 md:border-l border-dashed border-orange-500 flex flex-col justify-center items-center">
+          <div className="hidden md:block absolute top-0 left-0 w-10 h-10 bg-background rounded-full -translate-x-1/2 -translate-y-1/2" />
+          <div className="hidden md:block absolute bottom-0 left-0 w-10 h-10 bg-background rounded-full -translate-x-1/2 translate-y-1/2" />
+          <div className="text-center space-y-4 p-6">
+            <div className="space-y-1">
+              <input
+                type="number"
+                value={customAmount}
+                onChange={(e) => setCustomAmount(e.target.value)}
+                placeholder="Enter amount"
+                className="w-full p-2 rounded border text-center"
+                min="0"
+                step="0.01"
+              />
+              <div className="text-sm mt-2">
+                {customAmount && !isNaN(customAmount) && customAmount > 0 && (
+                  <div>Tax (6%): ${(parseFloat(customAmount) * 0.06).toFixed(2)}</div>
+                )}
+              </div>
+            </div>
+            <Button
+              className="w-full font-semibold"
+              onClick={handleCustomPayment}
+              disabled={isLoading === "Custom Payment"}
+            >
+              {isLoading === "Custom Payment" ? "Processing..." : "Pay Now"}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  </div>
+</div>
+
       </div>
       {selectedTicket && (
         <CCavenuePaymentForm
