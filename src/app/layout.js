@@ -84,10 +84,8 @@ export default function RootLayout({ children }) {
         {children}
         <Footer/>
         <TawkToChat/>
-       <ToastProvider />
-       <FloatingWhatsAppButton phoneNumber="8260080050" message="How can we assist you?
-
-" />
+       <ToastProvider />  
+       <FloatingWhatsAppButton phoneNumber="8260080050" message="How can we assist you?" />
       </body>
   
     </html>
