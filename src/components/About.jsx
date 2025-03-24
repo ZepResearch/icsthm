@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 const stats = [
   { id: 1, name: "Attendees", value: 8000, suffix: "+" },
   { id: 2, name: "Speakers", value: 35, suffix: "+" },
-  { id: 3, name: "Uptime guarantee", value: 99.9, suffix: "%" },
-  { id: 4, name: "Traffic Sources", value: 70, prefix: "", suffix: "+" },
+  // { id: 3, name: "Uptime guarantee", value: 99.9, suffix: "%" },
+  { id: 4, name: "Universities", value: 15, prefix: "", suffix: "+" },
 ];
 
 export default function AboutSection() {

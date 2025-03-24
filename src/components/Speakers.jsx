@@ -7,10 +7,10 @@ const pb = new PocketBase('https://icsthm.pockethost.io');
 
 // Updated to match exact PocketBase select field choices
 const speakerCategories = [
-  { id: "Guest Speaker", title: "Guest Speaker" },
+  // { id: "Guest Speaker", title: "Guest Speaker" },
   { id: "Keynote Speaker", title: "Keynote Speaker" },
-  { id: "Conference Chair", title: "Conference Chair" },
-  { id: "Conference Co-Chair", title: "Conference Co-Chair" },
+  // { id: "Conference Chair", title: "Conference Chair" },
+  // { id: "Conference Co-Chair", title: "Conference Co-Chair" },
   { id: "Session Chair", title: "Session Chair" },
 ];
 
@@ -105,7 +105,7 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
 );
 
 export default function SpeakerSection() {
-  const [activeCategory, setActiveCategory] = useState("Guest Speaker");
+  const [activeCategory, setActiveCategory] = useState("Keynote Speaker");
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [speakers, setSpeakers] = useState({});

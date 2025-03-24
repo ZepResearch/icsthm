@@ -72,12 +72,12 @@ export default function SDGSection() {
   return (
     <section className="w-full bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-orange-500">
+        <h2 className="text-center text-3xl md:text-5xl font-bold py-12 text-orange-500">
           <span className="text-orange-700">ICSTHM  2025</span> IS DEDICATED TO ADVANCING THE
            NATIONS SUSTAINABLE DEVELOPMENT GOALS (SDGS)
         </h2>
         
-        <div 
+        {/* <div 
           ref={scrollRef}
           className="flex overflow-x-auto gap-6 pb-6 cursor-grab active:cursor-grabbing"
           onMouseDown={handleMouseDown}
@@ -98,19 +98,10 @@ export default function SDGSection() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
-      <style jsx>{`
-        .overflow-x-auto {
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-        .overflow-x-auto::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
+      
     </section>
   )
 }

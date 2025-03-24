@@ -40,7 +40,7 @@ export default function CoOrganizationLogos() {
     <section className="w-full py-8 bg-gradient-to-tr from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
       <div className="container mx-auto px-4 md:px-6">
         <span className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl   mb-8 text-center ">
-          Our Co-organizations
+          Our Co-organizer 
         </span >
         <CoOrganizationLogosClient logos={logos} />
       </div>
