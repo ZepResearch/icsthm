@@ -11,7 +11,7 @@ const speakerCategories = [
   { id: "Keynote Speaker", title: "Keynote Speaker" },
   // { id: "Conference Chair", title: "Conference Chair" },
   // { id: "Conference Co-Chair", title: "Conference Co-Chair" },
-  { id: "Session Chair", title: "Session Chair" },
+  // { id: "Session Chair", title: "Session Chair" },
 ];
 
 const SpeakerCard = ({ name, role, image, bio,collectionId, id, country, college, onMoreInfo }) => (
