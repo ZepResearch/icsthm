@@ -86,7 +86,7 @@ export default function AboutCompany() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-        Zep Research, in partnership with the International Conference on Tourism Management and Hospitality,
+        Zep Research, in partnership with the International Conference on Sustainable Tourism and Hospitality Management,
         is committed to driving innovation and fostering collaboration within the tourism and hospitality industries.
           The mission is to create a platform for global knowledge exchange, promote sustainable practices, 
           and highlight emerging trends and solutions. By connecting industry leaders, researchers, and professionals,

@@ -212,7 +212,7 @@ export default function ConferenceAboutSection() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Fostering innovation and collaboration, with a focus on sustainable practices in the tourism and hospitality industry through knowledge sharing, networking, and showcasing the most up-to-date research and technologies.
+                  Fostering innovation and collaboration, with a focus on sustainable practices in the tourism and hospitality management   through knowledge sharing, networking, and showcasing the most up-to-date research and technologies.
                 </p>
               </CardContent>
             </Card>
