@@ -42,17 +42,17 @@ export default function ConferenceObjectives() {
     {
       title: "Networking",
       description:
-        "Establish professional connections among professionals, researchers, and students, promoting significant collaboration and partnerships across the industry",
+        "Establish professional connections among professionals, researchers, and students, promoting significant collaboration and partnerships across the industry",
     },
     {
       title: "Innovation",
       description:
-        "Highlight pioneering approaches and transformational technologies informing the future landscape of tourism and hospitality",
+        "Highlight pioneering approaches and transformational technologies informing the future landscape of tourism and hospitality",
     },
     {
       title: "Sustainability",
       description:
-        "Promote sustainable and responsible tourism practices that impinge upon global challenges while contributing to long-term resilience in the industry.",
+        "Promote sustainable and responsible tourism practices that impinge upon global challenges while contributing to long-term resilience in the industry.",
     },
   ];
 
@@ -86,7 +86,7 @@ export default function ConferenceObjectives() {
                       <h3 className="text-lg font-bold mb-2 text-primary">
                         {objective.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground ">
                         {objective.description}
                       </p>
                     </CardContent>
