@@ -12,6 +12,9 @@ const pb = new PocketBase('https://icsthm.pockethost.io');
 function TimelineItem({ item, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  
+  // Apply line-through if index is greater than 1
+  const isExpired = index > 2;
 
   return (
     <motion.div
@@ -24,11 +27,13 @@ function TimelineItem({ item, index }) {
       <Card className="relative flex items-center">
         <CardContent className="flex p-4">
           <div className="ml-4 flex flex-col">
-            <time className="text-sm font-semibold text-primary">
+            <time className={`text-sm font-semibold text-primary  ${isExpired ? "line-through text-orange-300" : ""}`}>
               {item.date}
             </time>
-            <h3 className="text-lg font-semibold">{item.name}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <h3 className={`text-lg font-semibold ${isExpired ? "line-through text-gray-500" : ""}`}>
+              {item.name}
+            </h3>
+            <p className={`mt-1 text-sm text-muted-foreground ${isExpired ? "line-through text-gray-400" : ""}`}>
               {item.description}
             </p>
           </div>
@@ -37,7 +42,6 @@ function TimelineItem({ item, index }) {
     </motion.div>
   );
 }
-
 export default function Dates() {
   const [timeline, setTimeline] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -110,8 +114,13 @@ export default function Dates() {
               style={{ originY: 0 }}
             />
             <div className="flex flex-col-reverse ">
-              {timeline.map((item, index) => (
-                <TimelineItem key={item.name} item={item} index={index} />
+            {timeline.map((item, index) => (
+                <TimelineItem 
+                  key={item.name} 
+                  item={item} 
+                  index={index} 
+                  isExpired={index === 0} // Pass a prop to indicate this is the first item
+                />
               ))}
             </div>
           </div>
