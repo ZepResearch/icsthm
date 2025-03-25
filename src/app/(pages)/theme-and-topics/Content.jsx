@@ -224,33 +224,33 @@ export default function ThemeAndTopics() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12">
-        <Card className="overflow-hidden shadow-2xl bg-white/50 backdrop-blur-sm border-2 border-primary/20">
-          <CardHeader className="bg-primary text-primary-foreground p-6">
-            <CardTitle className="text-3xl flex items-center">
-              <Calendar className="mr-2 h-8 w-8" />
-              Key Dates
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="p-6">
-            {loading ? (
-              <p className="text-lg text-muted-foreground">Loading dates...</p>
-            ) : (
-              <ul className=" flex flex-col-reverse">
-                {dates.map((item, index) => (
-                  <li key={index} className="flex items-center py-2">
-                    {/* <div className="mr-2 text-primary">
-                      {getIconForEventType(item.eventType)}
-                    </div> */}
-                    <span className="text-lg text-muted-foreground">
-                      <strong>{item.date}:</strong> {item.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </CardContent>
-        </Card>
-      </motion.div>
+      <Card className="overflow-hidden shadow-2xl bg-white/50 backdrop-blur-sm border-2 border-primary/20">
+        <CardHeader className="bg-primary text-primary-foreground p-6">
+          <CardTitle className="text-3xl flex items-center">
+            <Calendar className="mr-2 h-8 w-8" />
+            Key Dates
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-6">
+          {loading ? (
+            <p className="text-lg text-muted-foreground">Loading dates...</p>
+          ) : (
+            <ul className="flex flex-col-reverse">
+              {dates.map((item, index) => (
+                <li 
+                  key={index} 
+                  className={`flex items-center py-2 ${index === dates.length - 1 ? 'line-through text-gray-700' : ''}`}
+                >
+                  <span className={`text-lg${index === dates.length - 1 ? 'text-gray-400 text-muted-foreground text-lg' : ' '}`}>
+                    <strong>{item.date}:</strong> {item.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </CardContent>
+      </Card>
+    </motion.div>
       </div>
     </motion.section>
   )
