@@ -77,10 +77,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mt-12`}
-      > <Script 
+      <head>
+      <Script 
       async 
       src="https://www.googletagmanager.com/gtag/js?id=G-65D55ZHV55"
       strategy="afterInteractive"
@@ -97,6 +95,10 @@ export default function RootLayout({ children }) {
         `
       }}
     />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mt-12`}
+      > 
         <Navbar/>
         {children}
         <Footer/>
