@@ -78,23 +78,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <Script 
-      async 
-      src="https://www.googletagmanager.com/gtag/js?id=G-65D55ZHV55"
-      strategy="afterInteractive"
-    />
-    <Script 
-      id="google-analytics"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-65D55ZHV55');
-        `
-      }}
-    />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65D55ZHV55"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-65D55ZHV55');
+</script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased mt-12`}
