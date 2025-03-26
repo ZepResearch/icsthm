@@ -19,8 +19,10 @@ Allow: /Legal-Link/cancellation-policy
 Allow: /Legal-Link/privacy-policy
 Allow: /Legal-Link/terms-and-conditions
 
-# Sitemaps
-Sitemap: https://www.icsthm.com/sitemap.xml
+Disallow: /api/*
+Disallow: /admin/*
+Disallow: /*.json$
+Disallow: /*.xml$
 
-# Crawl-delay
-Crawl-delay: 10
+Sitemap: https://www.icsthm.com/sitemap.xml
+Host: https://www.icsthm.com

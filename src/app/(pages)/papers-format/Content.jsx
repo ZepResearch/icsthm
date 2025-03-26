@@ -43,7 +43,7 @@ export default function PaperFormat() {
 
   const formatSections = [
     {
-      title: "Abstract Format",
+        title: "Abstract Format",
       icon: <FileText className="w-8 h-8" />,
       content:
         "The abstract should be a concise summary of your research, not exceeding 300 words. It should include the research objectives, methodology, results, and conclusions. Use clear, concise language and avoid jargon or acronyms.",
