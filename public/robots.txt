@@ -20,9 +20,8 @@ Allow: /Legal-Link/privacy-policy
 Allow: /Legal-Link/terms-and-conditions
 
 Disallow: /api/*
-Disallow: /admin/*
-Disallow: /*.json$
-Disallow: /*.xml$
+
+
 
 Sitemap: https://www.icsthm.com/sitemap.xml
 Host: https://www.icsthm.com
