@@ -18,10 +18,7 @@ Allow: /venue
 Allow: /Legal-Link/cancellation-policy
 Allow: /Legal-Link/privacy-policy
 Allow: /Legal-Link/terms-and-conditions
-
-Disallow: /api/*
-
-
+Allow: /sitemap.xml
 
 Sitemap: https://www.icsthm.com/sitemap.xml
 Host: https://www.icsthm.com
