@@ -9,15 +9,9 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/:path*",
+        source: "/:path*", 
         has: [{ type: "host", value: "www.icsthm.com" }],
-        destination: "https://icsthm.com/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "icsthm.com" }],
-        destination: "https://icsthm.com/:path*",
+        destination: "https://icsthm.com/:path*", 
         permanent: true,
       },
     ];
