@@ -4,18 +4,20 @@ const nextConfig = {
     domains: ['res.cloudinary.com', 'images.unsplash.com', 'plus.unsplash.com'],
   },
   experimental: {
-    serverActions: true,
+    serverActions: {},
   },
   async redirects() {
     return [
       {
-        source: 'http://www.icsthm.com',
-        destination: 'https://icsthm.com',
+        source: "/:path*",
+        has: [{ type: "host", value: "www.icsthm.com" }],
+        destination: "https://icsthm.com/:path*",
         permanent: true,
       },
       {
-        source: 'http://icsthm.com',
-        destination: 'https://icsthm.com',
+        source: "/:path*",
+        has: [{ type: "host", value: "icsthm.com" }],
+        destination: "https://icsthm.com/:path*",
         permanent: true,
       },
     ];
