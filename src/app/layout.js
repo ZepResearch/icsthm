@@ -6,6 +6,7 @@ import { ToastProvider } from '@/components/ui/ToastProvider';
 import TawkToChat from "@/components/TawkToChat";
 import { FloatingWhatsAppButton } from "@/components/whatsapp";
 import Script from "next/script";
+import Head from "next/head";
 
 
 const geistSans = localFont({
@@ -77,7 +78,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
+      <link rel="canonical" href="https://icsthm.com/" />
       <Script 
       async 
       src="https://www.googletagmanager.com/gtag/js?id=G-65D55ZHV55"
@@ -95,7 +97,7 @@ export default function RootLayout({ children }) {
         `
       }}
     />
-      </head>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased mt-12`}
       > 
