@@ -1,5 +1,5 @@
 import React from "react";
-import SubmitForm from "./components/Form";
+import PaperSubmissionForm from "./components/Form";
 
 
 export const metadata = {
@@ -96,7 +96,7 @@ export const metadata = {
 function page() {
   return (
     <div>
-      <SubmitForm />
+      <PaperSubmissionForm/>
     </div>
   );
 }
