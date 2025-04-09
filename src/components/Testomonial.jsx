@@ -95,7 +95,7 @@ const Trophy = ({ className }) => (
 const testimonials = [
   {
     quote:
-      "The International Conference on Tourism Management & Hospitality was transformative. The insights shared have revolutionized how we approach sustainable tourism.",
+      "The International Conference on Sustainable Tourism & Hospitality Management was transformative. The insights shared have revolutionized how we approach sustainable tourism.",
     name: "Sarah Chen",
     title: "Director of Tourism Development, Global Destinations",
     avatar:

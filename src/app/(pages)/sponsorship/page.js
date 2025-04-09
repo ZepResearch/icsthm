@@ -119,7 +119,7 @@ export default function SponsorshipContact() {
                 </h1>
               </div>
               <p className="text-lg text-gray-700">
-                Join us in shaping the future of Tourism Management and Hospitality. Explore our sponsorship opportunities and connect with industry leaders.
+                Join us in shaping the future of Sustainable Tourism & Hospitality Management. Explore our sponsorship opportunities and connect with industry leaders.
               </p>
             </div>
 
