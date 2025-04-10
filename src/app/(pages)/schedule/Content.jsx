@@ -5,39 +5,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
 import { addDays } from "date-fns"
-
-
+import Image from "next/image"
 
 const scheduleData = [
   {
-    date: "April - 23 | Registration",
-    items: [
-      { time: "8:00AM - 9:15AM", title: "Registration" },
-      { time: "9:15AM - 9:30AM", title: "Inaugural Function" },
-      { time: "9:30AM - 10:00AM", title: "Keynote Speech (Session 1)" },
-      { time: "10:00AM - 10:15AM", title: "Coffee Break" },
-      { time: "10:15AM - 10:30AM", title: "Introduction to the Session Chairs" },
-      { time: "10:30AM - 01:00PM", title: "1st Session" },
-      { time: "01:00PM - 02:00PM", title: "Lunch Break" },
-      { time: "02:00PM - 02:30PM", title: "Keynote Speech" },
-      { time: "2:30PM - 5:00PM", title: "2nd Session" },
-    ]
+    date: "April 24 | Day 1",
+    imageUrl1: "/schedule/d1p1.jpg", // Path to your first image
+    imageUrl2: "/schedule/d1p2.jpg" // Path to your second image
   },
-
-  {
-    date: "April - 24 | Closing Day",
-    items: [
-      { time: "9:00AM - 9:30AM", title: "Registration" },
-      { time: "9:30AM - 10:00AM", title: "Closing Ceremony Opening Remarks" },
-      { time: "10:00AM - 11:00AM", title: "Final Keynote Speech" },
-      { time: "11:00AM - 11:15AM", title: "Coffee Break" },
-      { time: "11:15AM - 12:45PM", title: "Panel Discussion: Future of Sustainability" },
-      { time: "12:45PM - 2:00PM", title: "Networking Lunch" },
-      { time: "2:00PM - 3:30PM", title: "Workshops and Breakout Sessions" },
-      { time: "3:30PM - 4:00PM", title: "Closing Remarks and Next Steps" },
-      { time: "4:00PM - 5:00PM", title: "Farewell Reception" },
-    ]
-  }
+  // {
+  //   date: "April 25 | Day 2",
+  //   imageUrl1: "/schedule/d2p1.jpg", // Path to your first image
+  //   imageUrl2: "/schedule/d2p2.jpg", 
+  // }
 ]
 
 export default function ConferenceSchedule() {
@@ -45,7 +25,6 @@ export default function ConferenceSchedule() {
   const [selectedDates, setSelectedDates] = useState([
     startDate,
     addDays(startDate, 1),
-
   ])
 
   return (
@@ -53,17 +32,17 @@ export default function ConferenceSchedule() {
       <div className="space-y-8">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Shaping Tomorrow&apos;s Sustainable Landscape
+          Shaping Tomorrow&apos;s Sustainable Landscape
           </h1>
-          <p className="text-muted-foreground">
-            Join us April 24th-25th for three days of cutting-edge insights and networking. Reserve your spot today!
-          </p>
+          <h2 className="text-muted-foreground">
+          Join us April 24th-25th for three days of cutting-edge insights and networking. Reserve your spot today!
+          </h2>
         </div>
 
         <div className="grid gap-8 md:grid-cols-[300px_1fr]">
-          <Card className="border-orange-200">
+          <Card className="border-primary">
             <CardHeader>
-              <CardTitle>April 2024</CardTitle>
+              <CardTitle>April 2025</CardTitle>
             </CardHeader>
             <CardContent>
               <Calendar
@@ -73,10 +52,9 @@ export default function ConferenceSchedule() {
                 month={startDate}
                 className="w-full"
                 classNames={{
-                  day_selected: "bg-orange-500 text-primary-foreground hover:bg-orange-500 mr-0.5",
+                  day_selected: "bg-primary text-primary-foreground hover:bg-primary/90 mr-0.5",
                   day_today: "bg-orange-100 text-orange-900",
                 }}
-                
               />
             </CardContent>
           </Card>
@@ -84,26 +62,26 @@ export default function ConferenceSchedule() {
           <ScrollArea className="h-[600px]">
             <div className="space-y-8">
               {scheduleData.map((day, index) => (
-                <Card key={index} className="border-orange-200">
+                <Card key={index} className="border-primary/50">
                   <CardHeader>
                     <CardTitle>{day.date}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-2">
-                      {day.items.map((item, itemIndex) => (
-                        <div
-                          key={itemIndex}
-                          className={cn(
-                            "grid grid-cols-[140px_1fr] gap-4 p-3 rounded-lg",
-                            "bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-                          )}
-                        >
-                          <div className="text-sm font-medium text-orange-900">
-                            {item.time}
-                          </div>
-                          <div className="text-sm">{item.title}</div>
-                        </div>
-                      ))}
+                    <div className="relative w-full h-auto">
+                      <Image 
+                        src={day.imageUrl1}
+                        alt={`${day.date} Schedule`}
+                        width={800}
+                        height={1000}
+                        className="w-full h-auto rounded-lg"
+                      />
+                       <Image 
+                        src={day.imageUrl2}
+                        alt={`${day.date} Schedule`}
+                        width={800}
+                        height={1000}
+                        className="w-full h-auto rounded-lg"
+                      />
                     </div>
                   </CardContent>
                 </Card>
@@ -115,4 +93,3 @@ export default function ConferenceSchedule() {
     </div>
   )
 }
-
