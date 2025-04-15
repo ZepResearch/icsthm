@@ -36,8 +36,8 @@ export default function AboutCompany() {
   }
 
   const conferenceFeatures = [
-    { icon: CalendarDays, text: "2-day event: April 24th - 25th, 2025" },
-    { icon: MapPin, text: "Bangkok, Thailand" },
+    { icon: CalendarDays, text: "2-day event: May 22nd - 23rd, 2025" },
+    { icon: MapPin, text: "Kuala Lumpur, Malaysia" },
     { icon: Users, text: "500+ Expected Attendees" },
     { icon: Globe, text: "International Speakers" },
     { icon: Mail, text: "info@icsthm.com" },
@@ -123,7 +123,7 @@ export default function AboutCompany() {
                 Join us in shaping the future of tourism and hospitality
               </CardDescription>
               <h2 className="text-muted-foreground">
-                April 24th - 25th, 2025 • Bangkok, Thailand
+                May 22nd - 23rd, 2025 • Kuala Lumpur, Malaysia
               </h2>
             </CardContent>
           </Card>

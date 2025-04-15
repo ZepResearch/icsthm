@@ -128,7 +128,7 @@ export default function ConferenceAboutSection() {
 
   const conferenceFeatures = [
     { icon: CalendarDays, text: "2-day thought-provoking event" },
-    { icon: MapPin, text: "At the centre of Bangkok, Thailand" },
+    { icon: MapPin, text: "At the centre of Kuala Lumpur, Malaysia" },
     { icon: Users, text: "Connect with 500+ leaders in the industry" },
     { icon: Lightbulb, text: "Over 20+ workshops on emerging trends" },
     { icon: Globe, text: "Speakers from more than 30 countries" },
@@ -285,7 +285,7 @@ export default function ConferenceAboutSection() {
                 Be a part of redefining the future of tourism and hospitality.
               </CardDescription>
               <p className="text-muted-foreground">
-                April 24th - 25th, 2025 • Bangkok, Thailand
+                May 22nd - 23rd, 2025 • Kuala Lumpur, Malaysia  
               </p>
             </CardContent>
           </Card>

@@ -29,7 +29,7 @@ export default function VenuePage() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div className="w-full md:w-1/2">
             <Image
-              src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1671500338570-b5229b824c39?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Conference Venue"
               width={600}
               height={400}
@@ -37,30 +37,36 @@ export default function VenuePage() {
             />
           </div>
           <div className="w-full md:w-1/2">
-            <h1 className="text-4xl font-bold mb-4 text-orange-500  ">
-              Conference Venue
-            </h1>
-            <p className="text-lg mb-4">
-              Welcome to the International Conference on Sustainable Tourism  and
-              Hospitality Management. Our venue in the vibrant city of Bangkok offers state-of-the-art facilities to
-              ensure a productive and enjoyable experience for all attendees. With modern conference rooms,
-              cutting-edge audiovisual equipment, and spacious networking areas, weve created the perfect
-              environment for knowledge sharing and collaboration.
-            </p>
-            <p className="text-lg mb-4">
-              Situated in the heart of Bangkok, our venue provides easy access to public transportation,
-              world-class hotels, and a variety of dining options. Whether youre here to present, learn,
-              or network, youll find our venue both comfortable and inspiring.
-            </p>
-            <div className="flex items-center text-gray-950 font-semibold pb-4">
-            <Hotel className="mr-2"/>
-            <h2>Radisson Suites Bangkok Sukhumvit            </h2>
-            </div>
-            <div className="flex items-center text-gray-950 font-semibold">
-              <MapPin className="mr-2" />
-              <span>23/2 Soi Sukhumvit 13, Khwaeng Khlong Toei Nuea, Khlong Toei, Bangkok 10110, Thailand,</span>
-            </div>
-          </div>
+  <h1 className="text-4xl font-bold mb-4 text-orange-500">
+    Conference Venue
+  </h1>
+  <p className="text-lg mb-4">
+    Welcome to the International Conference on Sustainable Tourism and
+    Hospitality Management. This year, we’re hosting the event at the
+    Holiday Inn Express, Kuala Lumpur City Centre, an IHG Hotel. Located in
+    the heart of Malaysia’s vibrant capital, the venue offers modern
+    amenities to ensure a productive and enjoyable experience for all
+    attendees.
+  </p>
+  <p className="text-lg mb-4">
+    With comfortable conference facilities, contemporary design, and easy
+    access to local attractions, the hotel is perfect for learning,
+    networking, and sharing ideas. Kuala Lumpur’s dynamic culture and
+    hospitality will make your visit memorable.
+  </p>
+  <div className="flex items-center text-gray-950 font-semibold pb-4">
+    <Hotel className="mr-2" />
+    <h2>Holiday Inn Express</h2>
+  </div>
+  <div className="flex items-center text-gray-950 font-semibold">
+    <MapPin className="mr-2" />
+    <span>
+      Holiday Inn Express, Kuala Lumpur City Centre, an IHG Hotel, Kuala
+      Lumpur, Malaysia
+    </span>
+  </div>
+</div>
+
         </div>
       </motion.section>
 
@@ -76,8 +82,7 @@ export default function VenuePage() {
         </h3>
         <div className="aspect-w-16 aspect-h-9">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5766923075325!2d100.55548519306322!3d13.74405924155247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee677aa7f5b%3A0x297e4d6053920063!2sRadisson%20Suites%20Bangkok%20Sukhumvit!5e0!3m2!1sen!2sin!4v1734588683427!5m2!1sen!2sin"
-            width="100%"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7967.574347425009!2d101.708685!3d3.1507630000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362aba001bed%3A0x1a95bd9e2e38cad4!2sHoliday%20Inn%20Express%20Kuala%20Lumpur%20City%20Centre%20by%20IHG!5e0!3m2!1sen!2sin!4v1744704386743!5m2!1sen!2sin"            width="100%"
             height="450"
             style={{ border: 0 }}
             allowFullScreen
@@ -99,35 +104,42 @@ export default function VenuePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
-              title: "Grand Palace",
-              description: "Explore the majestic former residence of Thai royalty. This stunning complex features intricate architecture, golden spires, and sacred Buddhist temples. Don't miss the famous Emerald Buddha, housed within the palace grounds.",
-              img:"https://plus.unsplash.com/premium_photo-1694475357558-2b19f2344599?q=80&w=2079&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              title: "Petronas Twin Towers",
+              description:
+                "Marvel at the iconic Petronas Twin Towers, once the tallest buildings in the world. Enjoy breathtaking views from the Skybridge and observation deck, and explore the Suria KLCC mall at the base for shopping and dining.",
+              img: "https://plus.unsplash.com/premium_photo-1700955569542-735a654503bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-              title: "Wat Phra Chetuphon",
-              description: "Visit the famous Temple of the Reclining Buddha, also known as Wat Pho. Home to a 46-meter long golden reclining Buddha statue, this temple is also the birthplace of traditional Thai massage. Explore the beautiful courtyards and marvel at the intricate murals.",
-              img:"https://res.cloudinary.com/dtsuvx8dz/image/upload/v1734198049/samples/wtd41p4ycusjlcb1v5ht.jpg"
+              title: "KL Tower (Menara Kuala Lumpur)",
+              description:
+                "Visit one of the tallest telecommunications towers in the world. The KL Tower offers panoramic city views, a revolving restaurant, and thrilling attractions like the Sky Deck and Sky Box.",
+              img: "https://images.unsplash.com/photo-1561365549-2601f188b661?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-              title: "Chatuchak Weekend Market",
-              description: "Experience one of the world's largest outdoor markets, featuring over 15,000 stalls. From local crafts and antiques to fashion and street food, Chatuchak offers a vibrant shopping experience that captures the essence of Thai culture and commerce.",
-              img:"https://res.cloudinary.com/dtsuvx8dz/image/upload/v1734198246/samples/cu7zfbyk4ungsv5kvc5a.jpg"
+              title: "Bukit Bintang",
+              description:
+                "Explore Kuala Lumpur’s vibrant shopping and entertainment district. From trendy cafes and luxury malls to street food and nightlife, Bukit Bintang offers something for every traveler.",
+              img: "https://images.unsplash.com/photo-1548943468-babf66c01664?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-              title: "Chao Phraya River",
-              description: "Take a scenic boat tour along Bangkok's main waterway, often called the 'River of Kings'. Observe the city's skyline, historic temples, and local life along the riverbanks. For a unique experience, try a dinner cruise to see Bangkok illuminated at night.",
-              img:"https://res.cloudinary.com/dtsuvx8dz/image/upload/v1734198320/samples/bk5wfjsidtjfr8ycgddq.jpg"
+              title: "KL Forest Eco Park",
+              description:
+                "Discover a tropical rainforest reserve in the middle of the city. Walk the canopy walkways and enjoy a breath of fresh air while surrounded by lush greenery and native wildlife.",
+              img: "https://images.unsplash.com/photo-1700236660891-61e9234c8ef9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-              title: "Jim Thompson House",
-              description: "Discover traditional Thai architecture and art collections in this beautifully preserved home of American businessman Jim Thompson. The house showcases his extensive collection of Southeast Asian art and offers insight into Thai culture and history.",
-              img:"https://res.cloudinary.com/dtsuvx8dz/image/upload/v1734198367/samples/kyssuh36c5n68tvz0vkw.jpg"
+              title: "Merdeka Square",
+              description:
+                "Visit the historic site where Malaysia declared its independence. The square is surrounded by beautiful colonial architecture, including the Sultan Abdul Samad Building, and is perfect for a leisurely stroll.",
+              img: "https://images.unsplash.com/photo-1663237155810-a292cca8fe47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
-            {
-              title: "Lumpini Park",
-              description: "Relax in Bangkok's largest and oldest public park, a green oasis in the heart of the city. Enjoy jogging paths, paddle boats on the lake, and open-air aerobics classes. Keep an eye out for the park's resident monitor lizards, a unique sight in an urban setting.",
-              img:"https://res.cloudinary.com/dtsuvx8dz/image/upload/v1734198412/samples/dwfa0cxnlphedzrkgiyj.jpg"
+             {
+              title: "Central Market",
+              description:
+                "Experience Malaysian culture through handicrafts, local art, and traditional food. Central Market is a cultural hub where you can shop for souvenirs and watch live performances.",
+              img: "https://images.unsplash.com/photo-1736056338252-ea0dca186862?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
+            
           ].map((attraction, index) => (
             <motion.div
               key={index}

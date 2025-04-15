@@ -81,7 +81,7 @@ export default function Hero() {
           >
             <div className="flex items-center space-x-2">
               <Calendar className="h-6 w-6 text-primary" />
-              <span>24th - 25th April  2025</span>
+              <span>22nd - 23rd May 2025</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-6 w-6 text-primary" />
@@ -144,7 +144,7 @@ export default function Hero() {
               className="object-contain rounded-xl drop-shadow-2xl"
               height={450}
               width={450}
-              src="https://images.unsplash.com/photo-1508292162097-00dd24b15f47?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1519818187420-8e49de7adeef?q=80&w=1683&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <motion.div
               initial={{ opacity: 0, y: 20 }}

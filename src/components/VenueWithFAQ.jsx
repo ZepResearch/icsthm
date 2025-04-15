@@ -23,7 +23,7 @@ export default function VenueWithFAQ() {
             <CardContent className="p-0">
               <div className="aspect-[16/9] overflow-hidden bg-gray-100">
                 <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5766923075325!2d100.55548519306322!3d13.74405924155247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee677aa7f5b%3A0x297e4d6053920063!2sRadisson%20Suites%20Bangkok%20Sukhumvit!5e0!3m2!1sen!2sin!4v1734588683427!5m2!1sen!2sin"
+           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7967.574347425009!2d101.708685!3d3.1507630000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362aba001bed%3A0x1a95bd9e2e38cad4!2sHoliday%20Inn%20Express%20Kuala%20Lumpur%20City%20Centre%20by%20IHG!5e0!3m2!1sen!2sin!4v1744704386743!5m2!1sen!2sin"
             alt="Map of conference venue"
                   className="object-cover"
                   width={800}
@@ -32,13 +32,13 @@ export default function VenueWithFAQ() {
               </div>
               <div className="p-6">
                 <h3 className="mb-2 text-2xl font-semibold">
-                Radisson Suites Bangkok Sukhumvit
+                Holiday Inn Express, Kuala Lumpur City Centre,
 
                 </h3>
                 <div className="space-y-2 text-base text-gray-500 pb-4">
                   <p className="flex items-center">
                     <MapPin className="mr-2 h-4 w-4 text-orange-500" />
-                    23/2 Soi Sukhumvit 13, Khwaeng Khlong Toei Nuea, Khlong Toei, Bangkok 10110, Thailand
+                    Holiday Inn Express, Kuala Lumpur City Centre, an IHG Hotel,Kuala Lumpur, Malaysia
                   </p>
                   <p className="flex items-center">
                     <Phone className="mr-2 h-4 w-4 text-orange-500" />
