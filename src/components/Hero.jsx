@@ -85,7 +85,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-6 w-6 text-primary" />
-              <span>Bangkok, Thailand              </span>
+              <span>Kuala Lumpur, Malaysia</span>
             </div>
           </motion.div>
           <motion.div
