@@ -9,19 +9,19 @@ import Image from "next/image"
 
 const scheduleData = [
   {
-    date: "April 24 | Day 1",
+    date: "May 22 | Day 1",
     imageUrl1: "/schedule/d1p1.jpg", // Path to your first image
     imageUrl2: "/schedule/d1p2.jpg" // Path to your second image
   },
-  // {
-  //   date: "April 25 | Day 2",
-  //   imageUrl1: "/schedule/d2p1.jpg", // Path to your first image
-  //   imageUrl2: "/schedule/d2p2.jpg", 
-  // }
+  {
+    date: "May 23 | Day 2",
+    imageUrl1: "/schedule/d2p1.jpg", // Path to your first image
+    imageUrl2: "/schedule/d2p2.jpg", 
+  }
 ]
 
 export default function ConferenceSchedule() {
-  const startDate = new Date(2025, 3, 24) // March 21, 2024
+  const startDate = new Date(2025, 4, 22) // March 21, 2024
   const [selectedDates, setSelectedDates] = useState([
     startDate,
     addDays(startDate, 1),
@@ -35,14 +35,14 @@ export default function ConferenceSchedule() {
           Shaping Tomorrow&apos;s Sustainable Landscape
           </h1>
           <h2 className="text-muted-foreground">
-          Join us April 24th-25th for three days of cutting-edge insights and networking. Reserve your spot today!
+          Join us May 22nd-23rd for three days of cutting-edge insights and networking. Reserve your spot today!
           </h2>
         </div>
 
         <div className="grid gap-8 md:grid-cols-[300px_1fr]">
           <Card className="border-primary">
             <CardHeader>
-              <CardTitle>April 2025</CardTitle>
+              <CardTitle>May 2025</CardTitle>
             </CardHeader>
             <CardContent>
               <Calendar
