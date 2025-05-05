@@ -7,6 +7,7 @@ import { Calendar, MapPin, Users, Zap, Globe, Sparkles, Headphones } from "lucid
 import Image from "next/image";
 import Link from "next/link";
 import Banner from "./Banner";
+import { ReserveButton } from "./reserve-button";
 
 export default function Hero() {
   return (
@@ -111,6 +112,7 @@ export default function Hero() {
               Register Now
             </Button>
               </Link>
+              <ReserveButton/>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
