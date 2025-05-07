@@ -1,18 +1,16 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Users, Zap, Globe, Sparkles, Headphones } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import Banner from "./Banner";
-import { ReserveButton } from "./reserve-button";
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Calendar, MapPin, Users, Zap, Globe, Sparkles, Headphones } from "lucide-react"
+import Link from "next/link"
+import Banner from "./Banner"
+import { ReserveButton } from "./reserve-button"
 
 export default function Hero() {
   return (
     <div className=" relative min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
-        <motion.div
+      <motion.div
         className="md:absolute top-24 sm:right-24 right-5 z-20 bg-gradient-to-l from-orange-300/90 to-yellow-300/90 backdrop-blur-sm text-black p-4 rounded-lg shadow-lg w-64 md:my-0 my-24 md:ml-0 ml-16"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -35,7 +33,7 @@ export default function Hero() {
           </span>
         </div>
       </motion.div>
-      <Banner/>
+      <Banner />
       <div className="container mx-auto grid min-h-[calc(100vh-4rem)] grid-cols-1 items-center gap-12 px-4 py-16 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -43,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-      {/* <Image src={'https://res.cloudinary.com/dwlhesiyi/image/upload/v1729260387/erph7fml9unxiowlmrmg.png'}alt="zep logo  "
+          {/* <Image src={'https://res.cloudinary.com/dwlhesiyi/image/upload/v1729260387/erph7fml9unxiowlmrmg.png'}alt="zep logo  "
           width={400}
           height={400}
           /> */}
@@ -59,9 +57,7 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl md:text-7xl"
             >
-              <span className="block text-primary">
-                International Conference on
-              </span>
+              <span className="block text-primary">International Conference on</span>
               <span className="block">Sustainable Tourism </span>
               <span className="block">& Hospitality Management </span>
             </motion.h2>
@@ -71,7 +67,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="mt-3 text-xl text-gray-600 sm:mt-5 sm:text-2xl max-w-prose"
             >
-             Redefining Tourism and Hospitality: Pathways to Sustainability and Innovation
+              Redefining Tourism and Hospitality: Pathways to Sustainability and Innovation
             </motion.p>
           </div>
           <motion.div
@@ -89,30 +85,41 @@ export default function Hero() {
               <span>Kuala Lumpur, Malaysia</span>
             </div>
           </motion.div>
+          {/* Highlighted visa information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55, duration: 0.5 }}
+            className="bg-orange-100 border-l-4 border-orange-500 p-4 rounded-md shadow-md"
+          >
+            <p className="font-semibold text-orange-800 flex items-center">
+              <Globe className="h-5 w-5 mr-2 text-orange-600" />
+              <span className=" px-2 py-0.5 rounded">
+                Free Visa for Philippines, Thailand, Indonesia and Singapore.
+              </span>
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
             className="flex flex-wrap gap-4"
           >
-            <Link href={'/submission'}>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            <Link href={"/submission"}>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Submit Your Paper
+              </Button>
+            </Link>
+            <Link href={"registration"}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/50 hover:text-primary-foreground font-semibold"
               >
-              Submit Your Paper
-            </Button>
-              </Link>
-              <Link href={'registration'}>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/50 hover:text-primary-foreground font-semibold"
-              >
-              Register Now
-            </Button>
-              </Link>
-              <ReserveButton/>
+                Register Now
+              </Button>
+            </Link>
+            <ReserveButton />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,13 +163,11 @@ export default function Hero() {
             >
               <Sparkles className="h-8 w-8 mb-2" />
               <h3 className="text-xl font-bold">Networking Events</h3>
-              <p className="mt-1 text-primary-foreground">
-                Connect with industry leaders
-              </p>
+              <p className="mt-1 text-primary-foreground">Connect with industry leaders</p>
             </motion.div>
           </div>
         </motion.div>
       </div>
     </div>
-  );
+  )
 }
