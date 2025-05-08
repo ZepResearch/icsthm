@@ -122,6 +122,30 @@ export const userConfirmationTemplate = (data) => `
             margin: 0 0 10px;
             font-size: 18px;
         }
+        .action-button {
+            display: inline-block;
+            background-color: #ff7e00;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .action-button:hover {
+            background-color: #d45500;
+        }
+        .special-alert {
+            background-color: #ffe0b2;
+            border-left: 4px solid #ff7e00;
+            padding: 15px;
+            margin: 25px 0;
+            font-weight: 500;
+            color: #d45500;
+            font-size: 16px;
+            text-align: center;
+        }
         .footer {
             background-color: #fff5eb;
             color: #666;
@@ -169,17 +193,21 @@ export const userConfirmationTemplate = (data) => `
 <body>
     <div class="container">
         <div class="header">
-            <h1>Registration Confirmed!</h1>
+            <h1>Slot Reserved!</h1>
             <p>International Conference on Sustainable Tourism & Hospitality Management</p>
         </div>
         <div class="content">
             <p class="greeting">Dear ${data.name},</p>
-            <div class="success-badge">✓ Registration Successful</div>
+            <div class="success-badge">✓ Slot Reserved</div>
             
-            <p>We're delighted to confirm your registration for the International Conference on Sustainable Tourism & Hospitality Management. Your participation will contribute to valuable discussions on sustainable practices in the tourism and hospitality industries.</p>
+            <div class="special-alert">
+                Buy Conference ticket to avail the free accommodation.
+            </div>
+            
+            <p>We're pleased to confirm that your slot has been reserved for the International Conference on Sustainable Tourism & Hospitality Management. To complete your registration and secure your free accommodation, please purchase your conference ticket.</p>
             
             <div class="registration-details">
-                <h2>Your Registration Details</h2>
+                <h2>Your Reservation Details</h2>
                 <ul>
                     <li>
                         <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -203,14 +231,15 @@ export const userConfirmationTemplate = (data) => `
                     </li>
                     <li>
                         <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        <strong>Registration Date:</strong> ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+                        <strong>Reservation Date:</strong> ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
                     </li>
                 </ul>
             </div>
             
             <div class="highlight-box">
-                <h3>What's Next?</h3>
-                <p>We'll send you detailed conference information, including the agenda, accommodation options, and venue details as we get closer to the event date.</p>
+                <h3>Complete Your Registration</h3>
+                <p>To finalize your registration and secure your free accommodation, please purchase your conference ticket using the link below:</p>
+                <a href="https://www.icsthm.com/registration" class="action-button">Buy Conference Ticket</a>
             </div>
             
             <p>If you have any questions or need assistance, please don't hesitate to contact our conference team.</p>
@@ -240,7 +269,7 @@ export const adminNotificationTemplate = (data) => `
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Conference Registration</title>
+    <title>New Conference Slot Reservation</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
         
@@ -284,6 +313,13 @@ export const adminNotificationTemplate = (data) => `
             font-weight: 500;
             margin-bottom: 20px;
             text-transform: uppercase;
+        }
+        .special-note {
+            background-color: #ffe0b2;
+            padding: 12px;
+            border-left: 4px solid #ff7e00;
+            margin-bottom: 20px;
+            font-weight: 500;
         }
         .details-table {
             width: 100%;
@@ -331,12 +367,17 @@ export const adminNotificationTemplate = (data) => `
 <body>
     <div class="container">
         <div class="header">
-            <h1>New Conference Registration</h1>
+            <h1>New Conference Slot Reservation</h1>
         </div>
         <div class="content">
-            <div class="alert-badge">New Registration</div>
+            <div class="alert-badge">Slot Reserved</div>
             
-            <p>A new participant has registered for the International Conference on Sustainable Tourism & Hospitality Management:</p>
+            <div class="special-note">
+                Participant needs to buy conference ticket to avail free accommodation.
+                Registration link: https://www.icsthm.com/registration
+            </div>
+            
+            <p>A new participant has reserved a slot for the International Conference on Sustainable Tourism & Hospitality Management:</p>
             
             <table class="details-table">
                 <tr>
@@ -360,12 +401,12 @@ export const adminNotificationTemplate = (data) => `
                     <td>${data.organization}</td>
                 </tr>
                 <tr>
-                    <th>Registration Date</th>
+                    <th>Reservation Date</th>
                     <td>${new Date().toLocaleString()}</td>
                 </tr>
             </table>
             
-            <p>Please follow up as necessary.</p>
+            <p>Please follow up to ensure they complete their registration by purchasing a conference ticket.</p>
         </div>
         <div class="footer">
             <p>ICSTHM Admin Notification System</p>
