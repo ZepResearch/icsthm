@@ -62,7 +62,7 @@ export function getUserEmailTemplate(data) {
           <li><strong>Submission Date:</strong> ${new Date().toLocaleDateString()}</li>
         </ul>
         
-        <p>If you have any questions or need to make changes to your submission, please contact us at conference@example.com.</p>
+        <p>If you have any questions or need to make changes to your submission, please contact us at info@icsthm.com .</p>
         
         <p>Best regards,<br>
         Conference Organizing Committee<br>
