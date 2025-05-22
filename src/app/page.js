@@ -2,6 +2,7 @@ import AboutSection from "@/components/About";
 import CoOrganizationLogos from "@/components/Co-OrganiztionLogo";
 import CTASection from "@/components/Cta";
 import Dates from "@/components/Dates";
+import { DownloadPopup } from "@/components/download-popup";
 import DownloadButtons from "@/components/Downloadbuttons";
 import Hero from "@/components/Hero";
 import ConferenceHighlightSection from "@/components/Hightlight";
@@ -16,6 +17,7 @@ export default function Home() {
   return (
    <>
    <Hero/>
+   <DownloadPopup/>
    <CoOrganizationLogos/>
    <AboutSection/>
    <DownloadButtons/>
