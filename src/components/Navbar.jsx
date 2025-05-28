@@ -126,6 +126,7 @@ const MobileNav = () => (
             CALL FOR PAPERS
           </MobileNavItem>
           <MobileNavItem href="/committee">COMMITTEE</MobileNavItem>
+          <MobileNavItem href="/gallery">GALLERY</MobileNavItem>
           <MobileNavItem href="/submission">SUBMISSION</MobileNavItem>
           <MobileNavItem href="/venue">VENUE</MobileNavItem>
           <MobileNavItem href="/contact">CONTACT</MobileNavItem>
@@ -224,6 +225,13 @@ export default function Navbar() {
                 <Link href="/committee" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   COMMITTEE
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/gallery" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  GALLERY
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
