@@ -24,6 +24,8 @@ const firstConferenceImages = [
   // { src: "/gallery/18.jpg", alt: "1st Conference - Image 18" },
   { src: "/gallery/19.jpg", alt: "1st Conference - Image 19" },
   { src: "/gallery/20.jpg", alt: "1st Conference - Image 20" },
+  { src: "/gallery/21.jpg", alt: "1st Conference - Image 21" },
+
 ]
 
 
