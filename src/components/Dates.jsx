@@ -6,8 +6,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import PocketBase from 'pocketbase';
+import { pb } from "@/lib/pocketbase";
 
-const pb = new PocketBase('https://icsthm.pockethost.io');
+
 
 function TimelineItem({ item, index }) {
   const ref = useRef(null);
@@ -55,7 +56,7 @@ export default function Dates() {
       try {
         setLoading(true);
         // Fetch all records and sort them by date
-        const records = await pb.collection('dates').getFullList({
+        const records = await pb.collection('ICSTHM_dates').getFullList({
           sort: '-created',
           requestKey: null,
         });

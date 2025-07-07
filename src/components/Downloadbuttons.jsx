@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { DownloadCloudIcon } from "lucide-react";
-import PocketBase from 'pocketbase';
+import { pb } from "@/lib/pocketbase";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,8 +34,8 @@ export default function DownloadButtons() {
   useEffect(() => {
     const fetchDownloads = async () => {
       try {
-        const pb = new PocketBase('https://icsthm.pockethost.io');
-        const records = await pb.collection('downloads').getFullList({
+
+        const records = await pb.collection('ICSTHM_downloads').getFullList({
           sort: 'created',
           requestKey:null
           
@@ -92,7 +92,7 @@ export default function DownloadButtons() {
           >
             {downloads.map((download) => (
               <motion.a
-                href={`https://icsthm.pockethost.io/api/files/${download.collectionId}/${download.id}/${download.url}`}
+                href={`${process.env.NEXT_PUBLIC_POCKETBASE_URL}/api/files/${download.collectionId}/${download.id}/${download.url}`}
                 key={download.id}
                 className="bg-orange-400 hover:bg-orange-500/80 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-300 text-sm sm:text-sm text-center drop-shadow-sm"
                 variants={itemVariants}

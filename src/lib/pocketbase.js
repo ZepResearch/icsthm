@@ -1,9 +1,9 @@
 import PocketBase from 'pocketbase';
-
+ const URL = process.env.NEXT_PUBLIC_POCKETBASE_URL;
 // Create PocketBase instance only on client side
 const getPocketBase = () => {
   if (typeof window === "undefined") return null;
-  return new PocketBase('https://icsthm.pockethost.io');
+  return new PocketBase('https://icsthm-wfcces.pockethost.io');
 };
 
 export const pb = getPocketBase();

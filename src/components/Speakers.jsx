@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import PocketBase from 'pocketbase';
+import { pb } from "@/lib/pocketbase";
 
-const pb = new PocketBase('https://icsthm.pockethost.io');
 
 // Updated to match exact PocketBase select field choices
 const speakerCategories = [
@@ -20,7 +19,7 @@ const SpeakerCard = ({ name, role, image, bio,collectionId, id, country, college
     whileHover={{ y: -5 }}
   >
     <img 
-      src={ `https://icsthm.pockethost.io/api/files/${collectionId}/${id}/${image}` } 
+      src={ `${process.env.NEXT_PUBLIC_POCKETBASE_URL}/api/files/${collectionId}/${id}/${image}` } 
       alt={name} 
       className="w-full h-72 object-contain" 
     />
@@ -80,7 +79,7 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
               </svg>
             </button>
             <img
-              src={`https://icsthm.pockethost.io/api/files/${speaker.collectionId}/${speaker.id}/${speaker.image}` }
+              src={`${process.env.NEXT_PUBLIC_POCKETBASE_URL}/api/files/${speaker.collectionId}/${speaker.id}/${speaker.image}` }
               alt={speaker.name}
               className="w-full h-96 object-contain rounded-lg mb-4 mt-4"
             />
@@ -117,7 +116,7 @@ export default function SpeakerSection() {
       try {
         setLoading(true);
         // Fetch all speakers
-        const records = await pb.collection('speakers').getFullList({
+        const records = await pb.collection('ICSTHM_speakers').getFullList({
           sort: 'name',
           expand: 'image', // Expand the image relation if needed
           requestKey: null,
