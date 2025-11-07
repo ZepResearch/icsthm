@@ -6,20 +6,20 @@ import { pb } from "@/lib/pocketbase";
 
 // Updated to match exact PocketBase select field choices
 const speakerCategories = [
-  // { id: "Guest Speaker", title: "Guest Speaker" },
+  { id: "Guest Speaker", title: "Guest Speaker" },
   { id: "Keynote Speaker", title: "Keynote Speaker" },
-  // { id: "Conference Chair", title: "Conference Chair" },
-  // { id: "Conference Co-Chair", title: "Conference Co-Chair" },
+   { id: "Conference Chair", title: "Conference Chair" },
+   { id: "Conference Co-Chair", title: "Conference Co-Chair" },
   { id: "Session Chair", title: "Session Chair" },
 ];
 
-const SpeakerCard = ({ name, role, image, bio,collectionId, id, country, college, onMoreInfo }) => (
+const SpeakerCard = ({ name, role, image, bio, collectionId, id, country, college, onMoreInfo }) => (
   <motion.div
     className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
     whileHover={{ y: -5 }}
   >
     <img 
-      src={ `${process.env.NEXT_PUBLIC_POCKETBASE_URL}/api/files/${collectionId}/${id}/${image}` } 
+      src={`${process.env.NEXT_PUBLIC_POCKETBASE_URL}/api/files/${collectionId}/${id}/${image}`} 
       alt={name} 
       className="w-full h-72 object-contain" 
     />
@@ -29,7 +29,7 @@ const SpeakerCard = ({ name, role, image, bio,collectionId, id, country, college
       <p className="text-sm">{college}</p>
       <p className="text-sm">{country}</p>
       <button
-        onClick={() => onMoreInfo({ name, role, image, bio ,collectionId, id ,country,college}) }
+        onClick={() => onMoreInfo({ name, role, image, bio, collectionId, id, country, college })}
         className="mt-2 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors duration-300"
       >
         More info
@@ -79,14 +79,14 @@ const Drawer = ({ isOpen, onClose, speaker }) => (
               </svg>
             </button>
             <img
-              src={`${process.env.NEXT_PUBLIC_POCKETBASE_URL}/api/files/${speaker.collectionId}/${speaker.id}/${speaker.image}` }
+              src={`${process.env.NEXT_PUBLIC_POCKETBASE_URL}/api/files/${speaker.collectionId}/${speaker.id}/${speaker.image}`}
               alt={speaker.name}
               className="w-full h-96 object-contain rounded-lg mb-4 mt-4"
             />
             <h1 className="text-2xl font-bold text-orange-800 mb-2">
               {speaker.name}
             </h1>
-            <h3 className="text-xl text-orange-600 ">{speaker.role}</h3>
+            <h3 className="text-xl text-orange-600">{speaker.role}</h3>
             <p className="text-sm mt-1 mb-4">{speaker.country}</p>
             <p className="text-sm">{speaker.college}</p>
             <p className="text-gray-700 flex-grow mt-4">{speaker.bio}</p>
@@ -190,7 +190,7 @@ export default function SpeakerSection() {
     <div className="">
       
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold text-center  mb-8">
+        <h2 className="text-4xl font-bold text-center mb-8">
           Our Speakers
         </h2>
         <div className="mb-8 flex flex-wrap justify-center gap-2">
@@ -217,16 +217,24 @@ export default function SpeakerSection() {
             transition={{ duration: 0.3 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {speakers[activeCategory]?.map((speaker, index) => (
-              <motion.div
-                key={speaker.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <SpeakerCard {...speaker} onMoreInfo={handleMoreInfo} />
-              </motion.div>
-            ))}
+            {speakers[activeCategory]?.length > 0 ? (
+              speakers[activeCategory].map((speaker, index) => (
+                <motion.div
+                  key={speaker.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  <SpeakerCard {...speaker} onMoreInfo={handleMoreInfo} />
+                </motion.div>
+              ))
+            ) : (
+              <div className="col-span-full flex items-center justify-center py-24">
+                <p className="text-xl text-orange-600 font-medium">
+                  Speakers will be announced soon
+                </p>
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
         <Drawer
