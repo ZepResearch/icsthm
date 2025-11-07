@@ -15,7 +15,7 @@ function TimelineItem({ item, index }) {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   
   // Apply line-through if index is greater than 1
-  const isExpired = index > 2;
+  const isExpired = index > 4;
 
   return (
     <motion.div
@@ -92,7 +92,7 @@ export default function Dates() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900 py-12">
+    <section className="py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-5xl">
@@ -120,7 +120,7 @@ export default function Dates() {
                   key={item.name} 
                   item={item} 
                   index={index} 
-                  isExpired={index === 0} // Pass a prop to indicate this is the first item
+                  isExpired={index === 1} // Pass a prop to indicate this is the first item
                 />
               ))}
             </div>

@@ -141,7 +141,7 @@ export default function ThemeAndTopics() {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="py-16 px-4 bg-gradient-to-br from-primary/5 to-secondary/5"
+      className="py-16 px-4 "
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={itemVariants} className="text-center mb-12">
@@ -223,7 +223,7 @@ export default function ThemeAndTopics() {
           </Link>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="mt-12">
+        {/* <motion.div variants={itemVariants} className="mt-12">
       <Card className="overflow-hidden shadow-2xl bg-white/50 backdrop-blur-sm border-2 border-primary/20">
         <CardHeader className="bg-primary text-primary-foreground p-6">
           <CardTitle className="text-3xl flex items-center">
@@ -250,7 +250,7 @@ export default function ThemeAndTopics() {
           )}
         </CardContent>
       </Card>
-    </motion.div>
+    </motion.div> */}
       </div>
     </motion.section>
   )

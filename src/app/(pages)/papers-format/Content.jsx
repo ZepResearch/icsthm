@@ -71,7 +71,7 @@ export default function PaperFormat() {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="py-16 px-4 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900"
+      className="py-16 px-4"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div variants={itemVariants} className="text-center mb-12">

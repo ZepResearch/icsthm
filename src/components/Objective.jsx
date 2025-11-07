@@ -59,7 +59,7 @@ export default function ConferenceObjectives() {
   return (
     <section
       ref={ref}
-      className="w-full  pb-24 sm:pl-24 bg-gradient-to-tr from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900"
+      className="w-full  py-12 sm:pl-24 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900"
     >
       <div className="container mx-auto px-4  md:px-6">
         <motion.div

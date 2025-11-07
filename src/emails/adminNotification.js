@@ -90,7 +90,7 @@ export const adminNotificationTemplate = (data) => `
     <div class="container">
         <div class="header">
             <h1>New Paper Submission</h1>
-            <p>International Conference on Tourism Management & Hospitality</p>
+            <p>2<sup>nd</sup> International Conference on Tourism Management & Hospitality</p>
         </div>
         <div class="submission-details">
             <div class="field">

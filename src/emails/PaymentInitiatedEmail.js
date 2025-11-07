@@ -26,7 +26,7 @@ const PaymentInitiatedEmail = (data) => {
               box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
           }
           .header {
-              background: linear-gradient(135deg, #1680f9, #0056b3);
+              background: linear-gradient(135deg, #FF6035, #FBA84C);
               color: white;
               padding: 40px 20px;
               text-align: center;
@@ -46,7 +46,7 @@ const PaymentInitiatedEmail = (data) => {
               background-color: #f9f9f9;
               padding: 25px;
               border-radius: 8px;
-              border-left: 5px solid #1693f9;
+              border-left: 5px solid #FBA84C;
               margin-bottom: 30px;
               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
           }
@@ -117,7 +117,7 @@ const PaymentInitiatedEmail = (data) => {
                   <p>Please note that this email confirms that your payment process has started. You will receive another confirmation once the payment is successfully processed.</p>
                   <p>If you have any questions or concerns, please don't hesitate to contact our support team.</p>
                   <p>Thank you for your purchase!</p>
-                  <p>Best regards,<br>ICSTHM Team</p>
+                  <p>Best regards,<br> 2nd ICSTHM Team</p>
               </div>
           </div>
           <div class="footer">

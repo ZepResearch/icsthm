@@ -75,7 +75,7 @@ export function ReserveForm({ isOpen, onClose, onSubmitSuccess }) {
         <DialogTitle className="font-bold text-center bg-gradient-to-r from-pink-500 to-yellow-500 text-white py-4 px-3 rounded-md shadow-lg border-2 border-pink-200  mt-2">
        Pre-book your slot !
         </DialogTitle>
-          <DialogDescription>International Conference on Sustainable Tourism & Hospitality Management</DialogDescription>
+          <DialogDescription>2<sup>nd</sup> International Conference on Sustainable Tourism & Hospitality Management</DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">

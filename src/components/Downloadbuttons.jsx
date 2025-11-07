@@ -71,7 +71,7 @@ export default function DownloadButtons() {
   }
 
   return (
-    <section className="pb-12 mx-auto bg-gradient-to-tr from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
+    <section className="pb-12 mx-auto bg-gradient-to-tl from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex justify-center items-center mx-auto">
           <h1 className="text-center text-2xl pb-6 inline-flex justify-center items-center gap-3 font-medium text-orange-600">

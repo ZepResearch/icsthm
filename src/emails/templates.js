@@ -194,7 +194,7 @@ export const userConfirmationTemplate = (data) => `
     <div class="container">
         <div class="header">
             <h1>Slot Reserved!</h1>
-            <p>International Conference on Sustainable Tourism & Hospitality Management</p>
+            <p>2<sup>nd</sup> International Conference on Sustainable Tourism & Hospitality Management</p>
         </div>
         <div class="content">
             <p class="greeting">Dear ${data.name},</p>
@@ -247,10 +247,10 @@ export const userConfirmationTemplate = (data) => `
             <p>We look forward to your valuable participation in this important conference!</p>
             
             <p>Warm regards,<br>
-            <strong>The ICSTHM Organizing Committee</strong></p>
+            <strong>The 2nd ICSTHM Organizing Committee</strong></p>
         </div>
         <div class="footer">
-            <p>© ${new Date().getFullYear()} International Conference on Sustainable Tourism & Hospitality Management</p>
+            <p>© ${new Date().getFullYear()} 2nd International Conference on Sustainable Tourism & Hospitality Management</p>
             <p>This is an automated confirmation. Please do not reply to this email.</p>
             <div class="social-links">
                 <a href="https://www.zepresearch.com/">Website</a> |
@@ -377,7 +377,7 @@ export const adminNotificationTemplate = (data) => `
                 Registration link: https://www.icsthm.com/registration
             </div>
             
-            <p>A new participant has reserved a slot for the International Conference on Sustainable Tourism & Hospitality Management:</p>
+            <p>A new participant has reserved a slot for the 2nd International Conference on Sustainable Tourism & Hospitality Management:</p>
             
             <table class="details-table">
                 <tr>

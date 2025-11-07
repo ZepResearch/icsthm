@@ -25,7 +25,7 @@ export const userConfirmationTemplate = (data) => `
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .header {
-            background-color: #4a90e2;
+            background-color:#F99B16;
             color: #ffffff;
             padding: 30px;
             text-align: center;
@@ -45,7 +45,7 @@ export const userConfirmationTemplate = (data) => `
         }
         .submission-details {
             background-color: #f8f9fa;
-            border-left: 4px solid #4a90e2;
+            border-left: 4px solid #F99B16;
             padding: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -53,7 +53,7 @@ export const userConfirmationTemplate = (data) => `
         .submission-details h2 {
             margin-top: 0;
             font-size: 18px;
-            color: #4a90e2;
+            color: #F99B16;
         }
         .submission-details ul {
             list-style-type: none;
@@ -91,7 +91,7 @@ export const userConfirmationTemplate = (data) => `
         <div class="content">
             <p class="greeting">Dear ${data.authorName},</p>
             <p>Thank you for submitting your paper. We are pleased to confirm that we have received your submission titled:</p>
-            <p style="font-weight: 500; font-style: italic; color: #4a90e2;">"${data.paperTitle}"</p>
+            <p style="font-weight: 500; font-style: italic; color: #F99B16;">"${data.paperTitle}"</p>
             
             <div class="submission-details">
                 <h2>Submission Details</h2>

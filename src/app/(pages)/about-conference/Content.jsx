@@ -177,12 +177,12 @@ export default function ConferenceAboutSection() {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="py-16 px-4 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900"
+      className="py-16 px-4  "
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={itemVariants} className="text-center mb-12">
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">About the Conference</Badge>
-          <h1 className="text-4xl font-bold text-primary mb-4">International Conference on Sustainable Tourism & Hospitality Management</h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">2<sup>nd</sup> International Conference on Sustainable Tourism & Hospitality Management</h1>
           <h2 className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Connecting global leaders, innovators, and experts to redefine the future of tourism and hospitality.
           </h2>
@@ -191,11 +191,11 @@ export default function ConferenceAboutSection() {
         <motion.div variants={itemVariants} className="mt-12 text-center pb-12">
           <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20 inline-block">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary">About ICSTHM</CardTitle>
+              <CardTitle className="text-2xl font-bold text-primary">About 2<sup>nd</sup> ICSTHM</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground px-12 text-justify">
-                The International Conference on Sustainable Tourism  and Hospitality Management is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
+                The 2<sup>nd</sup> International Conference on Sustainable Tourism  and Hospitality Management is a premier global event that brings together thought leaders, industry professionals, researchers, and innovators from around the world. Over three days, participants will explore the latest trends, challenges, and opportunities within the tourism and hospitality sectors, with a focus on sustainability, digital transformation, and the future of travel. This conference serves as a unique platform to exchange ideas, foster collaborations, and drive actionable solutions for the industry&apos;s most pressing issues.
               </p>
               <p className="text-muted-foreground px-12 text-justify mt-2">
                 Attendees will have the chance to engage in insightful discussions, attend workshops, and network with key influencers shaping the future of tourism and hospitality. Whether you are a seasoned professional, an academic, or a newcomer to the industry, this conference will provide valuable knowledge and connections that can help you navigate and lead in the evolving landscape of tourism and hospitality.
@@ -241,7 +241,7 @@ export default function ConferenceAboutSection() {
         <motion.div variants={itemVariants} className="mt-12">
           <Card className="bg-white/50 backdrop-blur-sm border-2 border-primary/20">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary">Why Attend ICSTHM 2025</CardTitle>
+              <CardTitle className="text-2xl font-bold text-primary">Why Attend 2<sup>nd</sup> ICSTHM 2026</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
@@ -285,7 +285,7 @@ export default function ConferenceAboutSection() {
                 Be a part of redefining the future of tourism and hospitality.
               </CardDescription>
               <p className="text-muted-foreground">
-                May 22nd - 23rd, 2025 • Kuala Lumpur, Malaysia  
+                26th - 27th March 2026 • Kuala Lumpur, Malaysia  
               </p>
             </CardContent>
           </Card>

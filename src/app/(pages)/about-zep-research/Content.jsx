@@ -36,7 +36,7 @@ export default function AboutCompany() {
   }
 
   const conferenceFeatures = [
-    { icon: CalendarDays, text: "2-day event: May 22nd - 23rd, 2025" },
+    { icon: CalendarDays, text: "2-day event: 26th - 27th March 2026 " },
     { icon: MapPin, text: "Kuala Lumpur, Malaysia" },
     { icon: Users, text: "500+ Expected Attendees" },
     { icon: Globe, text: "International Speakers" },
@@ -50,12 +50,12 @@ export default function AboutCompany() {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="py-16 px-4 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900 "
+      className="py-16 px-4 "
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={itemVariants} className="text-center mb-12">
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">About Zep Research</Badge>
-          <h1 className="text-4xl font-bold text-primary mb-4">International Conference on Sustainable Tourism & Hospitality Management</h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">2<sup>nd</sup> International Conference on Sustainable Tourism & Hospitality Management</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A premier event bringing together industry professionals, researchers, and academics from around the world.
           </p>
@@ -123,7 +123,7 @@ export default function AboutCompany() {
                 Join us in shaping the future of tourism and hospitality
               </CardDescription>
               <h2 className="text-muted-foreground">
-                May 22nd - 23rd, 2025 • Kuala Lumpur, Malaysia
+                26th - 27th March 2026  • Kuala Lumpur, Malaysia
               </h2>
             </CardContent>
           </Card>

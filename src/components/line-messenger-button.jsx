@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { MessageCircle, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 
 
@@ -29,6 +30,7 @@ export function LineMessengerButton({
   }
 
   return (
+    <>
     <div
       className={cn(
         "fixed z-50 flex flex-col items-start gap-3",
@@ -56,5 +58,15 @@ export function LineMessengerButton({
         <span className="sr-only">{isOpen ? "Close Line Messenger chat" : "Open Line Messenger chat"}</span>
       </Button>
     </div>
+   <div className="fixed  left-4 bottom-24  z-50 hidden lg:flex flex-col items-center">
+          <Button size="icon" className="rounded-full bg-green-500 hover:bg-green-600 h-12 w-12 shadow-lg transition-transform hover:scale-110">
+            <Link href="https://wa.me/9237388328" target="_blank" rel="noopener noreferrer">
+              <img src="/whatsapp.png" alt="WhatsApp" className="h-8 w-8" />
+              <span className="sr-only">Contact via WhatsApp</span>
+            </Link>
+          </Button>
+          <span className="text-xs font-medium mt-1 text-green-600">Chat with us</span>
+        </div>
+    </>
   )
 }

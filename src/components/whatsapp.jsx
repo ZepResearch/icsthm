@@ -13,7 +13,7 @@ export function FloatingWhatsAppButton({ phoneNumber, message = '' }) {
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-4 left-4 bg-green-500 text-white p-1 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+      className="fixed top-4 left-4 bg-green-500 text-white p-1 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
       aria-label="Chat on WhatsApp"
     >
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">

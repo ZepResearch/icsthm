@@ -9,7 +9,7 @@ import { ReserveButton } from "./reserve-button"
 
 export default function Hero() {
   return (
-    <div className=" relative min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
+    <div className=" ">
       <motion.div
         className="md:absolute top-24 sm:right-24 right-5 z-20 bg-gradient-to-l from-orange-300/90 to-yellow-300/90 backdrop-blur-sm text-black p-4 rounded-lg shadow-lg w-64 md:my-0 my-24 md:ml-0 ml-16"
         initial={{ opacity: 0, x: 100 }}
@@ -34,7 +34,7 @@ export default function Hero() {
         </div>
       </motion.div>
       <Banner />
-      <div className="container mx-auto grid min-h-[calc(100vh-4rem)] grid-cols-1 items-center gap-12 px-4 py-16 lg:grid-cols-2">
+      <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 py-16 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -55,11 +55,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl md:text-7xl"
-            >
-              <span className="block text-primary">International Conference on</span>
-              <span className="block">Sustainable Tourism </span>
-              <span className="block">& Hospitality Management </span>
+              className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-7xl"
+            >2<sup>nd</sup> International Conference on
+          Sustainable Tourism 
+             & Hospitality Management 
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -78,7 +77,7 @@ export default function Hero() {
           >
             <div className="flex items-center space-x-2">
               <Calendar className="h-6 w-6 text-primary" />
-              <span>22nd - 23rd May 2025</span>
+              <span>26th - 27th March 2026</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-6 w-6 text-primary" />
@@ -147,13 +146,13 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="relative hidden lg:block"
         >
-          <div className="relative flex justify-center items-center h-full w-full  p-8">
+          <div className="relative flex justify-center items-center h-full w-full  p-1 ">
             <img
               alt="Conference illustration"
-              className="object-contain rounded-xl drop-shadow-2xl"
-              height={450}
-              width={450}
-              src="https://images.unsplash.com/photo-1519818187420-8e49de7adeef?q=80&w=1683&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="object-contain rounded-xl drop-shadow-2xl  -rotate-12 select-none pointer-events-none"
+              height={950}
+              width={950}
+              src="/assets/hero.png"
             />
             <motion.div
               initial={{ opacity: 0, y: 20 }}

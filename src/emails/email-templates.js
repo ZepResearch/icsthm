@@ -15,7 +15,7 @@ export function getUserEmailTemplate(data) {
           padding: 20px;
         }
         .header {
-          background-color: #1a5276;
+          background-color: #FF9249;
           color: white;
           padding: 20px;
           text-align: center;
@@ -34,18 +34,18 @@ export function getUserEmailTemplate(data) {
           color: #666;
         }
         h1 {
-          color: #1a5276;
+          color: #FFFFFF; 
           margin-top: 0;
         }
         .highlight {
           font-weight: bold;
-          color: #1a5276;
+          color: #FF9249;
         }
       </style>
     </head>
     <body>
       <div class="header">
-        <h1>International Conference on Sustainable Tourism & Hospitality Management</h1>
+        <h1>2<sup>nd</sup> International Conference on Sustainable Tourism & Hospitality Management</h1>
       </div>
       <div class="content">
         <p>Dear ${data.author},</p>
@@ -69,7 +69,7 @@ export function getUserEmailTemplate(data) {
         International Conference on Sustainable Tourism & Hospitality Management</p>
       </div>
       <div class="footer">
-        <p>© 2025 International Conference on Sustainable Tourism & Hospitality Management. All rights reserved.</p>
+        <p>© 2025 2<sup>nd</sup> International Conference on Sustainable Tourism & Hospitality Management. All rights reserved.</p>
       </div>
     </body>
     </html>
@@ -93,7 +93,7 @@ export function getUserEmailTemplate(data) {
           padding: 20px;
         }
         .header {
-          background-color: #1a5276;
+          background-color: #FF9249;
           color: white;
           padding: 20px;
           text-align: center;
@@ -112,7 +112,7 @@ export function getUserEmailTemplate(data) {
           color: #666;
         }
         h1 {
-          color: #1a5276;
+          color: #FFFFFF;
           margin-top: 0;
         }
         table {
@@ -131,7 +131,7 @@ export function getUserEmailTemplate(data) {
           background-color: #f2f2f2;
         }
         .file-link {
-          color: #1a5276;
+          color: #FF9249;
           text-decoration: underline;
         }
       </style>

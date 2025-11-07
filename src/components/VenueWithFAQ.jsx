@@ -84,27 +84,27 @@ export default function VenueWithFAQ() {
 
 const faqs = [
   {
-    question: "Who should attend the ICSTHM conference?",
+    question: "Who should attend the 2nd ICSTHM conference?",
     answer: "This conference is designed for tourism professionals, hospitality leaders, researchers, academics, policymakers, and innovators who are passionate about shaping sustainable practices in the tourism and hospitality sectors.",
   },
   {
-    question: "What makes ICSTHM different from other tourism conferences?",
-    answer: "ICSTHM focuses on post-pandemic innovations, sustainable strategies, and resilience in the tourism and hospitality industries, bringing together a global audience from over 30 countries and featuring insights from 50+ industry experts.",
+    question: "What makes 2nd ICSTHM different from other tourism conferences?",
+    answer: "2nd ICSTHM focuses on post-pandemic innovations, sustainable strategies, and resilience in the tourism and hospitality industries, bringing together a global audience from over 30 countries and featuring insights from 50+ industry experts.",
   },
   {
     question: "Can I submit a paper if Im not an academic?",
-    answer: "Yes! ICSTHM welcomes contributions from industry professionals, researchers, and innovators from both academic and non-academic backgrounds who have valuable insights and experiences to share.",
+    answer: "Yes! 2nd ICSTHM welcomes contributions from industry professionals, researchers, and innovators from both academic and non-academic backgrounds who have valuable insights and experiences to share.",
   },
   {
-    question: "What are the benefits of presenting at ICSTHM?",
+    question: "What are the benefits of presenting at 2nd ICSTHM?",
     answer: "Presenters gain global visibility, receive feedback from industry experts, have their work featured in conference proceedings, and access opportunities for publication in esteemed journals.",
   },
   {
     question: "What types of sessions will be available?",
-    answer: "ICSTHM offers a variety of sessions including keynote speeches, panel discussions, workshops, paper presentations, and interactive Q&A sessions to provide a comprehensive experience for all attendees.",
+    answer: "2nd ICSTHM offers a variety of sessions including keynote speeches, panel discussions, workshops, paper presentations, and interactive Q&A sessions to provide a comprehensive experience for all attendees.",
   },
   {
-    question: "What kind of innovations will be showcased at ICSTHM?",
+    question: "What kind of innovations will be showcased at 2nd ICSTHM?",
     answer: "Expect to see innovations in eco-friendly travel, digital transformation in hospitality, sustainable event management, and AI-driven guest services, among other forward-thinking solutions.",
   },
   {

@@ -46,7 +46,7 @@ export default function AboutSection() {
   return (
     <section
       ref={ref}
-      className="w-full py-12 md:py-12 lg:py-24 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900"
+      className="w-full py-12 md:py-12 lg:py-24"
     >
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
@@ -58,12 +58,12 @@ export default function AboutSection() {
           <motion.div variants={itemVariants} className="flex justify-center ">
             <div className="relative w flex justify-center items-center  aspect-square overflow-hidden rounded-lg">
               <Image
-                src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/assets/about.jpg"
                 alt="Conference Image"
                 width={500}
                 height={400}
                 objectFit=""
-                className="object-center w-96 h-60 rounded-xl "
+                className="object-center rounded-xl drop-shadow-lg "
               />
             </div>
           </motion.div>
@@ -75,7 +75,7 @@ export default function AboutSection() {
               About The Conference
             </p>
             <p className="text-muted-foreground">
-              The International Conference on Sustainable Tourism  and Hospitality Management
+              The 2<sup>nd</sup> International Conference on Sustainable Tourism  and Hospitality Management
               (ICSTHM) unites global leaders, researchers, and innovators to
               reimagine the future of tourism and hospitality, fostering
               sustainable growth, resilience, and transformative ideas for a

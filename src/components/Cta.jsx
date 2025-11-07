@@ -107,7 +107,7 @@ export default function CTASection() {
             variants={containerVariants}
             className="p-4"
           >
-            <Card className="overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm border-2 border-primary/20">
+            <Card className="overflow-hidden  backdrop-blur-sm border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-primary">
                   Shape the Future of Tourism and Hospitality with Us
@@ -155,28 +155,37 @@ export default function CTASection() {
             className="p-4"
           >
             <Card className="overflow-hidden bg-white backdrop-blur-sm border-2 border-primary/20">
-              <CardHeader className="relative pb-0">
+              <CardHeader className="relative pb-0 ">
                 <motion.div
+                className="relative z-10"
                   animate={isHovered ? "hover" : "initial"}
                   variants={imageVariants}
                 >
                   <Image
-                    src="https://illustrations.popsy.co/amber/man-on-a-bicycle.svg"
+                    src="/assets/cta.png"
                     alt="Conference Illustration"
-                    width={300}
+                    width={500}
                     height={300}
-                    className="mx-auto"
+                    className="mx-auto  opacity-90"
                   />
-                </motion.div>
-                <CardTitle className="text-3xl font-bold text-primary mt-4">
+                  </motion.div>
+                  <Image
+                    src="/assets/ctabehind.png"
+                    alt="Conference Illustration"
+                    width={350}
+                    height={300}
+                    className="mx-auto z-0 absolute top-0 left-0 right-0 "
+                  />
+                
+                <CardTitle className="text-3xl font-bold text-primary mt-4 relative z-10">
                   Register Now
                 </CardTitle>
-                <CardDescription className="text-lg mt-2">
+                <CardDescription className="text-lg mt-2 relative z-10 text-black">
                   Secure your spot at the International Conference on Tourism
                   Management and Hospitality
                 </CardDescription>
               </CardHeader>
-              <CardContent className="mt-4">
+              <CardContent className="mt-4 relative z-10">
                 <p className="mb-4 text-muted-foreground">
                   Join industry leaders, researchers, and professionals for an
                   enriching experience in the world of tourism and hospitality.

@@ -20,8 +20,8 @@ export default function Home() {
    <DownloadPopup/>
    <CoOrganizationLogos/>
    <AboutSection/>
-   <DownloadButtons/>
    <ConferenceObjectives/>
+   <DownloadButtons/>
    <SpeakerSection/>
    <SDGSection/>
    {/* <ConferenceHighlightSection/> */}

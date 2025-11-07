@@ -17,7 +17,7 @@ export default function ModePresentation() {
       icon: Mic,
       image: "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content:
-        "You well have 15 minutes for your talk. Please send us your slides by email to info[@]ictmh.org at least 10 days before the event. If you cant send them early, you can bring them to the registration desk at least 2 hours before your talk time.",
+        "You well have 15 minutes for your talk. Please send us your slides by email to info@icsthm.com at least 10 days before the event. If you cant send them early, you can bring them to the registration desk at least 2 hours before your talk time.",
     },
     {
       title: "Show a Poster",
@@ -49,7 +49,7 @@ export default function ModePresentation() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <motion.div variants={itemVariants} className="text-center mb-12">
           <Badge variant="outline" className="mb-4 text-lg px-4 py-1">

@@ -73,7 +73,7 @@ export default function SDGSection() {
     <section className="w-full bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900 dark:to-yellow-900py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-3xl md:text-5xl font-bold py-12 text-orange-500">
-          <span className="text-orange-700">ICSTHM  2025</span> IS DEDICATED TO ADVANCING THE
+          <span className="text-orange-700">2<sup>nd</sup> ICSTHM  2026</span> IS DEDICATED TO ADVANCING THE
            NATIONS SUSTAINABLE DEVELOPMENT GOALS (SDGS)
         </h2>
         

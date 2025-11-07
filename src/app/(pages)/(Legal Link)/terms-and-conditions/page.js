@@ -164,7 +164,7 @@ export default function TermsAndConditions() {
         </div>
         <div className="text-center ">
           <p>Last updated: <span className="font-semibold text-orange-600">{new Date().toLocaleDateString()}</span> </p>
-          <p>For any questions regarding these Terms and Conditions, please contact us at <a className="font-semibold text-orange-600" href="mailto:icthm@icthm.com">icthm@contact.com</a></p>
+          <p>For any questions regarding these Terms and Conditions, please contact us at <a className="font-semibold text-orange-600" href="mailto:icthm@icthm.com">info@icsthm.com</a></p>
         </div>
       </div>
     </div>
