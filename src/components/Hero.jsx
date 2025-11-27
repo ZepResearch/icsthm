@@ -58,7 +58,7 @@ export default function Hero() {
               className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-7xl"
             >2<sup>nd</sup> International Conference on
           Sustainable Tourism 
-             & Hospitality Management 
+             and Hospitality Management 
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
